@@ -19,105 +19,52 @@ const stagger = {
 
 // Hero Section
 const HeroSection = () => (
-  <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-cream">
+  <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-white">
     {/* Background Image */}
     <div className="absolute inset-0 z-0">
       <img 
-        src="https://www.lateliersecret.ca/images/slider/4.webp"
+        src="https://customer-assets.emergentagent.com/job_atelier-optimize/artifacts/w1zoelnq_Screenshot_20260301_232731_Wix.jpg"
         alt="L'atelier Secret Spa"
-        className="w-full h-full object-cover"
+        className="w-full h-full object-cover object-top"
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-cream/95 via-cream/80 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/70 to-transparent" />
     </div>
 
     <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 w-full">
       <div className="max-w-2xl">
-        <motion.span 
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2 text-salmon font-script text-2xl mb-4"
-        >
-          <Sparkles size={20} strokeWidth={1.5} />
-          Bienvenue chez
-        </motion.span>
-        
         <motion.h1 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="font-serif text-5xl md:text-6xl lg:text-7xl text-charcoal leading-tight mb-6"
+          transition={{ duration: 0.6 }}
+          className="font-serif text-5xl md:text-6xl lg:text-7xl text-taupe leading-tight mb-6 font-light"
           data-testid="hero-title"
         >
-          L'atelier Secret
+          Exprimez votre beauté naturelle.
         </motion.h1>
         
-        <motion.p 
+        <motion.div 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-charcoal-light text-lg md:text-xl leading-relaxed mb-8"
-        >
-          Centre esthétique professionnel à LeMoyne, Québec. 
-          Spécialisé dans l'épilation laser, le microneedling et les soins du visage haut de gamme.
-        </motion.p>
-
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="flex flex-col sm:flex-row gap-4"
+          className="flex flex-col sm:flex-row gap-4 mt-8"
         >
           <Link
+            to="/aesthetic-advance"
+            className="inline-flex items-center justify-center gap-2 bg-taupe text-white px-8 py-4 rounded-none font-sans text-sm uppercase tracking-wider font-medium hover:bg-taupe-dark transition-colors"
+            data-testid="hero-formations-btn"
+          >
+            Formations
+          </Link>
+          <Link
             to="/booking"
-            className="inline-flex items-center justify-center gap-2 bg-salmon text-white px-8 py-4 rounded-full font-sans font-medium hover:bg-salmon-dark transition-colors btn-lift"
+            className="inline-flex items-center justify-center gap-2 bg-taupe text-white px-8 py-4 rounded-none font-sans text-sm uppercase tracking-wider font-medium hover:bg-taupe-dark transition-colors"
             data-testid="hero-book-btn"
           >
-            Réserver maintenant
-            <ArrowRight size={18} strokeWidth={1.5} />
+            Consultation Gratuite
           </Link>
-          <a
-            href="tel:+14388822165"
-            className="inline-flex items-center justify-center gap-2 border-2 border-charcoal/20 text-charcoal px-8 py-4 rounded-full font-sans font-medium hover:border-salmon hover:text-salmon transition-colors"
-            data-testid="hero-call-btn"
-          >
-            <Phone size={18} strokeWidth={1.5} />
-            Appeler maintenant
-          </a>
-        </motion.div>
-
-        {/* Trust Badges */}
-        <motion.div 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="mt-12 flex items-center gap-6"
-        >
-          <div className="flex items-center gap-1">
-            {[...Array(5)].map((_, i) => (
-              <Star key={i} size={18} className="fill-gold text-gold" />
-            ))}
-          </div>
-          <span className="text-charcoal-light text-sm">
-            <strong className="text-charcoal">4.9/5</strong> - Plus de 150 avis Google
-          </span>
         </motion.div>
       </div>
     </div>
-
-    {/* Promo Badge */}
-    <motion.div 
-      initial={{ opacity: 0, scale: 0.8 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5, delay: 0.7 }}
-      className="absolute bottom-10 right-10 hidden lg:block"
-    >
-      <div className="bg-white shadow-medium rounded-2xl p-6 max-w-xs">
-        <span className="text-salmon font-medium text-sm uppercase tracking-wide">Offre Spéciale</span>
-        <p className="font-serif text-2xl text-charcoal mt-2">Jusqu'à 50% de rabais</p>
-        <p className="text-charcoal-light text-sm mt-1">Sur tous nos services ce mois-ci</p>
-      </div>
-    </motion.div>
   </section>
 );
 
