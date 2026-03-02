@@ -5,24 +5,26 @@
 /* Custom Fonts */
 body {
   margin: 0;
-  font-family: 'Lato', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #FFFDF9;
-  color: #2D2A26;
+  background-color: #FFFFFF;
+  color: #b5a48b;
 }
 
 /* Typography Classes */
 .font-serif {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: normal;
 }
 
 .font-script {
-  font-family: 'Yellowtail', cursive;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: normal;
 }
 
 .font-sans {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* Smooth scrolling */
@@ -56,36 +58,37 @@ html {
 
 @layer base {
   :root {
-    --background: 40 100% 99%;
-    --foreground: 30 6% 15%;
+    --background: 0 0% 100%;
+    --foreground: 35 20% 62%;
     --card: 0 0% 100%;
-    --card-foreground: 30 6% 15%;
+    --card-foreground: 35 20% 62%;
     --popover: 0 0% 100%;
-    --popover-foreground: 30 6% 15%;
-    --primary: 18 87% 72%;
+    --popover-foreground: 35 20% 62%;
+    --primary: 35 20% 62%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 40 30% 96%;
-    --secondary-foreground: 30 6% 15%;
-    --muted: 40 30% 96%;
-    --muted-foreground: 30 6% 45%;
-    --accent: 43 74% 52%;
+    --secondary: 35 15% 92%;
+    --secondary-foreground: 35 20% 50%;
+    --muted: 35 15% 92%;
+    --muted-foreground: 35 15% 55%;
+    --accent: 35 20% 72%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 30 6% 90%;
-    --input: 30 6% 90%;
-    --ring: 18 87% 72%;
-    --radius: 0.75rem;
+    --border: 35 15% 85%;
+    --input: 35 15% 85%;
+    --ring: 35 20% 62%;
+    --radius: 0.5rem;
     
-    /* Custom Colors */
-    --salmon: #f59d79;
-    --salmon-dark: #e08c68;
-    --cream: #FFFDF9;
-    --charcoal: #2D2A26;
-    --charcoal-light: #5D5A56;
-    --gold: #D4AF37;
-    --sage: #8F9779;
-    --stone: #E6E2DD;
+    /* Custom Colors - Beige/Taupe Theme */
+    --taupe: #b5a48b;
+    --taupe-dark: #9a8b74;
+    --taupe-light: #c9bda8;
+    --cream: #FFFFFF;
+    --charcoal: #b5a48b;
+    --charcoal-light: #c9bda8;
+    --gold: #b5a48b;
+    --sage: #a99f8d;
+    --stone: #f5f3f0;
   }
 }
 
