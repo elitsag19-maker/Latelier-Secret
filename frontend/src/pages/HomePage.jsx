@@ -170,7 +170,7 @@ const AboutSection = () => (
           transition={{ duration: 0.6 }}
           className="relative"
         >
-          <div className="aspect-[3/4] rounded-2xl overflow-hidden shadow-medium">
+          <div className="aspect-[3/4] rounded-none overflow-hidden shadow-medium">
             <img 
               src="https://www.lateliersecret.ca/images/Untitled-design-4-768x1024.webp"
               alt="L'atelier Secret - Centre esthétique"
@@ -178,10 +178,10 @@ const AboutSection = () => (
             />
           </div>
           {/* Stats Card */}
-          <div className="absolute -bottom-8 -right-8 bg-white rounded-2xl shadow-medium p-6 hidden md:block">
+          <div className="absolute -bottom-8 -right-8 bg-white rounded-none shadow-medium p-6 hidden md:block">
             <div className="text-center">
-              <span className="font-serif text-4xl text-salmon">15+</span>
-              <p className="text-charcoal-light text-sm mt-1">Années d'expérience</p>
+              <span className="font-serif text-4xl text-taupe">15+</span>
+              <p className="text-taupe-light text-sm mt-1">Années d'expérience</p>
             </div>
           </div>
         </motion.div>
@@ -193,20 +193,19 @@ const AboutSection = () => (
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <span className="font-script text-salmon text-2xl">L'atelier Secret</span>
-          <h2 className="font-serif text-4xl md:text-5xl text-charcoal mt-2 mb-6" data-testid="about-title">
+          <h2 className="font-serif text-3xl md:text-4xl text-taupe mb-6 font-light uppercase tracking-wide" data-testid="about-title">
             À Propos de Nous
           </h2>
           <div className="section-divider mb-8" />
           
-          <p className="text-charcoal-light text-lg leading-relaxed mb-6">
+          <p className="text-taupe text-lg leading-relaxed mb-6">
             L'atelier Secret est un centre esthétique professionnel basé au Québec, 
             spécialisé dans les traitements de soins de la peau avancés tels que 
             l'épilation laser, le microneedling, les soins du visage et les soins 
             de beauté personnalisés.
           </p>
           
-          <p className="text-charcoal-light leading-relaxed mb-8">
+          <p className="text-taupe-light leading-relaxed mb-8">
             Nous offrons une expérience haut de gamme et personnalisée axée sur 
             des résultats à long terme et le bien-être de nos clients.
           </p>
@@ -217,8 +216,8 @@ const AboutSection = () => (
               "Équipement et techniques modernes",
               "Satisfaction 100% garantie"
             ].map((item, i) => (
-              <li key={i} className="flex items-center gap-3 text-charcoal">
-                <CheckCircle size={20} className="text-salmon flex-shrink-0" strokeWidth={1.5} />
+              <li key={i} className="flex items-center gap-3 text-taupe">
+                <CheckCircle size={20} className="text-taupe flex-shrink-0" strokeWidth={1.5} />
                 {item}
               </li>
             ))}
@@ -226,7 +225,7 @@ const AboutSection = () => (
 
           <Link
             to="/about"
-            className="inline-flex items-center gap-2 bg-salmon text-white px-8 py-4 rounded-full font-sans font-medium hover:bg-salmon-dark transition-colors btn-lift"
+            className="inline-flex items-center gap-2 bg-taupe text-white px-8 py-4 rounded-none font-sans text-sm uppercase tracking-wider font-medium hover:bg-taupe-dark transition-colors"
             data-testid="about-learn-more-btn"
           >
             En savoir plus
