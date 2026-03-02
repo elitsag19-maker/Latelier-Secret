@@ -23,9 +23,9 @@ const HeroSection = () => (
     {/* Background Image */}
     <div className="absolute inset-0 z-0">
       <img 
-        src="https://customer-assets.emergentagent.com/job_atelier-optimize/artifacts/w1zoelnq_Screenshot_20260301_232731_Wix.jpg"
+        src="https://www.lateliersecret.ca/images/slider/4.webp"
         alt="L'atelier Secret Spa"
-        className="w-full h-full object-cover object-top"
+        className="w-full h-full object-cover object-center"
       />
       <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/70 to-transparent" />
     </div>
