@@ -63,7 +63,7 @@ const Header = () => {
   return (
     <>
       {/* Top Bar */}
-      <div className="bg-salmon text-white py-2 hidden md:block">
+      <div className="bg-taupe text-white py-2 hidden md:block">
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center text-sm">
           <a 
             href="mailto:info@lateliersecret.ca" 
@@ -89,7 +89,7 @@ const Header = () => {
         className={`sticky top-0 z-50 transition-all duration-300 ${
           isScrolled 
             ? 'bg-white/95 backdrop-blur-md shadow-soft' 
-            : 'bg-cream'
+            : 'bg-white'
         }`}
       >
         <div className="max-w-7xl mx-auto px-6">
@@ -115,10 +115,10 @@ const Header = () => {
                   <Link
                     to={item.children ? '#' : item.path}
                     onClick={(e) => item.children && e.preventDefault()}
-                    className={`flex items-center gap-1 font-sans text-sm tracking-wide transition-colors ${
+                    className={`flex items-center gap-1 font-sans text-sm tracking-wide uppercase transition-colors ${
                       location.pathname === item.path || item.children?.some(c => c.path === location.pathname)
-                        ? 'text-salmon'
-                        : 'text-charcoal hover:text-salmon'
+                        ? 'text-taupe-dark'
+                        : 'text-taupe hover:text-taupe-dark'
                     }`}
                     data-testid={`nav-${item.name.toLowerCase().replace(/\s+/g, '-')}`}
                   >
@@ -159,7 +159,7 @@ const Header = () => {
             <div className="hidden lg:block">
               <Link
                 to="/booking"
-                className="bg-salmon text-white px-6 py-3 rounded-full font-sans text-sm font-medium hover:bg-salmon-dark transition-colors btn-lift"
+                className="bg-taupe text-white px-6 py-3 rounded-none font-sans text-sm uppercase tracking-wider font-medium hover:bg-taupe-dark transition-colors"
                 data-testid="header-book-btn"
               >
                 Réserver maintenant
@@ -169,7 +169,7 @@ const Header = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden p-2 text-charcoal"
+              className="lg:hidden p-2 text-taupe"
               data-testid="mobile-menu-btn"
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -186,14 +186,14 @@ const Header = () => {
               exit={{ opacity: 0, height: 0 }}
               className="lg:hidden bg-white border-t border-stone/30"
             >
-              <nav className="max-w-7xl mx-auto px-6 py-4 space-y-2">
+              nav className="max-w-7xl mx-auto px-6 py-4 space-y-2">
                 {NAV_ITEMS.map((item) => (
                   <div key={item.path}>
                     {item.children ? (
                       <>
                         <button
                           onClick={() => setOpenDropdown(openDropdown === item.path ? null : item.path)}
-                          className="flex items-center justify-between w-full py-3 text-charcoal font-sans"
+                          className="flex items-center justify-between w-full py-3 text-taupe font-sans uppercase text-sm tracking-wide"
                           data-testid={`mobile-nav-${item.name.toLowerCase().replace(/\s+/g, '-')}`}
                         >
                           {item.name}
@@ -214,7 +214,7 @@ const Header = () => {
                                 <Link
                                   key={child.path}
                                   to={child.path}
-                                  className="block py-2 text-charcoal-light text-sm hover:text-salmon transition-colors"
+                                  className="block py-2 text-taupe-light text-sm hover:text-taupe transition-colors"
                                   data-testid={`mobile-nav-dropdown-${child.name.toLowerCase().replace(/\s+/g, '-')}`}
                                 >
                                   {child.name}
@@ -227,7 +227,7 @@ const Header = () => {
                     ) : (
                       <Link
                         to={item.path}
-                        className="block py-3 text-charcoal font-sans hover:text-salmon transition-colors"
+                        className="block py-3 text-taupe font-sans uppercase text-sm tracking-wide hover:text-taupe-dark transition-colors"
                         data-testid={`mobile-nav-${item.name.toLowerCase().replace(/\s+/g, '-')}`}
                       >
                         {item.name}
@@ -237,7 +237,7 @@ const Header = () => {
                 ))}
                 <Link
                   to="/booking"
-                  className="block w-full bg-salmon text-white text-center px-6 py-3 rounded-full font-sans text-sm font-medium mt-4"
+                  className="block w-full bg-taupe text-white text-center px-6 py-3 rounded-none font-sans text-sm uppercase tracking-wider font-medium mt-4"
                   data-testid="mobile-book-btn"
                 >
                   Réserver maintenant
