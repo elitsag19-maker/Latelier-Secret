@@ -81,6 +81,7 @@
       "border": "rgba(45, 42, 38, 0.1)",
       "glass_bg": "rgba(255, 255, 255, 0.7)"
     }
+    "legacy_images_note": "You MUST preserve existing images where relevant. Base URL: https://www.lateliersecret.ca/images/. Examples: https://www.lateliersecret.ca/images/slider/4.webp, https://www.lateliersecret.ca/images/services/1.webp. Use these for specific service cards if high-res Unsplash replacements feel too generic.",
   },
   "layout_strategies": {
     "spacing_scale": "Tailwind Extended (p-12, p-16, p-24, p-32)",
