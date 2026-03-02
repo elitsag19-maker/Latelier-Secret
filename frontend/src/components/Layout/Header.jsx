@@ -135,13 +135,13 @@ const Header = () => {
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: 10 }}
                           transition={{ duration: 0.2 }}
-                          className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-medium py-2 border border-stone/50"
+                          className="absolute top-full left-0 mt-2 w-48 bg-white rounded-none shadow-medium py-2 border border-stone"
                         >
                           {item.children.map((child) => (
                             <Link
                               key={child.path}
                               to={child.path}
-                              className="block px-4 py-2 text-sm text-charcoal hover:text-salmon hover:bg-cream/50 transition-colors"
+                              className="block px-4 py-2 text-sm text-taupe hover:text-taupe-dark hover:bg-stone/30 transition-colors"
                               data-testid={`nav-dropdown-${child.name.toLowerCase().replace(/\s+/g, '-')}`}
                             >
                               {child.name}
