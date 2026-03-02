@@ -5,7 +5,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-charcoal text-white">
+    <footer className="bg-taupe text-white">
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
@@ -25,7 +25,7 @@ const Footer = () => {
                 href="https://www.instagram.com/lateliersecret" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-salmon transition-colors"
+                className="w-10 h-10 rounded-none bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"
                 data-testid="footer-instagram"
                 aria-label="Instagram"
               >
@@ -35,7 +35,7 @@ const Footer = () => {
                 href="https://www.facebook.com/lateliersecret" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-salmon transition-colors"
+                className="w-10 h-10 rounded-none bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"
                 data-testid="footer-facebook"
                 aria-label="Facebook"
               >
@@ -46,7 +46,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-serif text-lg mb-6">Navigation</h4>
+            <h4 className="font-serif text-lg mb-6 font-normal uppercase tracking-wide">Navigation</h4>
             <ul className="space-y-3">
               {[
                 { name: 'Accueil', path: '/' },
@@ -71,7 +71,7 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h4 className="font-serif text-lg mb-6">Nos Services</h4>
+            <h4 className="font-serif text-lg mb-6 font-normal uppercase tracking-wide">Nos Services</h4>
             <ul className="space-y-3">
               {[
                 { name: 'Épilation Laser', path: '/hair-removal-price' },
@@ -96,12 +96,12 @@ const Footer = () => {
 
           {/* Contact Info - NAP for Local SEO */}
           <div>
-            <h4 className="font-serif text-lg mb-6">Contact</h4>
+            <h4 className="font-serif text-lg mb-6 font-normal uppercase tracking-wide">Contact</h4>
             <address className="not-italic space-y-4">
               {/* Location - Critical for Local SEO */}
               <div className="flex items-start gap-3">
-                <div className="w-8 h-8 rounded-full bg-salmon/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <MapPin size={14} className="text-salmon" strokeWidth={1.5} />
+                <div className="w-8 h-8 rounded-none bg-white/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <MapPin size={14} className="text-white" strokeWidth={1.5} />
                 </div>
                 <div className="text-sm text-stone/80">
                   <p className="font-medium text-white" data-testid="footer-business-name">L'atelier Secret</p>
@@ -112,12 +112,12 @@ const Footer = () => {
 
               {/* Phone - Critical for Local SEO */}
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-full bg-salmon/20 flex items-center justify-center flex-shrink-0">
-                  <Phone size={14} className="text-salmon" strokeWidth={1.5} />
+                <div className="w-8 h-8 rounded-none bg-white/10 flex items-center justify-center flex-shrink-0">
+                  <Phone size={14} className="text-white" strokeWidth={1.5} />
                 </div>
                 <a 
                   href="tel:+14388822165" 
-                  className="text-sm text-stone/80 hover:text-salmon transition-colors"
+                  className="text-sm text-white/80 hover:text-white transition-colors"
                   data-testid="footer-phone"
                 >
                   +1 438 882 2165
@@ -126,12 +126,12 @@ const Footer = () => {
 
               {/* Email */}
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-full bg-salmon/20 flex items-center justify-center flex-shrink-0">
-                  <Mail size={14} className="text-salmon" strokeWidth={1.5} />
+                <div className="w-8 h-8 rounded-none bg-white/10 flex items-center justify-center flex-shrink-0">
+                  <Mail size={14} className="text-white" strokeWidth={1.5} />
                 </div>
                 <a 
                   href="mailto:info@lateliersecret.ca" 
-                  className="text-sm text-stone/80 hover:text-salmon transition-colors"
+                  className="text-sm text-white/80 hover:text-white transition-colors"
                   data-testid="footer-email"
                 >
                   info@lateliersecret.ca
@@ -140,8 +140,8 @@ const Footer = () => {
 
               {/* Hours */}
               <div className="flex items-start gap-3">
-                <div className="w-8 h-8 rounded-full bg-salmon/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <Clock size={14} className="text-salmon" strokeWidth={1.5} />
+                <div className="w-8 h-8 rounded-none bg-white/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <Clock size={14} className="text-white" strokeWidth={1.5} />
                 </div>
                 <div className="text-sm text-stone/80">
                   <p>Lun - Ven: 9h00 - 21h00</p>
