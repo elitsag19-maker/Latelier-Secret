@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 
 // Layout
@@ -14,11 +14,35 @@ import ServicePage from "./pages/ServicePage";
 import PricingPage from "./pages/PricingPage";
 import AcademyPage from "./pages/AcademyPage";
 
+// Service page wrapper - extracts serviceId from URL
+const ServicePageWrapper = ({ serviceId: propServiceId }) => {
+  const location = useLocation();
+  const pathServiceId = location.pathname.replace('/', '').replace('.php', '');
+  return <ServicePage serviceId={propServiceId || pathServiceId} />;
+};
+
+// Pricing page wrapper
+const PricingPageWrapper = ({ pricingId: propPricingId }) => {
+  const location = useLocation();
+  const pathPricingId = location.pathname.replace('/', '').replace('.php', '');
+  return <PricingPage pricingId={propPricingId || pathPricingId} />;
+};
+
+// Academy page wrapper
+const AcademyPageWrapper = ({ courseId: propCourseId }) => {
+  const location = useLocation();
+  const pathCourseId = location.pathname.replace('/', '').replace('.php', '');
+  return <AcademyPage courseId={propCourseId || pathCourseId} />;
+};
+
 // Scroll to top on route change
 const ScrollToTop = () => {
+  const { pathname } = useLocation();
+  
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+  }, [pathname]);
+  
   return null;
 };
 
@@ -39,9 +63,9 @@ const NotFoundPage = () => (
   </div>
 );
 
-function App() {
+function AppRoutes() {
   return (
-    <BrowserRouter>
+    <>
       <ScrollToTop />
       <Layout>
         <Routes>
@@ -56,28 +80,50 @@ function App() {
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/gallery.php" element={<GalleryPage />} />
           
-          {/* Service Pages - Dynamic routing */}
-          <Route path="/:serviceId" element={<ServicePageWrapper />} />
-          
-          {/* Legacy PHP routes - redirect support */}
-          <Route path="/laser-hair.php" element={<ServicePageWrapper serviceId="laser-hair" />} />
+          {/* Service Pages */}
+          <Route path="/laser-hair" element={<ServicePageWrapper />} />
+          <Route path="/laser-hair.php" element={<ServicePageWrapper />} />
+          <Route path="/microneedling" element={<ServicePageWrapper />} />
           <Route path="/micronnedling.php" element={<ServicePageWrapper serviceId="microneedling" />} />
-          <Route path="/luxury-facial.php" element={<ServicePageWrapper serviceId="luxury-facial" />} />
-          <Route path="/anti-aging-facial.php" element={<ServicePageWrapper serviceId="anti-aging-facial" />} />
-          <Route path="/hair-removal-price.php" element={<PricingPageWrapper pricingId="hair-removal-price" />} />
-          <Route path="/facial-treatments-price.php" element={<PricingPageWrapper pricingId="facial-treatments-price" />} />
-          <Route path="/eyelash-extensions-price.php" element={<PricingPageWrapper pricingId="eyelash-extensions-price" />} />
-          <Route path="/body-care-price.php" element={<PricingPageWrapper pricingId="body-care-price" />} />
-          <Route path="/aesthetic-advance.php" element={<AcademyPageWrapper courseId="aesthetic-advance" />} />
-          <Route path="/aesthetic-beginner.php" element={<AcademyPageWrapper courseId="aesthetic-beginner" />} />
-          <Route path="/aesthetic-beginner-plus.php" element={<AcademyPageWrapper courseId="aesthetic-beginner-plus" />} />
-          <Route path="/eyelash-extension.php" element={<AcademyPageWrapper courseId="eyelash-extension" />} />
-          <Route path="/classic-volume-lifting.php" element={<AcademyPageWrapper courseId="classic-volume-lifting" />} />
+          <Route path="/luxury-facial" element={<ServicePageWrapper />} />
+          <Route path="/luxury-facial.php" element={<ServicePageWrapper />} />
+          <Route path="/anti-aging-facial" element={<ServicePageWrapper />} />
+          <Route path="/anti-aging-facial.php" element={<ServicePageWrapper />} />
+          
+          {/* Pricing Pages */}
+          <Route path="/hair-removal-price" element={<PricingPageWrapper />} />
+          <Route path="/hair-removal-price.php" element={<PricingPageWrapper />} />
+          <Route path="/facial-treatments-price" element={<PricingPageWrapper />} />
+          <Route path="/facial-treatments-price.php" element={<PricingPageWrapper />} />
+          <Route path="/eyelash-extensions-price" element={<PricingPageWrapper />} />
+          <Route path="/eyelash-extensions-price.php" element={<PricingPageWrapper />} />
+          <Route path="/body-care-price" element={<PricingPageWrapper />} />
+          <Route path="/body-care-price.php" element={<PricingPageWrapper />} />
+          
+          {/* Academy Pages */}
+          <Route path="/aesthetic-advance" element={<AcademyPageWrapper />} />
+          <Route path="/aesthetic-advance.php" element={<AcademyPageWrapper />} />
+          <Route path="/aesthetic-beginner" element={<AcademyPageWrapper />} />
+          <Route path="/aesthetic-beginner.php" element={<AcademyPageWrapper />} />
+          <Route path="/aesthetic-beginner-plus" element={<AcademyPageWrapper />} />
+          <Route path="/aesthetic-beginner-plus.php" element={<AcademyPageWrapper />} />
+          <Route path="/eyelash-extension" element={<AcademyPageWrapper />} />
+          <Route path="/eyelash-extension.php" element={<AcademyPageWrapper />} />
+          <Route path="/classic-volume-lifting" element={<AcademyPageWrapper />} />
+          <Route path="/classic-volume-lifting.php" element={<AcademyPageWrapper />} />
           
           {/* 404 */}
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Layout>
+    </>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <AppRoutes />
     </BrowserRouter>
   );
 }
