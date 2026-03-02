@@ -338,8 +338,7 @@ const PricingSection = () => {
     <section className="py-24 bg-stone/30">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <span className="font-script text-salmon text-2xl">Tarifs &</span>
-          <h2 className="font-serif text-4xl md:text-5xl text-charcoal mt-2" data-testid="pricing-title">
+          <h2 className="font-serif text-3xl md:text-4xl text-taupe font-light uppercase tracking-wide" data-testid="pricing-title">
             Forfaits
           </h2>
           <div className="section-divider mx-auto mt-6" />
@@ -353,27 +352,27 @@ const PricingSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className={`relative rounded-2xl p-8 ${
+              className={`relative rounded-none p-8 ${
                 pkg.highlight 
-                  ? 'bg-salmon text-white' 
-                  : 'bg-white shadow-soft'
+                  ? 'bg-taupe text-white' 
+                  : 'bg-white shadow-soft border border-stone'
               }`}
               data-testid={`pricing-card-${index}`}
             >
               {pkg.popular && (
-                <span className="absolute top-4 right-4 bg-salmon text-white text-xs px-3 py-1 rounded-full">
+                <span className="absolute top-4 right-4 bg-taupe text-white text-xs px-3 py-1 rounded-none uppercase tracking-wider">
                   Populaire
                 </span>
               )}
               
-              <h3 className={`font-serif text-xl mb-2 ${pkg.highlight ? 'text-white' : 'text-charcoal'}`}>
+              <h3 className={`font-serif text-xl mb-2 font-normal ${pkg.highlight ? 'text-white' : 'text-taupe'}`}>
                 {pkg.title}
               </h3>
-              <p className={`text-sm mb-4 ${pkg.highlight ? 'text-white/80' : 'text-charcoal-light'}`}>
+              <p className={`text-sm mb-4 ${pkg.highlight ? 'text-white/80' : 'text-taupe-light'}`}>
                 À partir de
               </p>
               <div className="mb-6">
-                <span className={`font-serif text-5xl ${pkg.highlight ? 'text-white' : 'text-charcoal'}`}>
+                <span className={`font-serif text-5xl ${pkg.highlight ? 'text-white' : 'text-taupe'}`}>
                   ${pkg.price}
                 </span>
               </div>
@@ -381,10 +380,10 @@ const PricingSection = () => {
               <ul className="space-y-3 mb-8">
                 {pkg.features.map((feature, i) => (
                   <li key={i} className={`flex items-start gap-2 text-sm ${
-                    pkg.highlight ? 'text-white/90' : 'text-charcoal-light'
+                    pkg.highlight ? 'text-white/90' : 'text-taupe-light'
                   }`}>
                     <CheckCircle size={16} className={`flex-shrink-0 mt-0.5 ${
-                      pkg.highlight ? 'text-white' : 'text-salmon'
+                      pkg.highlight ? 'text-white' : 'text-taupe'
                     }`} strokeWidth={1.5} />
                     {feature}
                   </li>
@@ -393,10 +392,10 @@ const PricingSection = () => {
 
               <Link
                 to={pkg.link}
-                className={`block text-center py-3 rounded-full font-medium transition-colors ${
+                className={`block text-center py-3 rounded-none font-medium uppercase text-sm tracking-wider transition-colors ${
                   pkg.highlight 
-                    ? 'bg-white text-salmon hover:bg-cream' 
-                    : 'bg-salmon text-white hover:bg-salmon-dark'
+                    ? 'bg-white text-taupe hover:bg-stone' 
+                    : 'bg-taupe text-white hover:bg-taupe-dark'
                 }`}
               >
                 Voir plus
