@@ -56,37 +56,23 @@ function App() {
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/gallery.php" element={<GalleryPage />} />
           
-          {/* Service Pages */}
-          <Route path="/laser-hair" element={<ServicePage />} />
-          <Route path="/laser-hair.php" element={<ServicePage />} />
-          <Route path="/microneedling" element={<ServicePage />} />
-          <Route path="/micronnedling.php" element={<ServicePage />} />
-          <Route path="/luxury-facial" element={<ServicePage />} />
-          <Route path="/luxury-facial.php" element={<ServicePage />} />
-          <Route path="/anti-aging-facial" element={<ServicePage />} />
-          <Route path="/anti-aging-facial.php" element={<ServicePage />} />
+          {/* Service Pages - Dynamic routing */}
+          <Route path="/:serviceId" element={<ServicePageWrapper />} />
           
-          {/* Pricing Pages */}
-          <Route path="/hair-removal-price" element={<PricingPage />} />
-          <Route path="/hair-removal-price.php" element={<PricingPage />} />
-          <Route path="/facial-treatments-price" element={<PricingPage />} />
-          <Route path="/facial-treatments-price.php" element={<PricingPage />} />
-          <Route path="/eyelash-extensions-price" element={<PricingPage />} />
-          <Route path="/eyelash-extensions-price.php" element={<PricingPage />} />
-          <Route path="/body-care-price" element={<PricingPage />} />
-          <Route path="/body-care-price.php" element={<PricingPage />} />
-          
-          {/* Academy Pages */}
-          <Route path="/aesthetic-advance" element={<AcademyPage />} />
-          <Route path="/aesthetic-advance.php" element={<AcademyPage />} />
-          <Route path="/aesthetic-beginner" element={<AcademyPage />} />
-          <Route path="/aesthetic-beginner.php" element={<AcademyPage />} />
-          <Route path="/aesthetic-beginner-plus" element={<AcademyPage />} />
-          <Route path="/aesthetic-beginner-plus.php" element={<AcademyPage />} />
-          <Route path="/eyelash-extension" element={<AcademyPage />} />
-          <Route path="/eyelash-extension.php" element={<AcademyPage />} />
-          <Route path="/classic-volume-lifting" element={<AcademyPage />} />
-          <Route path="/classic-volume-lifting.php" element={<AcademyPage />} />
+          {/* Legacy PHP routes - redirect support */}
+          <Route path="/laser-hair.php" element={<ServicePageWrapper serviceId="laser-hair" />} />
+          <Route path="/micronnedling.php" element={<ServicePageWrapper serviceId="microneedling" />} />
+          <Route path="/luxury-facial.php" element={<ServicePageWrapper serviceId="luxury-facial" />} />
+          <Route path="/anti-aging-facial.php" element={<ServicePageWrapper serviceId="anti-aging-facial" />} />
+          <Route path="/hair-removal-price.php" element={<PricingPageWrapper pricingId="hair-removal-price" />} />
+          <Route path="/facial-treatments-price.php" element={<PricingPageWrapper pricingId="facial-treatments-price" />} />
+          <Route path="/eyelash-extensions-price.php" element={<PricingPageWrapper pricingId="eyelash-extensions-price" />} />
+          <Route path="/body-care-price.php" element={<PricingPageWrapper pricingId="body-care-price" />} />
+          <Route path="/aesthetic-advance.php" element={<AcademyPageWrapper courseId="aesthetic-advance" />} />
+          <Route path="/aesthetic-beginner.php" element={<AcademyPageWrapper courseId="aesthetic-beginner" />} />
+          <Route path="/aesthetic-beginner-plus.php" element={<AcademyPageWrapper courseId="aesthetic-beginner-plus" />} />
+          <Route path="/eyelash-extension.php" element={<AcademyPageWrapper courseId="eyelash-extension" />} />
+          <Route path="/classic-volume-lifting.php" element={<AcademyPageWrapper courseId="classic-volume-lifting" />} />
           
           {/* 404 */}
           <Route path="*" element={<NotFoundPage />} />
