@@ -9,6 +9,12 @@ Migration et recréation du site web www.lateliersecret.ca - Centre esthétique 
 - **Base de données**: MongoDB (prête pour CMS/admin)
 - **Hébergement cible**: Vercel/Netlify (statique) ou tout hébergeur compatible React
 
+## Design Actuel (Mise à jour Janvier 2026)
+- **Polices**: Cormorant Garamond (titres) + Montserrat (corps)
+- **Couleur principale**: Taupe/Beige #b5a48b
+- **Style**: Élégant, minimaliste, pas d'italique
+- **Boutons**: Rectangulaires (rounded-none)
+
 ## Personas Utilisateurs
 1. **Clientes potentielles** (25-55 ans, Québec) - Recherchent des soins esthétiques de qualité
 2. **Clientes existantes** - Réservation de rendez-vous, consultation des prix
@@ -24,21 +30,22 @@ Migration et recréation du site web www.lateliersecret.ca - Centre esthétique 
 - ✅ robots.txt créé
 - ✅ sitemap.xml créé
 
+### Design (Mise à jour)
+- ✅ Police beige/taupe (pas noire)
+- ✅ Pas d'italique
+- ✅ Boutons rectangulaires
+- ✅ Couleur #b5a48b cohérente
+
 ### URLs (Redirections 301 prêtes)
 - ✅ /about.php → /about
 - ✅ /booking.php → /booking
 - ✅ /laser-hair.php → /laser-hair
 - ✅ Toutes les anciennes URLs .php supportées
 
-### Performance & CRO
-- ✅ CTA "Réserver maintenant" visible immédiatement (header sticky + hero)
-- ✅ Design mobile-first responsive
-- ✅ Animations fluides avec Framer Motion
-
 ## Ce qui a été implémenté (Janvier 2026)
 
 ### Pages Principales
-1. **Accueil (/)** - Hero, Services, À propos, Témoignages, Galerie, Académie, CTA
+1. **Accueil (/)** - Hero "Exprimez votre beauté naturelle", Services, À propos, Témoignages, Galerie, Académie, CTA
 2. **À propos (/about)** - Histoire, Stats, Fonctionnalités
 3. **Réservation (/booking)** - Formulaire 3 étapes (infos, service, date/heure)
 4. **Contact (/contact)** - Formulaire + NAP + Carte
@@ -62,11 +69,6 @@ Migration et recréation du site web www.lateliersecret.ca - Centre esthétique 
 - /aesthetic-beginner-plus - Formation intermédiaire
 - /eyelash-extension - Formation extensions cils
 - /classic-volume-lifting - Formation lash lift
-
-### Composants
-- Header responsive avec dropdowns
-- Footer avec NAP complet
-- Formulaires de contact et réservation
 
 ## Backlog Priorisé
 
