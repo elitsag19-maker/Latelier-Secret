@@ -102,13 +102,12 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-cream relative">
+    <section className="py-24 bg-white relative">
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="font-script text-salmon text-2xl">Découvrez</span>
-          <h2 className="font-serif text-4xl md:text-5xl text-charcoal mt-2" data-testid="services-title">
-            Nos Services
+          <h2 className="font-serif text-3xl md:text-4xl text-taupe font-light uppercase tracking-wide" data-testid="services-title">
+            Nos Soins Les Plus Populaires
           </h2>
           <div className="section-divider mx-auto mt-6" />
         </div>
@@ -129,7 +128,7 @@ const ServicesSection = () => {
             >
               <Link 
                 to={service.link}
-                className="block bg-white rounded-2xl overflow-hidden shadow-soft hover:shadow-medium transition-shadow card-hover"
+                className="block bg-white rounded-none overflow-hidden shadow-soft hover:shadow-medium transition-shadow card-hover border border-stone"
                 data-testid={`service-card-${index}`}
               >
                 <div className="aspect-[4/3] overflow-hidden">
@@ -140,11 +139,11 @@ const ServicesSection = () => {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="font-serif text-xl text-charcoal mb-2">{service.title}</h3>
-                  <p className="text-charcoal-light text-sm mb-4 line-clamp-2">{service.description}</p>
+                  <h3 className="font-serif text-xl text-taupe mb-2 font-normal">{service.title}</h3>
+                  <p className="text-taupe-light text-sm mb-4 line-clamp-2">{service.description}</p>
                   <div className="flex items-center justify-between">
-                    <span className="text-salmon font-medium">{service.price}</span>
-                    <span className="text-salmon group-hover:translate-x-1 transition-transform">
+                    <span className="text-taupe font-medium">{service.price}</span>
+                    <span className="text-taupe group-hover:translate-x-1 transition-transform">
                       <ArrowRight size={18} strokeWidth={1.5} />
                     </span>
                   </div>
