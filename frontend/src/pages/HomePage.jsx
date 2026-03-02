@@ -261,11 +261,10 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-cream">
+    <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <span className="font-script text-salmon text-2xl">Témoignages</span>
-          <h2 className="font-serif text-4xl md:text-5xl text-charcoal mt-2" data-testid="testimonials-title">
+          <h2 className="font-serif text-3xl md:text-4xl text-taupe font-light uppercase tracking-wide" data-testid="testimonials-title">
             Ce que disent nos clientes
           </h2>
           <div className="section-divider mx-auto mt-6" />
@@ -279,20 +278,20 @@ const TestimonialsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-white p-8 rounded-2xl shadow-soft border border-gold/10"
+              className="bg-stone/30 p-8 rounded-none border border-taupe/10"
               data-testid={`testimonial-${index}`}
             >
               <div className="flex items-center gap-1 mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} size={16} className="fill-gold text-gold" />
+                  <Star key={i} size={16} className="fill-taupe text-taupe" />
                 ))}
               </div>
-              <p className="text-charcoal-light italic mb-6 leading-relaxed">
+              <p className="text-taupe mb-6 leading-relaxed">
                 "{testimonial.text}"
               </p>
               <div>
-                <p className="font-medium text-charcoal">{testimonial.name}</p>
-                <p className="text-charcoal-muted text-sm">{testimonial.role}</p>
+                <p className="font-medium text-taupe">{testimonial.name}</p>
+                <p className="text-taupe-light text-sm">{testimonial.role}</p>
               </div>
             </motion.div>
           ))}
