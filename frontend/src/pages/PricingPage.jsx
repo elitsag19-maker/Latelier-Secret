@@ -112,8 +112,9 @@ const PRICING_DATA = {
   }
 };
 
-const PricingPage = () => {
-  const { pricingId } = useParams();
+const PricingPage = ({ pricingId: propPricingId }) => {
+  const params = useParams();
+  const pricingId = propPricingId || params.pricingId;
   const pricing = PRICING_DATA[pricingId];
 
   if (!pricing) {

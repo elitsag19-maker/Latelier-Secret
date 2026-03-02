@@ -106,8 +106,9 @@ const COURSES_DATA = {
   }
 };
 
-const AcademyPage = () => {
-  const { courseId } = useParams();
+const AcademyPage = ({ courseId: propCourseId }) => {
+  const params = useParams();
+  const courseId = propCourseId || params.courseId;
   const course = COURSES_DATA[courseId];
 
   if (!course) {

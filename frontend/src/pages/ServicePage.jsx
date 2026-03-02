@@ -110,8 +110,9 @@ const SERVICES_DATA = {
   }
 };
 
-const ServicePage = () => {
-  const { serviceId } = useParams();
+const ServicePage = ({ serviceId: propServiceId }) => {
+  const params = useParams();
+  const serviceId = propServiceId || params.serviceId;
   const service = SERVICES_DATA[serviceId];
 
   if (!service) {
