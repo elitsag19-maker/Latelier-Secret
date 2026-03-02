@@ -8,25 +8,30 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        serif: ['Playfair Display', 'serif'],
-        sans: ['Lato', 'sans-serif'],
-        script: ['Yellowtail', 'cursive'],
+        serif: ['Cormorant Garamond', 'serif'],
+        sans: ['Montserrat', 'sans-serif'],
+        script: ['Cormorant Garamond', 'serif'],
       },
       colors: {
         salmon: {
-          DEFAULT: '#f59d79',
-          dark: '#e08c68',
-          light: '#fbb99e',
+          DEFAULT: '#b5a48b',
+          dark: '#9a8b74',
+          light: '#c9bda8',
         },
-        cream: '#FFFDF9',
+        taupe: {
+          DEFAULT: '#b5a48b',
+          dark: '#9a8b74',
+          light: '#c9bda8',
+        },
+        cream: '#FFFFFF',
         charcoal: {
-          DEFAULT: '#2D2A26',
-          light: '#5D5A56',
-          muted: '#8D8A86',
+          DEFAULT: '#b5a48b',
+          light: '#c9bda8',
+          muted: '#d4c9b8',
         },
-        gold: '#D4AF37',
-        sage: '#8F9779',
-        stone: '#E6E2DD',
+        gold: '#b5a48b',
+        sage: '#a99f8d',
+        stone: '#f5f3f0',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {
@@ -108,7 +113,7 @@ module.exports = {
       boxShadow: {
         'soft': '0 4px 20px rgba(0, 0, 0, 0.03)',
         'medium': '0 8px 30px rgba(0, 0, 0, 0.06)',
-        'salmon': '0 10px 30px rgba(245, 157, 121, 0.25)',
+        'salmon': '0 10px 30px rgba(181, 164, 139, 0.25)',
       }
     }
   },
