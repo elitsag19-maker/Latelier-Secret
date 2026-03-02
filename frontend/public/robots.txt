@@ -1,0 +1,29 @@
+# robots.txt for L'atelier Secret
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.lateliersecret.ca/sitemap.xml
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /api/
+
+# Allow search engines to crawl all public pages
+Allow: /about
+Allow: /booking
+Allow: /contact
+Allow: /gallery
+Allow: /laser-hair
+Allow: /microneedling
+Allow: /luxury-facial
+Allow: /anti-aging-facial
+Allow: /hair-removal-price
+Allow: /facial-treatments-price
+Allow: /eyelash-extensions-price
+Allow: /body-care-price
+Allow: /aesthetic-advance
+Allow: /aesthetic-beginner
+Allow: /aesthetic-beginner-plus
+Allow: /eyelash-extension
+Allow: /classic-volume-lifting
