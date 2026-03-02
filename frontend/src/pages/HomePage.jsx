@@ -417,7 +417,7 @@ const CTASection = () => (
         alt="Book appointment"
         className="w-full h-full object-cover"
       />
-      <div className="absolute inset-0 bg-cream/70" />
+      <div className="absolute inset-0 bg-white/70" />
     </div>
 
     <div className="relative max-w-4xl mx-auto px-6 text-center">
@@ -426,18 +426,17 @@ const CTASection = () => (
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="bg-white/80 backdrop-blur-sm p-12 md:p-16 rounded-3xl shadow-medium"
+        className="bg-white/80 backdrop-blur-sm p-12 md:p-16 rounded-none shadow-medium"
       >
-        <span className="font-script text-salmon text-2xl">Consultation gratuite</span>
-        <h2 className="font-serif text-4xl md:text-6xl text-charcoal mt-2 mb-4" data-testid="cta-title">
+        <h2 className="font-serif text-3xl md:text-5xl text-taupe mb-4 font-light uppercase tracking-wide" data-testid="cta-title">
           Réservez Maintenant
         </h2>
-        <p className="font-script text-charcoal-light text-xl mb-8">
-          Réinventez-vous aujourd'hui!
+        <p className="text-taupe-light text-xl mb-8">
+          Consultation gratuite
         </p>
         <Link
           to="/booking"
-          className="inline-flex items-center gap-2 bg-salmon text-white px-10 py-4 rounded-full font-sans font-medium hover:bg-salmon-dark transition-colors btn-lift"
+          className="inline-flex items-center gap-2 bg-taupe text-white px-10 py-4 rounded-none font-sans text-sm uppercase tracking-wider font-medium hover:bg-taupe-dark transition-colors"
           data-testid="cta-book-btn"
         >
           Demander une consultation
@@ -469,11 +468,10 @@ const AcademySection = () => {
   ];
 
   return (
-    <section className="py-24 bg-cream">
+    <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <span className="font-script text-salmon text-2xl">Académie</span>
-          <h2 className="font-serif text-4xl md:text-5xl text-charcoal mt-2" data-testid="academy-title">
+          <h2 className="font-serif text-3xl md:text-4xl text-taupe font-light uppercase tracking-wide" data-testid="academy-title">
             Nos Formations
           </h2>
           <div className="section-divider mx-auto mt-6" />
@@ -490,7 +488,7 @@ const AcademySection = () => {
             >
               <Link 
                 to={course.link}
-                className="group block bg-white rounded-2xl overflow-hidden shadow-soft hover:shadow-medium transition-shadow"
+                className="group block bg-white rounded-none overflow-hidden shadow-soft hover:shadow-medium transition-shadow border border-stone"
                 data-testid={`course-card-${index}`}
               >
                 <div className="aspect-[4/3] overflow-hidden">
@@ -501,10 +499,10 @@ const AcademySection = () => {
                   />
                 </div>
                 <div className="p-6 text-center">
-                  <h3 className="font-serif text-xl text-charcoal group-hover:text-salmon transition-colors">
+                  <h3 className="font-serif text-xl text-taupe group-hover:text-taupe-dark transition-colors font-normal">
                     {course.title}
                   </h3>
-                  <span className="inline-flex items-center gap-1 text-salmon text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <span className="inline-flex items-center gap-1 text-taupe text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity">
                     Voir plus <ArrowRight size={14} />
                   </span>
                 </div>
@@ -516,7 +514,7 @@ const AcademySection = () => {
         <div className="text-center mt-12">
           <Link
             to="/aesthetic-advance"
-            className="inline-flex items-center gap-2 border-2 border-salmon text-salmon px-8 py-3 rounded-full font-sans font-medium hover:bg-salmon hover:text-white transition-colors"
+            className="inline-flex items-center gap-2 border-2 border-taupe text-taupe px-8 py-3 rounded-none font-sans text-sm uppercase tracking-wider font-medium hover:bg-taupe hover:text-white transition-colors"
             data-testid="view-all-courses-btn"
           >
             Voir toutes les formations
@@ -533,8 +531,7 @@ const GallerySection = () => (
   <section className="py-24 bg-stone/30">
     <div className="max-w-7xl mx-auto px-6">
       <div className="text-center mb-16">
-        <span className="font-script text-salmon text-2xl">Découvrez nos résultats</span>
-        <h2 className="font-serif text-4xl md:text-5xl text-charcoal mt-2" data-testid="gallery-title">
+        <h2 className="font-serif text-3xl md:text-4xl text-taupe font-light uppercase tracking-wide" data-testid="gallery-title">
           Nos Réalisations
         </h2>
         <div className="section-divider mx-auto mt-6" />
@@ -546,7 +543,7 @@ const GallerySection = () => (
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="aspect-video rounded-2xl overflow-hidden shadow-medium img-zoom"
+          className="aspect-video rounded-none overflow-hidden shadow-medium img-zoom"
         >
           <img 
             src="https://www.lateliersecret.ca/images/istockphoto-1257182741-612x612.jpg"
@@ -559,7 +556,7 @@ const GallerySection = () => (
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="aspect-video rounded-2xl overflow-hidden shadow-medium img-zoom"
+          className="aspect-video rounded-none overflow-hidden shadow-medium img-zoom"
         >
           <img 
             src="https://www.lateliersecret.ca/images/sfsrfg.png"
@@ -572,7 +569,7 @@ const GallerySection = () => (
       <div className="text-center mt-12">
         <Link
           to="/gallery"
-          className="inline-flex items-center gap-2 bg-salmon text-white px-8 py-4 rounded-full font-sans font-medium hover:bg-salmon-dark transition-colors btn-lift"
+          className="inline-flex items-center gap-2 bg-taupe text-white px-8 py-4 rounded-none font-sans text-sm uppercase tracking-wider font-medium hover:bg-taupe-dark transition-colors"
           data-testid="view-gallery-btn"
         >
           Voir la galerie
