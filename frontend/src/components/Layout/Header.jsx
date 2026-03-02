@@ -186,7 +186,7 @@ const Header = () => {
               exit={{ opacity: 0, height: 0 }}
               className="lg:hidden bg-white border-t border-stone/30"
             >
-              nav className="max-w-7xl mx-auto px-6 py-4 space-y-2">
+              <nav className="max-w-7xl mx-auto px-6 py-4 space-y-2">
                 {NAV_ITEMS.map((item) => (
                   <div key={item.path}>
                     {item.children ? (
