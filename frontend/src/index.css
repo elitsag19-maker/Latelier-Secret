@@ -235,7 +235,7 @@ html {
   left: 0;
   width: 0;
   height: 2px;
-  background-color: #f59d79;
+  background-color: #b5a48b;
   transition: width 0.3s ease;
 }
 
@@ -247,7 +247,7 @@ html {
 .section-divider {
   width: 80px;
   height: 2px;
-  background: linear-gradient(90deg, #f59d79, #D4AF37);
+  background: #b5a48b;
 }
 
 /* Card hover effect */
