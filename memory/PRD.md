@@ -1,0 +1,99 @@
+# L'atelier Secret - Document de Référence du Projet (PRD)
+
+## Problème Original
+Migration et recréation du site web www.lateliersecret.ca - Centre esthétique professionnel au Québec (LeMoyne). L'utilisateur n'avait plus accès au développeur original du site PHP custom et souhaitait une optimisation complète.
+
+## Architecture
+- **Frontend**: React 19 + Tailwind CSS + Framer Motion
+- **Backend**: FastAPI (Python) - minimal, pour futures extensions
+- **Base de données**: MongoDB (prête pour CMS/admin)
+- **Hébergement cible**: Vercel/Netlify (statique) ou tout hébergeur compatible React
+
+## Personas Utilisateurs
+1. **Clientes potentielles** (25-55 ans, Québec) - Recherchent des soins esthétiques de qualité
+2. **Clientes existantes** - Réservation de rendez-vous, consultation des prix
+3. **Étudiantes en esthétique** - Inscriptions aux formations
+
+## Exigences Critiques (Respectées ✅)
+
+### SEO Local
+- ✅ NAP identique dans footer: L'atelier Secret, 2475 Saint-Georges Street, LeMoyne, QC J4R 2T4, +1 438 882 2165
+- ✅ Schema.org LocalBusiness dans index.html
+- ✅ Meta tags préservés (title, description)
+- ✅ Structure sémantique H1/H2 conservée
+- ✅ robots.txt créé
+- ✅ sitemap.xml créé
+
+### URLs (Redirections 301 prêtes)
+- ✅ /about.php → /about
+- ✅ /booking.php → /booking
+- ✅ /laser-hair.php → /laser-hair
+- ✅ Toutes les anciennes URLs .php supportées
+
+### Performance & CRO
+- ✅ CTA "Réserver maintenant" visible immédiatement (header sticky + hero)
+- ✅ Design mobile-first responsive
+- ✅ Animations fluides avec Framer Motion
+
+## Ce qui a été implémenté (Janvier 2026)
+
+### Pages Principales
+1. **Accueil (/)** - Hero, Services, À propos, Témoignages, Galerie, Académie, CTA
+2. **À propos (/about)** - Histoire, Stats, Fonctionnalités
+3. **Réservation (/booking)** - Formulaire 3 étapes (infos, service, date/heure)
+4. **Contact (/contact)** - Formulaire + NAP + Carte
+5. **Galerie (/gallery)** - Grille d'images avec lightbox
+
+### Pages Services
+- /laser-hair - Épilation laser
+- /microneedling - Microneedling
+- /luxury-facial - Soin de luxe
+- /anti-aging-facial - Soin anti-âge
+
+### Pages Tarifs
+- /hair-removal-price - Tarifs épilation (24 zones)
+- /facial-treatments-price - Tarifs soins visage
+- /eyelash-extensions-price - Tarifs extensions cils
+- /body-care-price - Tarifs soins corps
+
+### Pages Académie
+- /aesthetic-advance - Formation avancée
+- /aesthetic-beginner - Formation débutant
+- /aesthetic-beginner-plus - Formation intermédiaire
+- /eyelash-extension - Formation extensions cils
+- /classic-volume-lifting - Formation lash lift
+
+### Composants
+- Header responsive avec dropdowns
+- Footer avec NAP complet
+- Formulaires de contact et réservation
+
+## Backlog Priorisé
+
+### P0 (Critique - À faire avant mise en production)
+- [ ] Ajouter Google Analytics ID (GA_TRACKING_ID)
+- [ ] Configurer Google Search Console
+- [ ] Tester Core Web Vitals après déploiement
+- [ ] Vérifier indexation Google post-migration
+
+### P1 (Important)
+- [ ] Intégration avis Google en temps réel (API Google Places)
+- [ ] Système de réservation avec backend (envoi emails, calendrier)
+- [ ] Panel admin pour modifier contenus/prix
+- [ ] Notifications email pour nouvelles réservations
+
+### P2 (Nice to have)
+- [ ] Multi-langue (français/anglais)
+- [ ] Programme de fidélité
+- [ ] Chat en direct
+- [ ] Blog pour SEO
+
+## Prochaines Étapes
+1. **Déploiement** - Déployer sur Vercel/Netlify
+2. **DNS** - Pointer lateliersecret.ca vers nouveau site
+3. **Google Analytics** - Ajouter ID dans index.html
+4. **Search Console** - Vérifier propriété et soumettre sitemap
+5. **Tests** - Vérifier 404s et indexation après migration
+
+---
+*Dernière mise à jour: Janvier 2026*
