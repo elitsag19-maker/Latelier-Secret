@@ -23,15 +23,15 @@ const HeroSection = () => (
     {/* Background Image */}
     <div className="absolute inset-0 z-0">
       <img 
-        src="https://www.lateliersecret.ca/images/slider/4.webp"
+        src="https://customer-assets.emergentagent.com/job_atelier-optimize/artifacts/w1zoelnq_Screenshot_20260301_232731_Wix.jpg"
         alt="L'atelier Secret Spa"
-        className="w-full h-full object-cover object-center"
+        className="w-full h-full object-cover object-right-top"
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/70 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent" />
     </div>
 
     <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 w-full">
-      <div className="max-w-2xl">
+      <div className="max-w-xl">
         <motion.h1 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
