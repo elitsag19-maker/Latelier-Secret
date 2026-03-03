@@ -12,9 +12,9 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="space-y-6">
             <img 
-              src="https://www.lateliersecret.ca/images/cropped-Logo-Latelier-Secret_edited.avif" 
+              src="https://customer-assets.emergentagent.com/job_atelier-optimize/artifacts/yv5svp3c_L%27atelier%20Secret%20%283%20x%202.5%20in%29_20260302_233222_0000.png" 
               alt="L'atelier Secret" 
-              className="h-16 w-auto brightness-0 invert"
+              className="h-20 w-auto"
             />
             <p className="text-stone/80 text-sm leading-relaxed">
               Centre esthétique professionnel spécialisé dans les soins de beauté avancés. 

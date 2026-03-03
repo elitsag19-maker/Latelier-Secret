@@ -97,9 +97,9 @@ const Header = () => {
             {/* Logo */}
             <Link to="/" className="flex-shrink-0" data-testid="header-logo">
               <img 
-                src="https://www.lateliersecret.ca/images/cropped-Logo-Latelier-Secret_edited.avif" 
+                src="https://customer-assets.emergentagent.com/job_atelier-optimize/artifacts/yv5svp3c_L%27atelier%20Secret%20%283%20x%202.5%20in%29_20260302_233222_0000.png" 
                 alt="L'atelier Secret" 
-                className="h-14 w-auto"
+                className="h-16 w-auto"
               />
             </Link>
 
