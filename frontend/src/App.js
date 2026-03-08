@@ -83,6 +83,14 @@ function AppRoutes() {
           
           {/* Soins Pages (New) */}
           <Route path="/epilation-laser" element={<SoinPage />} />
+          <Route path="/facial-de-luxe" element={<SoinPage />} />
+          <Route path="/soin-anti-age" element={<SoinPage />} />
+          <Route path="/irregularites-pigmentaires" element={<SoinPage />} />
+          <Route path="/facial-desincrustant" element={<SoinPage />} />
+          <Route path="/peeling-charbon" element={<SoinPage />} />
+          <Route path="/peeling-algues" element={<SoinPage />} />
+          <Route path="/traitement-raffermissant" element={<SoinPage />} />
+          <Route path="/microdermabrasion" element={<SoinPage />} />
           <Route path="/microneedling" element={<SoinPage />} />
           <Route path="/soin-silhouette" element={<SoinPage />} />
           <Route path="/soin-lumineux" element={<SoinPage />} />

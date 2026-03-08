@@ -36,6 +36,270 @@ En moyenne, de 6 à 10 séances espacées peuvent être nécessaires pour obteni
     procedureImage: 'https://static.wixstatic.com/media/9426a1_2f89400d83b4432286f5121ff2581568~mv2.webp/v1/fill/w_483,h_322,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/9426a1_2f89400d83b4432286f5121ff2581568~mv2.webp',
     disclaimer: "Ce soin est effectué à des fins esthétiques uniquement. Les paramètres sont ajustés pour offrir une expérience sécuritaire et adaptée à chaque type de peau."
   },
+  'facial-de-luxe': {
+    title: 'FACIAL DE LUXE',
+    subtitle: 'Rituel cabine unique',
+    heroImage: 'https://static.wixstatic.com/media/11062b_017f998d03a44d5494c1f4eb4a9fcace~mv2.jpg/v1/fill/w_529,h_505,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Gros%20plan%20sur%20les%20soins%20de%20la%20peau.jpg',
+    mainImage: 'https://static.wixstatic.com/media/11062b_3bc3b147c0304c37b1d90a705c95e64d~mv2.jpg/v1/fill/w_892,h_542,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Soin%20du%20visage%20relaxant.jpg',
+    introDescription: "Découvrez des rituels cabine uniques réalisés par nos esthéticiennes expertes tout en combinant plaisir des sens, efficacité et approche personnalisée des soins, afin de faire de chaque rendez-vous un havre de bien-être qui nourrit le corps et l'esprit.",
+    questionTitle: "QU'EST-CE QUE LE SOIN FACIAL DE LUXE ?",
+    description: `Ce soin exclusif combine des technologies esthétiques avancées et des actifs hautement performants pour offrir une expérience incomparable d'hydratation et de revitalisation. Conçu pour purifier, raviver et illuminer la peau, il agit en synergie pour lisser visiblement les traits, améliorer l'apparence de la peau et raviver l'éclat du teint.
+
+Grâce à des techniques expertes et à des ingrédients de qualité, ce soin allie nettoyage en profondeur, exfoliation ciblée, sérums concentrés et luminothérapie pour révéler une peau d'apparence plus ferme, lumineuse et repulpée. Idéal pour celles et ceux qui souhaitent un effet coup d'éclat durable, ce soin procure une sensation immédiate de fraîcheur et de confort, tout en contribuant à maintenir la souplesse et la vitalité de la peau.`,
+    benefitsTitle: "COMMENT FONCTIONNE LE SOIN FACIAL DE LUXE ?",
+    benefits: [
+      "Nettoyage et exfoliation permettant d'éliminer les impuretés et les cellules mortes",
+      "Application de sérums enrichis en acide hyaluronique, peptides ou collagène",
+      "Hydratation de la peau en profondeur pour un aspect plus uniforme et éclatant",
+      "Luminothérapie LED pour raviver l'éclat et favoriser un effet tonifiant",
+      "Masque personnalisé et hydratation adaptée",
+      "Effet immédiat de fraîcheur et de confort"
+    ],
+    benefitsImage: 'https://static.wixstatic.com/media/9426a1_43e9cd6a316c45d8a45460da787e57aa~mv2.jpg/v1/crop/x_75,y_0,w_1050,h_1200/fill/w_440,h_503,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Natural%20Beauty_edited.jpg',
+    procedureTitle: "LE DÉROULEMENT DU SOIN",
+    procedure: [
+      "Préparation de la peau – Analyse visuelle et nettoyage initial pour préparer la peau au soin",
+      "Nettoyage en profondeur – Utilisation d'un nettoyant doux adapté au type de peau",
+      "Exfoliation – Gommage enzymatique ou mécanique pour lisser et purifier la surface de la peau",
+      "Application d'un sérum activateur – Sérum concentré en acide hyaluronique, peptides ou collagène",
+      "Massage du visage – Techniques esthétiques drainantes et tonifiantes",
+      "Application d'un masque personnalisé – Masque hydratant ou tonifiant selon les besoins",
+      "Luminothérapie LED – Lumière douce utilisée à des fins esthétiques",
+      "Soin des yeux et des lèvres – Sérum contour des yeux et baume nourrissant",
+      "Hydratation et protection finale – Crème adaptée pour protéger et maintenir le confort cutané"
+    ],
+    procedureImage: 'https://static.wixstatic.com/media/dacd52b614a644b194d59f707251745f.jpg/v1/crop/x_1268,y_0,w_4680,h_5412/fill/w_422,h_488,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/soin%20du%20visage.jpg',
+    disclaimer: "Ce soin est offert à des fins esthétiques uniquement. Il ne remplace pas une consultation médicale et ne vise pas à traiter une condition de santé."
+  },
+  'soin-anti-age': {
+    title: 'SOIN ANTI-ÂGE',
+    subtitle: 'Soin Sothys',
+    heroImage: 'https://static.wixstatic.com/media/9426a1_c45128d5bd5a485f843d9d9b936b06ff~mv2.jpg/v1/fill/w_529,h_505,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/prix-lifting-visage-dubai-1.jpg',
+    mainImage: 'https://static.wixstatic.com/media/9426a1_11bdaf4c5f7f426ebf541f7f0aa0cff8~mv2.jpg/v1/crop/x_52,y_0,w_720,h_438/fill/w_864,h_525,al_c,lg_1,q_85,enc_avif,quality_auto/intro-1612922402.jpg',
+    introDescription: "Découvrez des rituels cabine uniques réalisés par nos esthéticiennes expertes tout en combinant plaisir des sens, efficacité et approche personnalisée des soins, afin de faire de chaque rendez-vous un havre de bien-être qui nourrit le corps et l'esprit.",
+    questionTitle: "QU'EST-CE QUE LE SOIN ANTI-ÂGE SOTHYS?",
+    description: `Ce soin a été spécialement mise au point pour optimiser les traitements et l'assimilation des actifs. Elle associe des techniques de digito-pression et de massage issues d'Orient et d'Occident avec des formules de lotions puissantes et efficaces.
+
+Au-delà des formules, Sothys s'attache depuis l'origine à développer des protocoles uniques qui mêlent sensorialité, efficacité et approche personnalisée du soin transformant chaque rendez-vous en une parenthèse de bien-être pour le corps et l'esprit. Un art qui fait toute la différence.`,
+    zonesTitle: "LE VISAGE N'EST PAS LA SEULE RÉGION TRAITABLE",
+    zonesDescription: `Le soin anti-âge ne se limite pas au visage. Bien que celui-ci soit souvent la priorité, d'autres zones méritent tout autant d'attention. Le cou, le décolleté, les lèvres et les mains sont tout aussi exposés aux signes du vieillissement et nécessitent des soins adaptés pour préserver leur jeunesse et leur éclat. Ces zones délicates sont particulièrement sensibles à la perte de fermeté et à l'apparition des taches pigmentaires. En intégrant un rituel complet et ciblé, il est possible de maintenir une peau uniforme, lisse et visiblement plus jeune.`,
+    procedureTitle: "LE DÉROULEMENT DU SOIN ANTI-ÂGE",
+    procedure: [
+      "ACTION NETTOYANTE RENOVATRICE - Lotion exfoliante préparatrice",
+      "Pâte exfoliante rénovatrice",
+      "ACTION JEUNESSE ZONES CIBLÉES - Sérum jeunesse zone rides",
+      "Sérum jeunesse zone lift",
+      "MODELAGE JEUNESSE - Baume de modelage tonifiant",
+      "MULTI-MASKING - Masques zones ciblées 2 temps"
+    ],
+    procedureImage: 'https://static.wixstatic.com/media/9426a1_f00da04be732412abe88f4bb6856e126~mv2.jpg/v1/crop/x_557,y_4,w_1761,h_1662/fill/w_498,h_470,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/9426a1_f00da04be732412abe88f4bb6856e126~mv2.jpg',
+    disclaimer: "Ce soin est offert à des fins esthétiques uniquement. Il ne remplace pas une consultation médicale ni un traitement dermatologique."
+  },
+  'irregularites-pigmentaires': {
+    title: 'SOIN IRRÉGULARITÉS PIGMENTAIRES',
+    subtitle: 'Teint uniforme et lumineux',
+    heroImage: 'https://static.wixstatic.com/media/9426a1_e5d99015cdec4706b3f52512a012b16f~mv2.jpg/v1/crop/x_236,y_0,w_479,h_499/fill/w_485,h_505,al_c,lg_1,q_80,enc_avif,quality_auto/eviter-taches-brunes-au-soleil-e1148043245d9085e6deae6e4ef0a27f.jpg',
+    mainImage: 'https://static.wixstatic.com/media/9426a1_ac7bc34bafc94cd8aba42ce1e2e215d7~mv2.jpg/v1/crop/x_0,y_234,w_1232,h_749/fill/w_892,h_542,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/qualite-de-peau-taches-brunes-dr-ben-youssef-paris.jpg',
+    introDescription: "Certaines irrégularités pigmentaires, telles que les taches brunes superficielles (souvent appelées taches de soleil ou de vieillesse), sont associées au vieillissement cutané et à l'exposition répétée au soleil. Ce soin esthétique a été conçu pour améliorer l'apparence de ces zones et offrir un teint visiblement plus uniforme et lumineux.",
+    questionTitle: "QU'EST-CE QUE LES TACHES BRUNES ?",
+    description: `Les taches brunes superficielles, aussi appelées « taches de soleil » ou « taches de vieillesse », sont des irrégularités pigmentaires fréquentes qui peuvent apparaître avec le temps, particulièrement après une exposition répétée au soleil. Elles se présentent souvent sous forme de petites zones plus foncées, plates, et bien délimitées. Ces variations de pigmentation sont purement esthétiques et peuvent être ciblées par des soins adaptés visant à uniformiser l'apparence du teint.`,
+    benefitsTitle: "QU'EST-CE QUE CE SOIN CIBLÉ POUR LE TEINT ?",
+    benefits: [
+      "Peeling enzymatique pour affiner le grain de peau",
+      "Microdermabrasion pour révéler l'éclat naturel du teint",
+      "Exfoliation douce adaptée à votre peau",
+      "Atténuation visible de l'apparence des taches pigmentaires superficielles",
+      "Amélioration de l'uniformité du teint",
+      "Sensation de douceur, de clarté et de fraîcheur"
+    ],
+    benefitsImage: 'https://static.wixstatic.com/media/9426a1_df9f401dcab74948861799d973df93ac~mv2.jpg/v1/crop/x_51,y_0,w_921,h_1024/fill/w_440,h_489,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/masque-argile.jpg',
+    zonesTitle: "D'AUTRES ZONES PEUVENT ÉGALEMENT ÊTRE CIBLÉES",
+    zonesDescription: "Bien que le visage soit souvent la première zone visée en esthétique, d'autres régions peuvent également bénéficier de ce soin, comme le cou, le décolleté, les mains ou le dos. Ces zones sont fréquemment demandées lorsqu'on souhaite unifier le teint et améliorer l'apparence de la peau de manière globale.",
+    procedureTitle: "LE DÉROULEMENT DU SOIN ANTI-TACHE",
+    procedure: [
+      "Lotion nettoyante préparatrice",
+      "Exfoliation aux enzymes",
+      "Microdermabrasion",
+      "Lotion apaisante",
+      "Peeling chimique (ou naturel)",
+      "Sérum hydratant",
+      "Masque éclaircissant",
+      "Sérum éclaircissant"
+    ],
+    procedureImage: 'https://static.wixstatic.com/media/9426a1_7944d783a10b4c6f82a661f9aa2f1e04~mv2.jpg/v1/crop/x_66,y_0,w_260,h_257/fill/w_364,h_360,al_c,lg_1,q_80,enc_avif,quality_auto/facial-treatment-therapist-applying-clay-260nw-1755410549_edited.jpg',
+    disclaimer: "Ce soin est offert à des fins esthétiques uniquement. Il ne remplace pas une consultation médicale ni un traitement dermatologique."
+  },
+  'facial-desincrustant': {
+    title: 'FACIAL DÉSINCRUSTANT',
+    subtitle: 'Pour peaux à imperfections',
+    heroImage: 'https://static.wixstatic.com/media/9426a1_881f72f3647e485bace581e6ab558d66~mv2.webp/v1/fill/w_528,h_505,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Untitled-design-2022-12-07T114715_938.webp',
+    mainImage: 'https://static.wixstatic.com/media/9426a1_c746e9eaf9ba471fb4f2475c298336a8~mv2.jpg/v1/fill/w_540,h_542,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Traitement-acne-Avant-apres-laser-Harmony-XL-Pro-Acne-Rive-Sud-de-Montreal-Longueuil-Chamb.jpg',
+    questionTitle: "QU'EST-CE QUE LE SOIN POUR ÉRUPTIONS CUTANÉES ET IMPERFECTIONS ?",
+    description: `Notre soin du visage est spécialement conçu pour les peaux sujettes aux éruptions cutanées, aux brillances, aux comédons et aux irrégularités visibles. Réalisé avec les produits professionnels SOTHYS, il offre un nettoyage en profondeur tout en respectant l'équilibre naturel de la peau.
+
+Ce soin vise à améliorer l'apparence des boutons superficiels, à affiner le grain de peau, à réduire l'excès de sébum, et à procurer une sensation de peau purifiée et apaisée. Il est idéal pour les personnes ayant une peau à tendance grasse, congestionnée ou avec des imperfections récurrentes.`,
+    zonesTitle: "ZONES TRAITABLES PAR LE SOIN",
+    zonesDescription: `Le visage (zone la plus fréquemment demandée), le cou, le décolleté et le dos.
+
+Des rougeurs localisées ou une légère desquamation peuvent apparaître temporairement après le soin. Ces effets sont normaux et disparaissent généralement dans les heures suivant la séance.`,
+    procedureTitle: "LE DÉROULEMENT DU SOIN",
+    procedure: [
+      "Examen de la peau",
+      "Lotion nettoyante",
+      "Lotion désincrustante",
+      "Séance de vapozone",
+      "Extraction mécanique",
+      "Exfoliation mécanique",
+      "Exfoliation aux enzymes",
+      "Lotion personnalisée",
+      "Masque personnalisé",
+      "Luminothérapie",
+      "Sérum personnalisé",
+      "Crème personnalisée"
+    ],
+    procedureImage: 'https://static.wixstatic.com/media/38043b3c05f64dbf99237fc72a2d7f5e.jpg/v1/crop/x_272,y_0,w_1506,h_1280/fill/w_499,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Mod%C3%A8le%20d\'appliquer%20la%20cr%C3%A8me.jpg',
+    disclaimer: "Ce soin est effectué à des fins esthétiques uniquement. Les paramètres sont ajustés pour offrir une expérience sécuritaire et adaptée à chaque type de peau."
+  },
+  'peeling-charbon': {
+    title: 'PEELING AU CHARBON',
+    subtitle: 'Soin détoxifiant',
+    heroImage: 'https://static.wixstatic.com/media/9426a1_b4d51e128ae74eac8fc0965706e4ca34~mv2.png/v1/crop/x_0,y_275,w_1920,h_1999/fill/w_485,h_505,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/mayagi_a_medium_shot_portrait_of_a_35_yo.png',
+    mainImage: 'https://static.wixstatic.com/media/11062b_c08353118ce849f98c46f9788443b1fe~mv2.jpg/v1/crop/x_0,y_147,w_5000,h_3038/fill/w_892,h_542,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Traitement%20facial%20au%20laser.jpg',
+    introDescription: "Un soin de peeling au charbon, conçu pour purifier la peau en douceur, améliorer l'apparence des pores et raviver l'éclat du teint. Ce soin est idéal pour les peaux mixtes à grasses, sujettes aux irrégularités ou au teint terne, et procure un effet lumineux dès la première séance.",
+    questionTitle: "QU'EST-CE QUE LE TRAITEMENT DE PEELING AU CHARBON ?",
+    description: `Le peeling au charbon est un soin esthétique détoxifiant qui associe le charbon actif à des agents exfoliants doux pour purifier la peau en surface. Il aide à éliminer l'excès de sébum, les cellules mortes et à améliorer visiblement l'uniformité du teint.
+
+Grâce à ses propriétés absorbantes, le charbon actif contribue à donner à la peau un aspect plus net et matifié. Ce soin est particulièrement adapté aux peaux mixtes à grasses, sujettes aux brillances et à l'aspect irrégulier, ou exposées à la pollution urbaine.
+
+Dès la première séance, la peau paraît plus fraîche, lisse et lumineuse, avec une sensation de propreté et de confort durable.`,
+    benefitsTitle: "COMMENT FONCTIONNE LE TRAITEMENT DE PEELING AU CHARBON ?",
+    benefits: [
+      "Application d'un masque au charbon actif enrichi d'agents exfoliants doux",
+      "Libération de la peau des impuretés et de l'excès de sébum",
+      "Exfoliation pour lisser la surface de la peau",
+      "Aspect plus uniforme et éclatant",
+      "Texture de la peau affinée visiblement",
+      "Sensation de fraîcheur et de douceur",
+      "Teint plus lumineux"
+    ],
+    benefitsImage: 'https://static.wixstatic.com/media/9426a1_60e6f7f65d5943cf9c1f8a81e66d9efd~mv2.png/v1/crop/x_10,y_0,w_1180,h_1320/fill/w_426,h_476,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Beige%20Blush%20_edited.png',
+    procedureTitle: "LE DÉROULEMENT DU SOIN",
+    procedure: [
+      "Consultation esthétique et observation de la peau",
+      "Nettoyage et préparation – Nettoyage doux de la peau et application d'un pré-soin",
+      "Application du peeling au charbon – Pose d'un masque au charbon actif et agents exfoliants",
+      "Temps de pose et activation – Le soin reste en place quelques minutes",
+      "Retrait du masque et apaisement – Nettoyage délicat de la peau",
+      "Soin hydratant final – Application d'un sérum et d'une crème hydratante",
+      "Protection solaire – Application d'un écran solaire à large spectre (SPF 50)"
+    ],
+    procedureImage: 'https://static.wixstatic.com/media/11062b_ebd18b146d35447c9f521b744c160509~mv2.jpg/v1/crop/x_1566,y_0,w_2872,h_3333/fill/w_475,h_595,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Traitement%20au%20laser.jpg',
+    disclaimer: "Ce soin est offert à des fins esthétiques uniquement. Il ne remplace pas une consultation médicale ni un traitement dermatologique."
+  },
+  'peeling-algues': {
+    title: 'PEELING AUX ALGUES',
+    subtitle: 'Naturel',
+    heroImage: 'https://static.wixstatic.com/media/da88f0575401483fb62f625d9b0033cb.jpg/v1/fill/w_528,h_505,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Femme.jpg',
+    mainImage: 'https://static.wixstatic.com/media/dacd52b614a644b194d59f707251745f.jpg/v1/fill/w_540,h_571,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/soin%20du%20visage.jpg',
+    introDescription: "Le peeling aux algues exfolie la peau en douceur tout en contribuant à lui redonner une apparence plus fraîche et lumineuse. Riche en nutriments marins, ce soin aide à unifier le teint, à lisser visiblement la texture de la peau et à lui apporter une sensation de vitalité et d'éclat naturel.",
+    questionTitle: "QU'EST-CE QUE LE PEELING AUX ALGUES ?",
+    description: `Le Peeling aux algues est un soin esthétique naturel qui utilise le pouvoir des extraits d'algues marines pour exfolier la peau en douceur. Contrairement aux peelings chimiques classiques, ce soin repose sur une exfoliation biologique progressive, respectueuse de l'épiderme, qui aide à lisser visiblement la texture de la peau et à raviver son éclat.
+
+Grâce à sa richesse en minéraux, vitamines et antioxydants, le Peeling aux algues contribue à éliminer les cellules mortes et à améliorer l'apparence du teint. Il peut également aider à unifier la peau et à atténuer certaines irrégularités superficielles.
+
+Naturel et bien toléré, ce soin convient à toute personne souhaitant retrouver une peau d'apparence plus lisse, lumineuse et revitalisée, sans inconfort ni interruption des activités quotidiennes.`,
+    benefitsTitle: "POURQUOI CHOISIR LE PEELING AUX ALGUES ?",
+    benefits: [
+      "Exfoliation naturelle et en douceur, sans agression pour la peau",
+      "Stimulation du renouvellement cellulaire pour une peau plus éclatante",
+      "Unification du teint et atténuation des taches pigmentaires",
+      "Réduction des imperfections et des pores dilatés",
+      "Effet raffermissant et anti-âge grâce à l'activation du collagène",
+      "Hydratation et revitalisation intense grâce aux nutriments marins",
+      "Adapté à tous les types de peau, même les plus sensibles",
+      "Traitement non invasif et sans éviction sociale"
+    ],
+    benefitsImage: 'https://static.wixstatic.com/media/11062b_8164f6ede3334e059ea1ba9c11257907~mv2.jpeg/v1/crop/x_1207,y_0,w_3698,h_4193/fill/w_462,h_493,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Portrait%20rieur.jpeg',
+    procedureTitle: "LE DÉROULEMENT D'UNE SÉANCE DE PEELING AUX ALGUES",
+    procedure: [
+      "Observation esthétique de la peau – pour adapter le soin à votre type de peau",
+      "Nettoyage et préparation – élimination des impuretés et préparation de la peau",
+      "Application du peeling aux algues – soin appliqué de manière uniforme selon les besoins",
+      "Temps de pose – courte période de repos pour permettre au soin d'agir en douceur",
+      "Application d'un masque apaisant – selon le type de peau et les objectifs esthétiques",
+      "Retrait du soin et phase de détente – nettoyage doux de la peau et sensation de fraîcheur",
+      "Application de soins hydratants et protecteurs – pour nourrir et protéger la peau après le soin"
+    ],
+    procedureImage: 'https://static.wixstatic.com/media/11062b_a9649e6bc69a46b8b69b5c3093456279~mv2.jpg/v1/crop/x_0,y_470,w_1920,h_1610/fill/w_402,h_412,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Comparaison%20des%20faces%20divis%C3%A9es.jpg',
+    disclaimer: "Ce soin est effectué à des fins esthétiques uniquement. Les paramètres sont ajustés pour offrir une expérience sécuritaire et adaptée à chaque type de peau."
+  },
+  'traitement-raffermissant': {
+    title: 'TRAITEMENT RAFFERMISSANT',
+    subtitle: 'Lumière LED',
+    heroImage: 'https://static.wixstatic.com/media/9426a1_a5d06b721a534c1ba46748fa5d85b741~mv2.jpg/v1/fill/w_529,h_505,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/shutterstock-1456053788_edited_edited_jp.jpg',
+    mainImage: 'https://static.wixstatic.com/media/9426a1_a77891ac427b42c8bacb3237c26255e4~mv2.jpg/v1/crop/x_0,y_2340,w_4912,h_2984/fill/w_892,h_542,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/pexels-shiny-diamond-3762754.jpg',
+    introDescription: "Plongez dans une expérience sensorielle inédite grâce à nos soins exclusifs, conçus par nos esthéticiennes expertes pour allier expertise, bien-être et résultats esthétiques visibles. Chaque rituel est pensé pour s'adapter aux besoins uniques de votre peau, tout en offrant un moment de détente profonde qui harmonise beauté et relaxation.",
+    questionTitle: "QU'EST-CE QUE LE SOIN RAFFERMISSANT À LA LUMIÈRE LED ?",
+    description: `Ce soin esthétique innovant utilise la lumière LED pour contribuer à améliorer visiblement l'apparence de la peau. Il est particulièrement apprécié pour ses effets esthétiques tels qu'un teint plus uniforme, une peau d'apparence plus ferme, et une sensation de vitalité.
+
+La technologie LED est reconnue en esthétique pour son action douce et non invasive. Elle est utilisée dans plusieurs contextes professionnels pour raviver l'éclat naturel de la peau et lui donner un aspect plus tonique et lumineux.`,
+    benefitsTitle: "COMMENT FONCTIONNE LE SOIN RAFFERMISSANT À LA LUMIÈRE LED",
+    benefits: [
+      "Lumière rouge LED pour améliorer visiblement l'apparence de la peau",
+      "Action en surface et en profondeur pour raviver l'éclat du teint",
+      "Sensation de fermeté et texture cutanée unifiée",
+      "Réduction de l'aspect des signes de fatigue",
+      "Effet apaisant et revitalisant",
+      "Bien tolérée par tous les types de peau",
+      "Aspect plus reposé, lumineux et tonique"
+    ],
+    benefitsImage: 'https://static.wixstatic.com/media/9426a1_ac7bc34bafc94cd8aba42ce1e2e215d7~mv2.jpg/v1/crop/x_69,y_0,w_1094,h_1216/fill/w_440,h_503,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/qualite-de-peau-taches-brunes-dr-ben-youssef-paris.jpg',
+    procedureTitle: "LE DÉROULEMENT D'UNE SÉANCE DE SOIN RAFFERMISSANT À LA LUMIÈRE LED",
+    procedure: [
+      "Préparation de la peau – Nettoyage délicat du visage pour retirer les impuretés",
+      "Exfoliation douce – Application d'un exfoliant léger pour lisser la surface de la peau",
+      "Application d'un sérum activateur – Sérum enrichi en peptides, acide hyaluronique ou collagène",
+      "Exposition à la lumière LED – Application de la lumière rouge pendant 3 à 5 minutes",
+      "Masque apaisant et nourrissant – Pose d'un masque enrichi en antioxydants ou agents hydratants",
+      "Hydratation et protection finale – Application d'une crème hydratante et protection solaire au besoin"
+    ],
+    procedureImage: 'https://static.wixstatic.com/media/9426a1_33b99919e2e14340b837d04d858a41dc~mv2.jpg/v1/crop/x_264,y_0,w_1519,h_1434/fill/w_422,h_619,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/perfectio.jpg',
+    disclaimer: "Ce soin est effectué à des fins esthétiques uniquement. Les paramètres sont ajustés pour offrir une expérience sécuritaire et adaptée à chaque type de peau."
+  },
+  'microdermabrasion': {
+    title: 'MICRODERMABRASION',
+    subtitle: 'Soin facial exfoliant',
+    heroImage: 'https://static.wixstatic.com/media/11062b_6dfa28682dbf4247930028a218950e64~mv2.jpg/v1/crop/x_2019,y_0,w_2658,h_2543/fill/w_528,h_505,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Gros%20plan%20sur%20le%20visage%20d\'une%20femme.jpg',
+    mainImage: 'https://static.wixstatic.com/media/11062b_ee4c6f7007fb49b5ab00657a5be9471a~mv2.jpg/v1/fill/w_540,h_571,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Femme%20Exfoliant%20Visage.jpg',
+    introDescription: "La microdermabrasion est un soin esthétique qui exfolie la surface de la peau à l'aide de microcristaux pour améliorer visiblement la texture et l'éclat du teint. En affinant l'apparence du grain de peau, elle aide à révéler une peau d'apparence plus lisse, douce et lumineuse. Ce soin est idéal pour les peaux ternes, irrégulières ou en quête de fraîcheur et de vitalité.",
+    questionTitle: "QU'EST-CE QUE LA MICRODERMABRASION ?",
+    description: `La microdermabrasion est une technique exfoliante esthétique qui permet d'améliorer l'apparence de la peau en éliminant en douceur les cellules mortes et les impuretés à la surface de l'épiderme. Réalisée à l'aide d'un embout en diamant ou de microcristaux, cette méthode offre un gommage mécanique précis et non invasif.
+
+Ce soin aide à affiner visiblement le grain de peau, à raviver l'éclat du teint et à lisser la texture cutanée. Il peut également favoriser une meilleure réception des produits appliqués après la séance. Sans douleur et sans interruption des activités, la microdermabrasion est idéale pour celles et ceux qui souhaitent une peau d'apparence plus uniforme, douce et lumineuse.`,
+    benefitsTitle: "POURQUOI CHOISIR LA MICRODERMABRASION ?",
+    benefits: [
+      "Exfoliation profonde et douce pour un teint plus net et unifié",
+      "Peau plus lumineuse et éclatante dès la première séance",
+      "Réduction des taches pigmentaires, cicatrices superficielles et ridules",
+      "Affinement du grain de peau et resserrement des pores dilatés",
+      "Stimulation du renouvellement cellulaire pour une peau plus jeune",
+      "Amélioration de l'absorption des sérums et crèmes hydratantes",
+      "Traitement non invasif et sans douleur, adapté à tous les types de peau"
+    ],
+    benefitsImage: 'https://static.wixstatic.com/media/11062b_d8e10d1a29194e44828298452026733e~mv2.jpg/v1/crop/x_0,y_251,w_1920,h_2047/fill/w_462,h_493,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Avant%20et%20apr%C3%A8s%20la%20peau.jpg',
+    procedureTitle: "LE DÉROULEMENT D'UNE SÉANCE DE MICRODERMABRASION",
+    procedure: [
+      "Observation esthétique personnalisée – pour adapter le soin selon le type de peau",
+      "Nettoyage en profondeur – nettoyage doux pour préparer la peau à l'exfoliation",
+      "Exfoliation par microdermabrasion – à l'aide d'un embout en diamant ou de microcristaux",
+      "Application d'un sérum ciblé – enrichi en acide hyaluronique, antioxydants ou collagène",
+      "Masque apaisant et hydratant – pour favoriser le confort et la fraîcheur de la peau",
+      "Exposition à la lumière LED – utilisée à des fins esthétiques pour raviver l'éclat du teint",
+      "Application d'une crème hydratante et protectrice – pour nourrir et protéger la peau"
+    ],
+    procedureImage: 'https://static.wixstatic.com/media/11062b_489acfa04b614cd78a159be37e7a7d9a~mv2.jpeg/v1/crop/x_560,y_0,w_4352,h_3648/fill/w_402,h_397,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Soin%20du%20visage%20professionnel.jpeg',
+    disclaimer: "Ce soin est effectué à des fins esthétiques uniquement. Les paramètres sont ajustés pour offrir une expérience sécuritaire et adaptée à chaque type de peau."
+  },
   'microneedling': {
     title: 'MICRONEEDLING',
     subtitle: 'Pour une peau de meilleur aspect',

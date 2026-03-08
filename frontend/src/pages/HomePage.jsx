@@ -78,22 +78,34 @@ const ServicesSection = () => {
       link: "/epilation-laser"
     },
     {
-      title: "MICRONEEDLING",
+      title: "FACIAL DE LUXE",
       description: "Découvrir",
-      image: "https://static.wixstatic.com/media/9426a1_daea62aba2824a9fa898bddb1f50be1b~mv2.jpg/v1/crop/x_365,y_0,w_652,h_922/fill/w_239,h_338,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/woman-getting-microneedling-treatment.jpg",
-      link: "/microneedling"
+      image: "https://static.wixstatic.com/media/11062b_017f998d03a44d5494c1f4eb4a9fcace~mv2.jpg/v1/fill/w_239,h_338,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Gros%20plan%20sur%20les%20soins%20de%20la%20peau.jpg",
+      link: "/facial-de-luxe"
     },
     {
-      title: "SOIN SILHOUETTE",
+      title: "SOIN ANTI-ÂGE",
       description: "Découvrir",
-      image: "https://static.wixstatic.com/media/9426a1_c5d12f25e9034182857cfb8f7b9cbd2a~mv2.webp/v1/fill/w_239,h_338,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/DSC7619.webp",
-      link: "/soin-silhouette"
+      image: "https://static.wixstatic.com/media/9426a1_c45128d5bd5a485f843d9d9b936b06ff~mv2.jpg/v1/fill/w_239,h_338,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/prix-lifting-visage-dubai-1.jpg",
+      link: "/soin-anti-age"
     },
     {
-      title: "SOIN LUMINEUX",
+      title: "MICRODERMABRASION",
       description: "Découvrir",
-      image: "https://static.wixstatic.com/media/9426a1_60ba364326264fc386aa90813f664f2b~mv2.jpg/v1/crop/x_717,y_0,w_869,h_1229/fill/w_239,h_338,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/reju-femme.jpg",
-      link: "/soin-lumineux"
+      image: "https://static.wixstatic.com/media/11062b_6dfa28682dbf4247930028a218950e64~mv2.jpg/v1/crop/x_2019,y_0,w_2658,h_2543/fill/w_239,h_338,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Gros%20plan%20sur%20le%20visage%20d'une%20femme.jpg",
+      link: "/microdermabrasion"
+    },
+    {
+      title: "PEELING AU CHARBON",
+      description: "Découvrir",
+      image: "https://static.wixstatic.com/media/9426a1_b4d51e128ae74eac8fc0965706e4ca34~mv2.png/v1/crop/x_0,y_275,w_1920,h_1999/fill/w_239,h_338,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/mayagi_a_medium_shot_portrait_of_a_35_yo.png",
+      link: "/peeling-charbon"
+    },
+    {
+      title: "TRAITEMENT RAFFERMISSANT",
+      description: "Découvrir",
+      image: "https://static.wixstatic.com/media/9426a1_a5d06b721a534c1ba46748fa5d85b741~mv2.jpg/v1/fill/w_239,h_338,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/shutterstock-1456053788_edited_edited_jp.jpg",
+      link: "/traitement-raffermissant"
     }
   ];
 
@@ -114,7 +126,7 @@ const ServicesSection = () => {
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           {services.map((service, index) => (
             <motion.div
@@ -142,6 +154,19 @@ const ServicesSection = () => {
             </motion.div>
           ))}
         </motion.div>
+
+        {/* View All Services Link */}
+        <div className="text-center mt-12">
+          <p className="text-taupe-light mb-4">Et 6 autres soins disponibles</p>
+          <Link
+            to="/epilation-laser"
+            className="inline-flex items-center gap-2 border-2 border-taupe text-taupe px-8 py-3 rounded-none font-sans text-sm uppercase tracking-wider font-medium hover:bg-taupe hover:text-white transition-colors"
+            data-testid="view-all-services-btn"
+          >
+            Voir tous nos soins
+            <ArrowRight size={18} strokeWidth={1.5} />
+          </Link>
+        </div>
       </div>
     </section>
   );
