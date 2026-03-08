@@ -13,6 +13,7 @@ import GalleryPage from "./pages/GalleryPage";
 import ServicePage from "./pages/ServicePage";
 import PricingPage from "./pages/PricingPage";
 import AcademyPage from "./pages/AcademyPage";
+import SoinPage from "./pages/SoinPage";
 
 // Service page wrapper - extracts serviceId from URL
 const ServicePageWrapper = ({ serviceId: propServiceId }) => {
@@ -80,15 +81,21 @@ function AppRoutes() {
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/gallery.php" element={<GalleryPage />} />
           
-          {/* Service Pages */}
-          <Route path="/laser-hair" element={<ServicePageWrapper />} />
-          <Route path="/laser-hair.php" element={<ServicePageWrapper />} />
+          {/* Soins Pages (New) */}
+          <Route path="/epilation-laser" element={<SoinPage />} />
+          <Route path="/microneedling" element={<SoinPage />} />
+          <Route path="/soin-silhouette" element={<SoinPage />} />
+          <Route path="/soin-lumineux" element={<SoinPage />} />
+          
+          {/* Legacy Service Pages (redirects) */}
+          <Route path="/laser-hair" element={<SoinPage soinId="epilation-laser" />} />
+          <Route path="/laser-hair.php" element={<SoinPage soinId="epilation-laser" />} />
           <Route path="/microneedling" element={<ServicePageWrapper />} />
-          <Route path="/micronnedling.php" element={<ServicePageWrapper serviceId="microneedling" />} />
-          <Route path="/luxury-facial" element={<ServicePageWrapper />} />
-          <Route path="/luxury-facial.php" element={<ServicePageWrapper />} />
-          <Route path="/anti-aging-facial" element={<ServicePageWrapper />} />
-          <Route path="/anti-aging-facial.php" element={<ServicePageWrapper />} />
+          <Route path="/micronnedling.php" element={<SoinPage soinId="microneedling" />} />
+          <Route path="/luxury-facial" element={<SoinPage soinId="soin-lumineux" />} />
+          <Route path="/luxury-facial.php" element={<SoinPage soinId="soin-lumineux" />} />
+          <Route path="/anti-aging-facial" element={<SoinPage soinId="soin-lumineux" />} />
+          <Route path="/anti-aging-facial.php" element={<SoinPage soinId="soin-lumineux" />} />
           
           {/* Pricing Pages */}
           <Route path="/hair-removal-price" element={<PricingPageWrapper />} />

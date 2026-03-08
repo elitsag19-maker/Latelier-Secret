@@ -72,32 +72,28 @@ const HeroSection = () => (
 const ServicesSection = () => {
   const services = [
     {
-      title: "Épilation Laser",
-      description: "Résultats durables et peau lisse avec notre technologie laser avancée.",
-      image: "https://www.lateliersecret.ca/images/services/1.webp",
-      link: "/laser-hair",
-      price: "À partir de 55$"
+      title: "ÉPILATION AU LASER",
+      description: "Découvrir",
+      image: "https://static.wixstatic.com/media/9426a1_b941e26d1d9e46d38f15c68cfd693de9~mv2.jpg/v1/crop/x_0,y_85,w_481,h_680/fill/w_239,h_338,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/epilation-laser-1_edited.jpg",
+      link: "/epilation-laser"
     },
     {
-      title: "Microneedling",
-      description: "Stimulez la production de collagène pour une peau rajeunie.",
-      image: "https://www.lateliersecret.ca/images/services/2%20(1).webp",
-      link: "/microneedling",
-      price: "À partir de 150$"
+      title: "MICRONEEDLING",
+      description: "Découvrir",
+      image: "https://static.wixstatic.com/media/9426a1_daea62aba2824a9fa898bddb1f50be1b~mv2.jpg/v1/crop/x_365,y_0,w_652,h_922/fill/w_239,h_338,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/woman-getting-microneedling-treatment.jpg",
+      link: "/microneedling"
     },
     {
-      title: "Soins du Visage",
-      description: "Traitements personnalisés pour révéler l'éclat de votre peau.",
-      image: "https://www.lateliersecret.ca/images/services/3%20(1).webp",
-      link: "/luxury-facial",
-      price: "À partir de 115$"
+      title: "SOIN SILHOUETTE",
+      description: "Découvrir",
+      image: "https://static.wixstatic.com/media/9426a1_c5d12f25e9034182857cfb8f7b9cbd2a~mv2.webp/v1/fill/w_239,h_338,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/DSC7619.webp",
+      link: "/soin-silhouette"
     },
     {
-      title: "Soins Lumineux",
-      description: "Technologie LED et photothérapie pour une peau éclatante.",
-      image: "https://www.lateliersecret.ca/images/services/4%20(1).webp",
-      link: "/anti-aging-facial",
-      price: "À partir de 95$"
+      title: "SOIN LUMINEUX",
+      description: "Découvrir",
+      image: "https://static.wixstatic.com/media/9426a1_60ba364326264fc386aa90813f664f2b~mv2.jpg/v1/crop/x_717,y_0,w_869,h_1229/fill/w_239,h_338,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/reju-femme.jpg",
+      link: "/soin-lumineux"
     }
   ];
 
@@ -128,25 +124,19 @@ const ServicesSection = () => {
             >
               <Link 
                 to={service.link}
-                className="block bg-white rounded-none overflow-hidden shadow-soft hover:shadow-medium transition-shadow card-hover border border-stone"
+                className="block bg-white rounded-none overflow-hidden shadow-soft hover:shadow-medium transition-shadow card-hover"
                 data-testid={`service-card-${index}`}
               >
-                <div className="aspect-[4/3] overflow-hidden">
+                <div className="aspect-[3/4] overflow-hidden">
                   <img 
                     src={service.image} 
                     alt={service.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-                <div className="p-6">
-                  <h3 className="font-serif text-xl text-taupe mb-2 font-normal">{service.title}</h3>
-                  <p className="text-taupe-light text-sm mb-4 line-clamp-2">{service.description}</p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-taupe font-medium">{service.price}</span>
-                    <span className="text-taupe group-hover:translate-x-1 transition-transform">
-                      <ArrowRight size={18} strokeWidth={1.5} />
-                    </span>
-                  </div>
+                <div className="p-6 text-center">
+                  <h3 className="font-serif text-lg text-taupe mb-2 font-normal tracking-wide">{service.title}</h3>
+                  <p className="text-taupe-light text-sm uppercase tracking-wider group-hover:text-taupe transition-colors">{service.description}</p>
                 </div>
               </Link>
             </motion.div>

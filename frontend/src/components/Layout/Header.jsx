@@ -7,13 +7,13 @@ const NAV_ITEMS = [
   { name: 'Accueil', path: '/' },
   { name: 'À propos', path: '/about' },
   { 
-    name: 'Services', 
-    path: '/services',
+    name: 'Soins', 
+    path: '/soins',
     children: [
-      { name: 'Épilation Laser', path: '/laser-hair' },
+      { name: 'Épilation au Laser', path: '/epilation-laser' },
       { name: 'Microneedling', path: '/microneedling' },
-      { name: 'Soin Luxe', path: '/luxury-facial' },
-      { name: 'Anti-Âge', path: '/anti-aging-facial' },
+      { name: 'Soin Silhouette', path: '/soin-silhouette' },
+      { name: 'Soin Lumineux', path: '/soin-lumineux' },
     ]
   },
   { 
