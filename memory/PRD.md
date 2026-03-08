@@ -42,20 +42,28 @@ Migration et recréation du site web www.lateliersecret.ca - Centre esthétique 
 - ✅ /laser-hair.php → /laser-hair
 - ✅ Toutes les anciennes URLs .php supportées
 
-## Ce qui a été implémenté (Janvier 2026)
+## Ce qui a été implémenté (Décembre 2025)
 
 ### Pages Principales
-1. **Accueil (/)** - Hero "Exprimez votre beauté naturelle", Services, À propos, Témoignages, Galerie, Académie, CTA
+1. **Accueil (/)** - Hero "Exprimez votre beauté naturelle", Services (6 populaires), À propos, Témoignages, Galerie, Académie, CTA
 2. **À propos (/about)** - Histoire, Stats, Fonctionnalités
 3. **Réservation (/booking)** - Formulaire 3 étapes (infos, service, date/heure)
 4. **Contact (/contact)** - Formulaire + NAP + Carte
 5. **Galerie (/gallery)** - Grille d'images avec lightbox
 
-### Pages Services
-- /laser-hair - Épilation laser
-- /microneedling - Microneedling
-- /luxury-facial - Soin de luxe
-- /anti-aging-facial - Soin anti-âge
+### Pages Soins (12 soins - Complété ✅)
+1. **/epilation-laser** - Épilation laser
+2. **/facial-de-luxe** - Facial de Luxe
+3. **/soin-anti-age** - Soin Anti-Âge Sothys
+4. **/irregularites-pigmentaires** - Soin Irrégularités Pigmentaires
+5. **/facial-desincrustant** - Facial Désincrustant
+6. **/peeling-charbon** - Peeling au Charbon
+7. **/peeling-algues** - Peeling aux Algues
+8. **/traitement-raffermissant** - Traitement Raffermissant (LED)
+9. **/microdermabrasion** - Microdermabrasion
+10. **/microneedling** - Microneedling
+11. **/soin-silhouette** - Soin Silhouette (Lipocavitation)
+12. **/soin-lumineux** - Soin Lumineux (Pico Laser)
 
 ### Pages Tarifs
 - /hair-removal-price - Tarifs épilation (24 zones)
@@ -73,13 +81,14 @@ Migration et recréation du site web www.lateliersecret.ca - Centre esthétique 
 ## Backlog Priorisé
 
 ### P0 (Critique - À faire avant mise en production)
+- [x] Implémenter les 12 soins du site Wix de référence ✅
 - [ ] Ajouter Google Analytics ID (GA_TRACKING_ID)
 - [ ] Configurer Google Search Console
 - [ ] Tester Core Web Vitals après déploiement
 - [ ] Vérifier indexation Google post-migration
 
 ### P1 (Important)
-- [ ] Intégration avis Google en temps réel (API Google Places)
+- [ ] Intégration avis Google sur la page d'accueil (API Google Places)
 - [ ] Système de réservation avec backend (envoi emails, calendrier)
 - [ ] Panel admin pour modifier contenus/prix
 - [ ] Notifications email pour nouvelles réservations
@@ -91,11 +100,12 @@ Migration et recréation du site web www.lateliersecret.ca - Centre esthétique 
 - [ ] Blog pour SEO
 
 ## Prochaines Étapes
-1. **Déploiement** - Déployer sur Vercel/Netlify
-2. **DNS** - Pointer lateliersecret.ca vers nouveau site
-3. **Google Analytics** - Ajouter ID dans index.html
-4. **Search Console** - Vérifier propriété et soumettre sitemap
-5. **Tests** - Vérifier 404s et indexation après migration
+1. **Intégrer Google Analytics** - Ajouter ID dans index.html (demander ID à l'utilisateur)
+2. **Intégrer Google Search Console** - Vérifier propriété et soumettre sitemap
+3. **Intégrer les avis Google** - Afficher les avis sur la page d'accueil
+4. **Déploiement** - Déployer sur Vercel/Netlify
+5. **DNS** - Pointer lateliersecret.ca vers nouveau site
+6. **Tests** - Vérifier 404s et indexation après migration
 
 ---
-*Dernière mise à jour: Janvier 2026*
+*Dernière mise à jour: Décembre 2025*
