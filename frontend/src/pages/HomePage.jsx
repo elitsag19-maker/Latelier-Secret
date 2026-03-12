@@ -49,18 +49,18 @@ const HeroSection = () => (
           className="flex flex-col sm:flex-row gap-4 mt-8"
         >
           <Link
-            to="/aesthetic-advance"
-            className="inline-flex items-center justify-center gap-2 bg-taupe text-white px-8 py-4 rounded-none font-sans text-sm uppercase tracking-wider font-medium hover:bg-taupe-dark transition-colors"
-            data-testid="hero-formations-btn"
-          >
-            Formations
-          </Link>
-          <Link
             to="/booking"
             className="inline-flex items-center justify-center gap-2 bg-taupe text-white px-8 py-4 rounded-none font-sans text-sm uppercase tracking-wider font-medium hover:bg-taupe-dark transition-colors"
             data-testid="hero-book-btn"
           >
             Consultation Gratuite
+          </Link>
+          <Link
+            to="/aesthetic-advance"
+            className="inline-flex items-center justify-center gap-2 bg-taupe text-white px-8 py-4 rounded-none font-sans text-sm uppercase tracking-wider font-medium hover:bg-taupe-dark transition-colors"
+            data-testid="hero-formations-btn"
+          >
+            Formations
           </Link>
         </motion.div>
       </div>
@@ -84,10 +84,10 @@ const ServicesSection = () => {
       link: "/facial-de-luxe"
     },
     {
-      title: "SOIN ANTI-ÂGE",
+      title: "SOIN SILHOUETTE",
       description: "Découvrir",
-      image: "https://static.wixstatic.com/media/9426a1_c45128d5bd5a485f843d9d9b936b06ff~mv2.jpg/v1/fill/w_239,h_338,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/prix-lifting-visage-dubai-1.jpg",
-      link: "/soin-anti-age"
+      image: "https://static.wixstatic.com/media/9426a1_c5d12f25e9034182857cfb8f7b9cbd2a~mv2.webp/v1/fill/w_239,h_338,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/DSC7619.webp",
+      link: "/soin-silhouette"
     },
     {
       title: "MICRODERMABRASION",
@@ -102,10 +102,10 @@ const ServicesSection = () => {
       link: "/peeling-charbon"
     },
     {
-      title: "TRAITEMENT RAFFERMISSANT",
+      title: "PEELING AU CHARBON",
       description: "Découvrir",
-      image: "https://static.wixstatic.com/media/9426a1_a5d06b721a534c1ba46748fa5d85b741~mv2.jpg/v1/fill/w_239,h_338,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/shutterstock-1456053788_edited_edited_jp.jpg",
-      link: "/traitement-raffermissant"
+      image: "https://static.wixstatic.com/media/9426a1_b4d51e128ae74eac8fc0965706e4ca34~mv2.png/v1/crop/x_0,y_275,w_1920,h_1999/fill/w_239,h_338,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/mayagi_a_medium_shot_portrait_of_a_35_yo.png",
+      link: "/peeling-charbon"
     }
   ];
 
@@ -214,7 +214,7 @@ const AboutSection = () => (
           <div className="section-divider mb-8" />
           
           <p className="text-taupe text-lg leading-relaxed mb-6">
-            L'atelier Secret est un centre esthétique professionnel basé au Québec, 
+            L'atelier Secret est un centre esthétique professionnel basé sur la Rive Sud de Montréal, 
             spécialisé dans les traitements de soins de la peau avancés tels que 
             l'épilation laser, le microneedling, les soins du visage et les soins 
             de beauté personnalisés.
@@ -331,7 +331,7 @@ const PricingSection = () => {
       price: "115",
       features: ["Nettoyage en profondeur", "Hydratation et éclat", "Taches, rides, acné et plus"],
       link: "/facial-treatments-price",
-      highlight: true
+      popular: false
     },
     {
       title: "Extensions Cils",
@@ -466,19 +466,19 @@ const CTASection = () => (
 const AcademySection = () => {
   const courses = [
     {
-      title: "Esthétique Avancé",
+      title: "Esthétique",
       image: "https://www.lateliersecret.ca/images/jty.jpeg",
       link: "/aesthetic-advance"
-    },
-    {
-      title: "Lash Lift",
-      image: "https://www.lateliersecret.ca/images/vfsdv.jpeg",
-      link: "/classic-volume-lifting"
     },
     {
       title: "Extension Cils",
       image: "https://www.lateliersecret.ca/images/2.png",
       link: "/eyelash-extension"
+    },
+    {
+      title: "Rehaussement de cils",
+      image: "https://www.lateliersecret.ca/images/vfsdv.jpeg",
+      link: "/classic-volume-lifting"
     }
   ];
 
@@ -547,7 +547,7 @@ const GallerySection = () => (
     <div className="max-w-7xl mx-auto px-6">
       <div className="text-center mb-16">
         <h2 className="font-serif text-3xl md:text-4xl text-taupe font-light uppercase tracking-wide" data-testid="gallery-title">
-          Nos Réalisations
+          Résultats
         </h2>
         <div className="section-divider mx-auto mt-6" />
       </div>
