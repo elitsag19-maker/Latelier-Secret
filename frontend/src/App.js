@@ -14,6 +14,8 @@ import ServicePage from "./pages/ServicePage";
 import PricingPage from "./pages/PricingPage";
 import AcademyPage from "./pages/AcademyPage";
 import SoinPage from "./pages/SoinPage";
+import SoinsListPage from "./pages/SoinsListPage";
+import FormationsPage from "./pages/FormationsPage";
 
 // Service page wrapper - extracts serviceId from URL
 const ServicePageWrapper = ({ serviceId: propServiceId }) => {
@@ -82,6 +84,7 @@ function AppRoutes() {
           <Route path="/gallery.php" element={<GalleryPage />} />
           
           {/* Soins Pages (New) */}
+          <Route path="/soins" element={<SoinsListPage />} />
           <Route path="/epilation-laser" element={<SoinPage />} />
           <Route path="/facial-de-luxe" element={<SoinPage />} />
           <Route path="/soin-anti-age" element={<SoinPage />} />
@@ -94,6 +97,9 @@ function AppRoutes() {
           <Route path="/microneedling" element={<SoinPage />} />
           <Route path="/soin-silhouette" element={<SoinPage />} />
           <Route path="/soin-lumineux" element={<SoinPage />} />
+          
+          {/* Formations Page */}
+          <Route path="/formations" element={<FormationsPage />} />
           
           {/* Legacy Service Pages (redirects) */}
           <Route path="/laser-hair" element={<SoinPage soinId="epilation-laser" />} />

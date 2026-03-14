@@ -56,7 +56,7 @@ const HeroSection = () => (
             Consultation Gratuite
           </Link>
           <Link
-            to="/aesthetic-advance"
+            to="/formations"
             className="inline-flex items-center justify-center gap-2 bg-taupe text-white px-8 py-4 rounded-none font-sans text-sm uppercase tracking-wider font-medium hover:bg-taupe-dark transition-colors"
             data-testid="hero-formations-btn"
           >
@@ -98,14 +98,14 @@ const ServicesSection = () => {
     {
       title: "PEELING AU CHARBON",
       description: "Découvrir",
-      image: "https://static.wixstatic.com/media/9426a1_b4d51e128ae74eac8fc0965706e4ca34~mv2.png/v1/crop/x_0,y_275,w_1920,h_1999/fill/w_239,h_338,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/mayagi_a_medium_shot_portrait_of_a_35_yo.png",
+      image: "https://static.wixstatic.com/media/11062b_c08353118ce849f98c46f9788443b1fe~mv2.jpg/v1/crop/x_0,y_147,w_5000,h_3038/fill/w_300,h_400,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Traitement%20facial%20au%20laser.jpg",
       link: "/peeling-charbon"
     },
     {
-      title: "PEELING AU CHARBON",
+      title: "PEELING AUX ALGUES",
       description: "Découvrir",
-      image: "https://static.wixstatic.com/media/9426a1_b4d51e128ae74eac8fc0965706e4ca34~mv2.png/v1/crop/x_0,y_275,w_1920,h_1999/fill/w_239,h_338,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/mayagi_a_medium_shot_portrait_of_a_35_yo.png",
-      link: "/peeling-charbon"
+      image: "https://static.wixstatic.com/media/da88f0575401483fb62f625d9b0033cb.jpg/v1/fill/w_239,h_338,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Femme.jpg",
+      link: "/peeling-algues"
     }
   ];
 
@@ -159,7 +159,7 @@ const ServicesSection = () => {
         <div className="text-center mt-12">
           <p className="text-taupe-light mb-4">Et 6 autres soins disponibles</p>
           <Link
-            to="/epilation-laser"
+            to="/soins"
             className="inline-flex items-center gap-2 border-2 border-taupe text-taupe px-8 py-3 rounded-none font-sans text-sm uppercase tracking-wider font-medium hover:bg-taupe hover:text-white transition-colors"
             data-testid="view-all-services-btn"
           >
@@ -329,14 +329,14 @@ const PricingSection = () => {
     {
       title: "Soins du Visage",
       price: "115",
-      features: ["Nettoyage en profondeur", "Hydratation et éclat", "Taches, rides, acné et plus"],
+      features: ["Nettoyage en profondeur", "Hydratation et éclat du teint", "Taches, rides, acné et plus"],
       link: "/facial-treatments-price",
       popular: false
     },
     {
       title: "Extensions Cils",
       price: "55",
-      features: ["Look naturel ou dramatique", "Tenue longue durée", "Rehausse vos yeux instantanément"],
+      features: ["Look naturel ou dramatique", "Tenue longue durée garantie", "Rehausse vos yeux instantanément"],
       link: "/eyelash-extensions-price",
       popular: false
     },
@@ -367,11 +367,7 @@ const PricingSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className={`relative rounded-none p-8 ${
-                pkg.highlight 
-                  ? 'bg-taupe text-white' 
-                  : 'bg-white shadow-soft border border-stone'
-              }`}
+              className="relative rounded-none p-8 bg-white shadow-soft border border-stone flex flex-col h-full"
               data-testid={`pricing-card-${index}`}
             >
               {pkg.popular && (
@@ -380,26 +376,22 @@ const PricingSection = () => {
                 </span>
               )}
               
-              <h3 className={`font-serif text-xl mb-2 font-normal ${pkg.highlight ? 'text-white' : 'text-taupe'}`}>
+              <h3 className="font-serif text-xl mb-2 font-normal text-taupe">
                 {pkg.title}
               </h3>
-              <p className={`text-sm mb-4 ${pkg.highlight ? 'text-white/80' : 'text-taupe-light'}`}>
+              <p className="text-sm mb-4 text-taupe-light">
                 À partir de
               </p>
               <div className="mb-6">
-                <span className={`font-serif text-5xl ${pkg.highlight ? 'text-white' : 'text-taupe'}`}>
+                <span className="font-serif text-5xl text-taupe">
                   ${pkg.price}
                 </span>
               </div>
 
-              <ul className="space-y-3 mb-8">
+              <ul className="space-y-3 mb-8 flex-grow">
                 {pkg.features.map((feature, i) => (
-                  <li key={i} className={`flex items-start gap-2 text-sm ${
-                    pkg.highlight ? 'text-white/90' : 'text-taupe-light'
-                  }`}>
-                    <CheckCircle size={16} className={`flex-shrink-0 mt-0.5 ${
-                      pkg.highlight ? 'text-white' : 'text-taupe'
-                    }`} strokeWidth={1.5} />
+                  <li key={i} className="flex items-start gap-2 text-sm text-taupe-light">
+                    <CheckCircle size={16} className="flex-shrink-0 mt-0.5 text-taupe" strokeWidth={1.5} />
                     {feature}
                   </li>
                 ))}
@@ -407,11 +399,7 @@ const PricingSection = () => {
 
               <Link
                 to={pkg.link}
-                className={`block text-center py-3 rounded-none font-medium uppercase text-sm tracking-wider transition-colors ${
-                  pkg.highlight 
-                    ? 'bg-white text-taupe hover:bg-stone' 
-                    : 'bg-taupe text-white hover:bg-taupe-dark'
-                }`}
+                className="block text-center py-3 rounded-none font-medium uppercase text-sm tracking-wider transition-colors bg-taupe text-white hover:bg-taupe-dark mt-auto"
               >
                 Voir plus
               </Link>
@@ -528,7 +516,7 @@ const AcademySection = () => {
 
         <div className="text-center mt-12">
           <Link
-            to="/aesthetic-advance"
+            to="/formations"
             className="inline-flex items-center gap-2 border-2 border-taupe text-taupe px-8 py-3 rounded-none font-sans text-sm uppercase tracking-wider font-medium hover:bg-taupe hover:text-white transition-colors"
             data-testid="view-all-courses-btn"
           >
