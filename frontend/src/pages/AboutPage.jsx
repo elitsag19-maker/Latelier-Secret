@@ -6,7 +6,7 @@ const AboutPage = () => {
   const stats = [
     { value: "15+", label: "Années d'expérience", icon: Clock },
     { value: "2.5K+", label: "Clientes satisfaites", icon: Users },
-    { value: "12+", label: "Spécialistes experts", icon: Award },
+    { value: "100%", label: "Spécialistes experts", icon: Award },
     { value: "100%", label: "Satisfaction garantie", icon: CheckCircle },
   ];
 
@@ -16,11 +16,11 @@ const AboutPage = () => {
       <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img 
-            src="https://www.lateliersecret.ca/images/slider/2.webp"
+            src="https://images.unsplash.com/photo-1609535895148-cf9f5c446290?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwxfHx3b21hbiUyMHNtaWxpbmclMjBzcGElMjByZWxheGVkJTIwYmVhdXR5JTIwc2Fsb24lMjBiZWlnZSUyMHdhcm0lMjB0b25lc3xlbnwwfHx8fDE3NzM1NDA4NDd8MA&ixlib=rb-4.1.0&q=85"
             alt="À propos de L'atelier Secret"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-charcoal/50" />
+          <div className="absolute inset-0 bg-taupe/40" />
         </div>
         <div className="relative z-10 text-center text-white px-6">
           <motion.h1 
@@ -57,8 +57,8 @@ const AboutPage = () => {
             >
               <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-medium">
                 <img 
-                  src="https://www.lateliersecret.ca/images/photo.jpeg"
-                  alt="Notre salon"
+                  src="https://images.unsplash.com/photo-1611169035510-f9af52e6dbe2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzZ8MHwxfHNlYXJjaHwxfHxiZWF1dHklMjBzYWxvbiUyMGNsaWVudCUyMHNwZWNpYWxpc3QlMjBmYWNpYWwlMjB0cmVhdG1lbnQlMjB3YXJtJTIwdG9uZXN8ZW58MHx8fHwxNzczNTQwODQ3fDA&ixlib=rb-4.1.0&q=85"
+                  alt="Soin du visage au salon"
                   className="w-full h-full object-cover"
                 />
               </div>
