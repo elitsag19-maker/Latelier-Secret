@@ -57,8 +57,8 @@ const AboutPage = () => {
             >
               <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-medium">
                 <img 
-                  src="https://images.unsplash.com/photo-1611169035510-f9af52e6dbe2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzZ8MHwxfHNlYXJjaHwxfHxiZWF1dHklMjBzYWxvbiUyMGNsaWVudCUyMHNwZWNpYWxpc3QlMjBmYWNpYWwlMjB0cmVhdG1lbnQlMjB3YXJtJTIwdG9uZXN8ZW58MHx8fHwxNzczNTQwODQ3fDA&ixlib=rb-4.1.0&q=85"
-                  alt="Soin du visage au salon"
+                  src="https://images.unsplash.com/photo-1732813316061-b5b0fb1ceeec?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHwzfHxlbGVnYW50JTIwd29tZW4lMjBoYXBweSUyMHB1cmUlMjBzb3BoaXN0aWNhdGVkJTIwYmVhdXR5JTIwcG9ydHJhaXQlMjBtaW5pbWFsJTIwYmVpZ2V8ZW58MHx8fHwxNzczNTQxMDQ3fDA&ixlib=rb-4.1.0&q=85"
+                  alt="Femme élégante"
                   className="w-full h-full object-cover"
                 />
               </div>
