@@ -529,60 +529,6 @@ const AcademySection = () => {
   );
 };
 
-// Gallery Preview Section
-const GallerySection = () => (
-  <section className="py-24 bg-stone/30">
-    <div className="max-w-7xl mx-auto px-6">
-      <div className="text-center mb-16">
-        <h2 className="font-serif text-3xl md:text-4xl text-taupe font-light uppercase tracking-wide" data-testid="gallery-title">
-          Résultats
-        </h2>
-        <div className="section-divider mx-auto mt-6" />
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="aspect-video rounded-none overflow-hidden shadow-medium img-zoom"
-        >
-          <img 
-            src="https://www.lateliersecret.ca/images/istockphoto-1257182741-612x612.jpg"
-            alt="Résultat traitement 1"
-            className="w-full h-full object-cover"
-          />
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, x: 30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="aspect-video rounded-none overflow-hidden shadow-medium img-zoom"
-        >
-          <img 
-            src="https://www.lateliersecret.ca/images/sfsrfg.png"
-            alt="Résultat traitement 2"
-            className="w-full h-full object-cover"
-          />
-        </motion.div>
-      </div>
-
-      <div className="text-center mt-12">
-        <Link
-          to="/gallery"
-          className="inline-flex items-center gap-2 bg-taupe text-white px-8 py-4 rounded-none font-sans text-sm uppercase tracking-wider font-medium hover:bg-taupe-dark transition-colors"
-          data-testid="view-gallery-btn"
-        >
-          Voir la galerie
-          <ArrowRight size={18} strokeWidth={1.5} />
-        </Link>
-      </div>
-    </div>
-  </section>
-);
-
 // Main Home Page Component
 const HomePage = () => {
   return (
@@ -592,7 +538,6 @@ const HomePage = () => {
       <AboutSection />
       <PricingSection />
       <TestimonialsSection />
-      <GallerySection />
       <AcademySection />
       <CTASection />
     </>
