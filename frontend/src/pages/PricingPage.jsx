@@ -5,9 +5,9 @@ import { ArrowRight, CheckCircle } from 'lucide-react';
 // Pricing data configuration
 const PRICING_DATA = {
   'hair-removal-price': {
-    title: 'Tarifs d\'Épilation',
-    subtitle: 'Épilation Laser',
-    description: 'Obtenez une peau lisse et sans poils grâce à nos services d\'épilation professionnels.',
+    title: 'Tarifs',
+    subtitle: 'Épilation au Laser',
+    description: 'Obtenez une peau lisse et sans poils grâce à nos services professionnels d\'épilation au laser.',
     heroImage: 'https://www.lateliersecret.ca/images/fgbhg.png',
     prices: [
       { area: 'Aisselles', price: '55$' },
@@ -171,8 +171,31 @@ const PricingPage = ({ pricingId: propPricingId }) => {
             <div className="section-divider mx-auto mt-6" />
           </div>
 
-          {/* Price List */}
+          {/* Promotions - Now before price list */}
           <div className="bg-white rounded-2xl shadow-soft overflow-hidden mb-12">
+            <div className="p-6 bg-gold/10 border-b border-gold/20">
+              <h3 className="font-serif text-xl text-charcoal">Promotions</h3>
+            </div>
+            <div className="p-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+              {pricing.promotions.map((promo, index) => (
+                <motion.div
+                  key={promo.description}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: index * 0.1 }}
+                  className="text-center p-6 bg-cream rounded-xl"
+                  data-testid={`promo-${index}`}
+                >
+                  <span className="font-serif text-3xl text-salmon">{promo.discount}</span>
+                  <p className="text-charcoal-light mt-2">{promo.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
+          {/* Price List */}
+          <div className="bg-white rounded-2xl shadow-soft overflow-hidden">
             <div className="p-6 bg-salmon/5 border-b border-stone">
               <h3 className="font-serif text-xl text-charcoal">Liste des prix</h3>
             </div>
@@ -189,29 +212,6 @@ const PricingPage = ({ pricingId: propPricingId }) => {
                 >
                   <span className="text-charcoal">{item.area}</span>
                   <span className="font-medium text-salmon">{item.price}</span>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-
-          {/* Promotions */}
-          <div className="bg-white rounded-2xl shadow-soft overflow-hidden">
-            <div className="p-6 bg-gold/10 border-b border-gold/20">
-              <h3 className="font-serif text-xl text-charcoal">Promotions Spéciales</h3>
-            </div>
-            <div className="p-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-              {pricing.promotions.map((promo, index) => (
-                <motion.div
-                  key={promo.description}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="text-center p-6 bg-cream rounded-xl"
-                  data-testid={`promo-${index}`}
-                >
-                  <span className="font-serif text-3xl text-salmon">{promo.discount}</span>
-                  <p className="text-charcoal-light mt-2">{promo.description}</p>
                 </motion.div>
               ))}
             </div>
