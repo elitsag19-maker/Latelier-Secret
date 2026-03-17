@@ -1,128 +1,44 @@
-import { useState } from 'react';
+import { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Calendar, Clock, User, Mail, Phone, CheckCircle, ArrowRight, ArrowLeft } from 'lucide-react';
-
-const SERVICES = [
-  { value: 'luxury-facial', label: 'Soin du visage de luxe' },
-  { value: 'anti-aging', label: 'Soin du visage anti-âge' },
-  { value: 'deep-cleansing', label: 'Nettoyage ultra-pur' },
-  { value: 'acne-treatment', label: 'Traitement de l\'acné' },
-  { value: 'hydration', label: 'Hydratation extrême' },
-  { value: 'radiofrequency', label: 'Radiofréquence' },
-  { value: 'microdermabrasion', label: 'Microdermabrasion' },
-  { value: 'microneedling', label: 'Microneedling' },
-  { value: 'natural-peeling', label: 'Peeling naturel' },
-  { value: 'photorejuvenation', label: 'Photorajeunissement' },
-  { value: 'laser-hair-removal', label: 'Épilation laser' },
-  { value: 'eyelash-extensions', label: 'Extensions de cils' },
-  { value: 'lipocavitation', label: 'Lipocavitation' },
-];
-
-const TIME_SLOTS = [
-  '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00'
-];
+import { Calendar, Clock, MapPin, Phone } from 'lucide-react';
 
 const BookingPage = () => {
-  const [step, setStep] = useState(1);
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    service: '',
-    specialist: '',
-    date: '',
-    time: '',
-    notes: '',
-    acceptTerms: false
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  // Load Go Rendez-vous script
+  useEffect(() => {
+    const loadGoRendezvousScript = () => {
+      const existingScript = document.getElementById('gorendezvous-bookingwidget-script');
+      if (existingScript) {
+        existingScript.parentNode.removeChild(existingScript);
+      }
+      
+      const script = document.createElement('script');
+      script.id = 'gorendezvous-bookingwidget-script';
+      script.src = `https://www.gorendezvous.com/Scripts/gorendezvous.bookingWidgetV2.min.js?v=${Math.floor(new Date().getTime() / (1000 * 60 * 30)) * (1000 * 60 * 30)}`;
+      script.async = true;
+      document.body.appendChild(script);
+    };
 
-  const handleInputChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: type === 'checkbox' ? checked : value
-    }));
-  };
+    loadGoRendezvousScript();
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-  };
-
-  const nextStep = () => setStep(prev => Math.min(prev + 1, 3));
-  const prevStep = () => setStep(prev => Math.max(prev - 1, 1));
-
-  if (isSubmitted) {
-    return (
-      <>
-        {/* Hero Banner */}
-        <section className="relative h-[40vh] min-h-[300px] flex items-center justify-center overflow-hidden">
-          <div className="absolute inset-0">
-            <img 
-              src="https://www.lateliersecret.ca/images/slider/2.webp"
-              alt="Réservation confirmée"
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-charcoal/50" />
-          </div>
-          <div className="relative z-10 text-center text-white px-6">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5 }}
-            >
-              <CheckCircle size={64} className="mx-auto mb-4 text-green-400" />
-              <h1 className="font-serif text-4xl md:text-5xl mb-4">Réservation Confirmée!</h1>
-              <p className="text-white/80">Nous vous contacterons sous peu pour confirmer votre rendez-vous.</p>
-            </motion.div>
-          </div>
-        </section>
-
-        <section className="py-16 bg-cream">
-          <div className="max-w-xl mx-auto px-6 text-center">
-            <div className="bg-white p-8 rounded-2xl shadow-soft">
-              <h2 className="font-serif text-2xl text-charcoal mb-4">Détails de votre réservation</h2>
-              <div className="text-left space-y-3 text-charcoal-light mb-8">
-                <p><strong>Service:</strong> {SERVICES.find(s => s.value === formData.service)?.label}</p>
-                <p><strong>Date:</strong> {formData.date}</p>
-                <p><strong>Heure:</strong> {formData.time}</p>
-                <p><strong>Nom:</strong> {formData.firstName} {formData.lastName}</p>
-              </div>
-              <Link
-                to="/"
-                className="inline-flex items-center gap-2 bg-salmon text-white px-8 py-3 rounded-full font-medium hover:bg-salmon-dark transition-colors"
-                data-testid="back-home-btn"
-              >
-                Retour à l'accueil
-              </Link>
-            </div>
-          </div>
-        </section>
-      </>
-    );
-  }
+    return () => {
+      const script = document.getElementById('gorendezvous-bookingwidget-script');
+      if (script) {
+        script.parentNode.removeChild(script);
+      }
+    };
+  }, []);
 
   return (
     <>
       {/* Hero Banner */}
-      <section className="relative h-[40vh] min-h-[300px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img 
-            src="https://www.lateliersecret.ca/images/slider/2.webp"
+            src="https://images.unsplash.com/photo-1609535904959-aaa9d01fb5a4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDB8MHwxfHNlYXJjaHw0fHxzcGElMjBhcHBvaW50bWVudCUyMGJvb2tpbmclMjByZWxheGF0aW9uJTIwd29tYW4lMjBiZWlnZSUyMGVsZWdhbnR8ZW58MHx8fHwxNzczNzE3MzU0fDA&ixlib=rb-4.1.0&q=85"
             alt="Prendre rendez-vous"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-charcoal/50" />
+          <div className="absolute inset-0 bg-taupe/40" />
         </div>
         <div className="relative z-10 text-center text-white px-6">
           <motion.h1 
@@ -140,301 +56,177 @@ const BookingPage = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-white/80 text-lg"
           >
-            Réservez votre soin de beauté
+            Réservez votre soin de beauté en ligne
           </motion.p>
         </div>
       </section>
 
-      {/* Booking Form */}
-      <section className="py-16 bg-cream">
-        <div className="max-w-4xl mx-auto px-6">
-          {/* Progress Steps */}
-          <div className="flex items-center justify-center mb-12">
-            {[1, 2, 3].map((s) => (
-              <div key={s} className="flex items-center">
-                <div className={`w-10 h-10 rounded-full flex items-center justify-center font-medium ${
-                  step >= s ? 'bg-salmon text-white' : 'bg-stone text-charcoal-light'
-                }`}>
-                  {s}
-                </div>
-                {s < 3 && (
-                  <div className={`w-20 h-1 ${step > s ? 'bg-salmon' : 'bg-stone'}`} />
-                )}
-              </div>
-            ))}
-          </div>
-
-          <div className="bg-white rounded-2xl shadow-soft p-8 md:p-12">
-            <form onSubmit={handleSubmit}>
-              {/* Step 1: Personal Info */}
-              {step === 1 && (
-                <motion.div
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <h2 className="font-serif text-2xl text-charcoal mb-6">Informations personnelles</h2>
-                  
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-charcoal-light text-sm mb-2">Prénom *</label>
-                      <div className="relative">
-                        <User size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-charcoal-muted" />
-                        <input
-                          type="text"
-                          name="firstName"
-                          value={formData.firstName}
-                          onChange={handleInputChange}
-                          required
-                          className="w-full pl-12 pr-4 py-3 border border-stone rounded-lg focus:border-salmon focus:outline-none transition-colors"
-                          placeholder="Votre prénom"
-                          data-testid="input-firstname"
-                        />
-                      </div>
-                    </div>
-                    
-                    <div>
-                      <label className="block text-charcoal-light text-sm mb-2">Nom de famille *</label>
-                      <div className="relative">
-                        <User size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-charcoal-muted" />
-                        <input
-                          type="text"
-                          name="lastName"
-                          value={formData.lastName}
-                          onChange={handleInputChange}
-                          required
-                          className="w-full pl-12 pr-4 py-3 border border-stone rounded-lg focus:border-salmon focus:outline-none transition-colors"
-                          placeholder="Votre nom"
-                          data-testid="input-lastname"
-                        />
-                      </div>
-                    </div>
-                    
-                    <div>
-                      <label className="block text-charcoal-light text-sm mb-2">Adresse courriel *</label>
-                      <div className="relative">
-                        <Mail size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-charcoal-muted" />
-                        <input
-                          type="email"
-                          name="email"
-                          value={formData.email}
-                          onChange={handleInputChange}
-                          required
-                          className="w-full pl-12 pr-4 py-3 border border-stone rounded-lg focus:border-salmon focus:outline-none transition-colors"
-                          placeholder="email@exemple.com"
-                          data-testid="input-email"
-                        />
-                      </div>
-                    </div>
-                    
-                    <div>
-                      <label className="block text-charcoal-light text-sm mb-2">Numéro de téléphone *</label>
-                      <div className="relative">
-                        <Phone size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-charcoal-muted" />
-                        <input
-                          type="tel"
-                          name="phone"
-                          value={formData.phone}
-                          onChange={handleInputChange}
-                          required
-                          className="w-full pl-12 pr-4 py-3 border border-stone rounded-lg focus:border-salmon focus:outline-none transition-colors"
-                          placeholder="+1 438 000 0000"
-                          data-testid="input-phone"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-              )}
-
-              {/* Step 2: Service Selection */}
-              {step === 2 && (
-                <motion.div
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <h2 className="font-serif text-2xl text-charcoal mb-6">Sélection du service</h2>
-                  
-                  <div className="space-y-6">
-                    <div>
-                      <label className="block text-charcoal-light text-sm mb-2">Choisir un traitement *</label>
-                      <select
-                        name="service"
-                        value={formData.service}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 border border-stone rounded-lg focus:border-salmon focus:outline-none transition-colors bg-white"
-                        data-testid="select-service"
-                      >
-                        <option value="">Sélectionnez un service</option>
-                        {SERVICES.map(service => (
-                          <option key={service.value} value={service.value}>{service.label}</option>
-                        ))}
-                      </select>
-                    </div>
-                    
-                    <div>
-                      <label className="block text-charcoal-light text-sm mb-2">Spécialiste préféré (optionnel)</label>
-                      <select
-                        name="specialist"
-                        value={formData.specialist}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-stone rounded-lg focus:border-salmon focus:outline-none transition-colors bg-white"
-                        data-testid="select-specialist"
-                      >
-                        <option value="">Aucune préférence</option>
-                        <option value="anna">Anna S.</option>
-                        <option value="elisa">Elisa G.</option>
-                      </select>
-                    </div>
-                  </div>
-                </motion.div>
-              )}
-
-              {/* Step 3: Date & Time */}
-              {step === 3 && (
-                <motion.div
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <h2 className="font-serif text-2xl text-charcoal mb-6">Date et heure</h2>
-                  
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                    <div>
-                      <label className="block text-charcoal-light text-sm mb-2">Sélectionner une date *</label>
-                      <div className="relative">
-                        <Calendar size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-charcoal-muted" />
-                        <input
-                          type="date"
-                          name="date"
-                          value={formData.date}
-                          onChange={handleInputChange}
-                          required
-                          min={new Date().toISOString().split('T')[0]}
-                          className="w-full pl-12 pr-4 py-3 border border-stone rounded-lg focus:border-salmon focus:outline-none transition-colors"
-                          data-testid="input-date"
-                        />
-                      </div>
-                    </div>
-                    
-                    <div>
-                      <label className="block text-charcoal-light text-sm mb-2">Sélectionner l'heure *</label>
-                      <div className="relative">
-                        <Clock size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-charcoal-muted" />
-                        <select
-                          name="time"
-                          value={formData.time}
-                          onChange={handleInputChange}
-                          required
-                          className="w-full pl-12 pr-4 py-3 border border-stone rounded-lg focus:border-salmon focus:outline-none transition-colors bg-white"
-                          data-testid="select-time"
-                        >
-                          <option value="">Choisissez l'heure</option>
-                          {TIME_SLOTS.map(time => (
-                            <option key={time} value={time}>{time}</option>
-                          ))}
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="mb-6">
-                    <label className="block text-charcoal-light text-sm mb-2">Notes supplémentaires (optionnel)</label>
-                    <textarea
-                      name="notes"
-                      value={formData.notes}
-                      onChange={handleInputChange}
-                      rows={4}
-                      className="w-full px-4 py-3 border border-stone rounded-lg focus:border-salmon focus:outline-none transition-colors resize-none"
-                      placeholder="Exigences particulières ou remarques..."
-                      data-testid="input-notes"
-                    />
-                  </div>
-
-                  <div className="flex items-start gap-3 mb-6">
-                    <input
-                      type="checkbox"
-                      name="acceptTerms"
-                      id="acceptTerms"
-                      checked={formData.acceptTerms}
-                      onChange={handleInputChange}
-                      required
-                      className="mt-1 w-5 h-5 text-salmon border-stone rounded focus:ring-salmon"
-                      data-testid="checkbox-terms"
-                    />
-                    <label htmlFor="acceptTerms" className="text-charcoal-light text-sm">
-                      J'accepte les termes et conditions. En réservant un rendez-vous, vous acceptez notre 
-                      politique d'annulation et notre politique de confidentialité.
-                    </label>
-                  </div>
-                </motion.div>
-              )}
-
-              {/* Navigation Buttons */}
-              <div className="flex justify-between mt-8 pt-6 border-t border-stone">
-                {step > 1 ? (
-                  <button
-                    type="button"
-                    onClick={prevStep}
-                    className="inline-flex items-center gap-2 text-charcoal hover:text-salmon transition-colors"
-                    data-testid="btn-prev"
-                  >
-                    <ArrowLeft size={18} />
-                    Précédent
-                  </button>
-                ) : (
-                  <div />
-                )}
-                
-                {step < 3 ? (
-                  <button
-                    type="button"
-                    onClick={nextStep}
-                    className="inline-flex items-center gap-2 bg-salmon text-white px-8 py-3 rounded-full font-medium hover:bg-salmon-dark transition-colors"
-                    data-testid="btn-next"
-                  >
-                    Suivant
-                    <ArrowRight size={18} />
-                  </button>
-                ) : (
-                  <button
-                    type="submit"
-                    disabled={isSubmitting || !formData.acceptTerms}
-                    className="inline-flex items-center gap-2 bg-salmon text-white px-8 py-3 rounded-full font-medium hover:bg-salmon-dark transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                    data-testid="btn-submit"
-                  >
-                    {isSubmitting ? 'Envoi en cours...' : 'Confirmer la réservation'}
-                    {!isSubmitting && <CheckCircle size={18} />}
-                  </button>
-                )}
-              </div>
-            </form>
-          </div>
-
-          {/* Side Info */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-            <div className="bg-white p-6 rounded-2xl shadow-soft">
-              <h3 className="font-serif text-lg text-charcoal mb-4">Horaires d'ouverture</h3>
-              <div className="text-charcoal-light text-sm space-y-2">
-                <p>Lundi - Vendredi: 9h00 - 21h00</p>
-                <p>Samedi: 10h00 - 18h00</p>
-                <p>Dimanche: Fermé</p>
-              </div>
-            </div>
+      {/* Booking Section */}
+      <section className="py-20 bg-cream">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             
-            <div className="bg-white p-6 rounded-2xl shadow-soft">
-              <h3 className="font-serif text-lg text-charcoal mb-4">Politique d'annulation</h3>
-              <ul className="text-charcoal-light text-sm space-y-2">
-                <li>• Préavis de 24h requis pour annulation</li>
-                <li>• Frais possibles pour annulation tardive</li>
-                <li>• No-show: 50% du prix facturé</li>
-              </ul>
-            </div>
+            {/* Left Column - Info */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <h2 className="font-serif text-3xl md:text-4xl text-taupe mb-6">
+                Réservez votre moment de bien-être
+              </h2>
+              <p className="text-taupe-light text-lg leading-relaxed mb-8">
+                Utilisez notre système de réservation en ligne pour planifier votre prochain rendez-vous. 
+                Choisissez le service, la date et l'heure qui vous conviennent le mieux.
+              </p>
+
+              {/* Contact Info */}
+              <div className="space-y-4 mb-8">
+                <div className="flex items-center gap-4 text-taupe">
+                  <div className="w-12 h-12 bg-taupe/10 rounded-full flex items-center justify-center">
+                    <MapPin size={20} strokeWidth={1.5} />
+                  </div>
+                  <div>
+                    <p className="font-medium">Adresse</p>
+                    <p className="text-taupe-light text-sm">1296 Rue Nobel #103, Boucherville, QC J4B 5H1</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-center gap-4 text-taupe">
+                  <div className="w-12 h-12 bg-taupe/10 rounded-full flex items-center justify-center">
+                    <Phone size={20} strokeWidth={1.5} />
+                  </div>
+                  <div>
+                    <p className="font-medium">Téléphone</p>
+                    <p className="text-taupe-light text-sm">+1 438 882 2165</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-4 text-taupe">
+                  <div className="w-12 h-12 bg-taupe/10 rounded-full flex items-center justify-center">
+                    <Clock size={20} strokeWidth={1.5} />
+                  </div>
+                  <div>
+                    <p className="font-medium">Heures d'ouverture</p>
+                    <p className="text-taupe-light text-sm">Lun - Sam: 9h00 - 19h00</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-4 text-taupe">
+                  <div className="w-12 h-12 bg-taupe/10 rounded-full flex items-center justify-center">
+                    <Calendar size={20} strokeWidth={1.5} />
+                  </div>
+                  <div>
+                    <p className="font-medium">Consultation gratuite</p>
+                    <p className="text-taupe-light text-sm">Première consultation sans engagement</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Additional Info */}
+              <div className="bg-white p-6 rounded-lg shadow-soft">
+                <h3 className="font-serif text-xl text-taupe mb-3">Politique d'annulation</h3>
+                <p className="text-taupe-light text-sm leading-relaxed">
+                  Veuillez nous prévenir au moins 24 heures à l'avance si vous devez annuler ou reporter votre rendez-vous. 
+                  Les annulations tardives peuvent entraîner des frais.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Right Column - Go Rendez-vous Widget */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="bg-white p-8 md:p-10 rounded-2xl shadow-medium"
+            >
+              <h3 className="font-serif text-2xl text-taupe mb-6 text-center">
+                Réserver maintenant
+              </h3>
+              
+              <p className="text-taupe-light text-center mb-8">
+                Cliquez sur le bouton ci-dessous pour accéder à notre système de réservation en ligne
+              </p>
+
+              {/* Go Rendez-vous Button Widget */}
+              <div className="flex justify-center mb-8">
+                <div 
+                  data-professionalpagename="" 
+                  data-bookingwidgeturlparams="companyId=138849" 
+                  data-language="fr" 
+                  data-label="Prendre un rendez-vous" 
+                  data-url="https://www.gorendezvous.com/" 
+                  className="gorendezvous-button" 
+                  data-buttoncolor="inverse" 
+                  data-width="280px" 
+                  data-height="50px"
+                  data-testid="gorendezvous-widget"
+                >
+                  <a 
+                    href="https://www.gorendezvous.com/homepage/138849?companyId=138849" 
+                    target="GOrendezvous"
+                    className="inline-flex items-center justify-center gap-2 bg-taupe text-white px-8 py-4 rounded-none font-sans text-sm uppercase tracking-wider font-medium hover:bg-taupe-dark transition-colors w-full"
+                  >
+                    <Calendar size={18} />
+                    Prendre un rendez-vous
+                  </a>
+                </div>
+              </div>
+
+              {/* Or call us */}
+              <div className="text-center">
+                <p className="text-taupe-light text-sm mb-4">Ou appelez-nous directement</p>
+                <a 
+                  href="tel:+14388822165"
+                  className="inline-flex items-center justify-center gap-2 border-2 border-taupe text-taupe px-6 py-3 rounded-none font-sans text-sm uppercase tracking-wider font-medium hover:bg-taupe hover:text-white transition-colors"
+                >
+                  <Phone size={16} />
+                  +1 438 882 2165
+                </a>
+              </div>
+
+              {/* Benefits */}
+              <div className="mt-10 pt-8 border-t border-stone">
+                <h4 className="font-serif text-lg text-taupe mb-4 text-center">Pourquoi réserver en ligne?</h4>
+                <ul className="space-y-3">
+                  {[
+                    "Disponibilité en temps réel",
+                    "Confirmation instantanée",
+                    "Rappels automatiques par courriel",
+                    "Modification facile de votre rendez-vous"
+                  ].map((benefit, index) => (
+                    <li key={index} className="flex items-center gap-3 text-taupe-light text-sm">
+                      <span className="w-2 h-2 bg-taupe rounded-full flex-shrink-0"></span>
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Map Section */}
+      <section className="py-16 bg-stone/30">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-10">
+            <h2 className="font-serif text-3xl text-taupe mb-4">Nous trouver</h2>
+            <p className="text-taupe-light">1296 Rue Nobel #103, Boucherville, QC J4B 5H1</p>
+          </div>
+          <div className="rounded-2xl overflow-hidden shadow-medium h-[400px]">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.8889!2d-73.4444!3d45.5833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc905e00e0a8b01%3A0x0!2s1296%20Rue%20Nobel%2C%20Boucherville%2C%20QC%20J4B%205H1!5e0!3m2!1sfr!2sca!4v1234567890"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="L'atelier Secret Location"
+            ></iframe>
           </div>
         </div>
       </section>
