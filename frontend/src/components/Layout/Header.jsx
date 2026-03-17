@@ -9,6 +9,7 @@ const NAV_ITEMS = [
   { 
     name: 'Soins', 
     path: '/soins',
+    clickable: true,
     children: [
       { name: 'Épilation au Laser', path: '/epilation-laser' },
       { name: 'Facial de Luxe', path: '/facial-de-luxe' },
@@ -36,16 +37,16 @@ const NAV_ITEMS = [
   },
   { 
     name: 'Académie', 
-    path: '/academy',
+    path: '/formations',
+    clickable: true,
     children: [
       { name: 'Esthétique Avancé', path: '/aesthetic-advance' },
       { name: 'Esthétique Débutant', path: '/aesthetic-beginner' },
       { name: 'Débutant Plus', path: '/aesthetic-beginner-plus' },
       { name: 'Extensions Cils', path: '/eyelash-extension' },
-      { name: 'Lash Lift', path: '/classic-volume-lifting' },
+      { name: 'Rehaussement de Cils', path: '/classic-volume-lifting' },
     ]
   },
-  { name: 'Galerie', path: '/gallery' },
   { name: 'Contact', path: '/contact' },
 ];
 
@@ -121,8 +122,8 @@ const Header = () => {
                   onMouseLeave={() => setOpenDropdown(null)}
                 >
                   <Link
-                    to={item.children ? '#' : item.path}
-                    onClick={(e) => item.children && e.preventDefault()}
+                    to={item.clickable || !item.children ? item.path : '#'}
+                    onClick={(e) => !item.clickable && item.children && e.preventDefault()}
                     className={`flex items-center gap-1 font-sans text-sm tracking-wide uppercase transition-colors ${
                       location.pathname === item.path || item.children?.some(c => c.path === location.pathname)
                         ? 'text-taupe-dark'
@@ -199,17 +200,25 @@ const Header = () => {
                   <div key={item.path}>
                     {item.children ? (
                       <>
-                        <button
-                          onClick={() => setOpenDropdown(openDropdown === item.path ? null : item.path)}
-                          className="flex items-center justify-between w-full py-3 text-taupe font-sans uppercase text-sm tracking-wide"
-                          data-testid={`mobile-nav-${item.name.toLowerCase().replace(/\s+/g, '-')}`}
-                        >
-                          {item.name}
-                          <ChevronDown 
-                            size={16} 
-                            className={`transition-transform ${openDropdown === item.path ? 'rotate-180' : ''}`}
-                          />
-                        </button>
+                        <div className="flex items-center justify-between">
+                          <Link
+                            to={item.clickable ? item.path : '#'}
+                            onClick={(e) => !item.clickable && e.preventDefault()}
+                            className="flex-grow py-3 text-taupe font-sans uppercase text-sm tracking-wide"
+                            data-testid={`mobile-nav-${item.name.toLowerCase().replace(/\s+/g, '-')}`}
+                          >
+                            {item.name}
+                          </Link>
+                          <button
+                            onClick={() => setOpenDropdown(openDropdown === item.path ? null : item.path)}
+                            className="p-3 text-taupe"
+                          >
+                            <ChevronDown 
+                              size={16} 
+                              className={`transition-transform ${openDropdown === item.path ? 'rotate-180' : ''}`}
+                            />
+                          </button>
+                        </div>
                         <AnimatePresence>
                           {openDropdown === item.path && (
                             <motion.div
