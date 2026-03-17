@@ -89,7 +89,7 @@ const BookingPage = () => {
                   </div>
                   <div>
                     <p className="font-medium">Adresse</p>
-                    <p className="text-taupe-light text-sm">1296 Rue Nobel #103, Boucherville, QC J4B 5H1</p>
+                    <p className="text-taupe-light text-sm">2475 rue Saint-Georges, Lemoyne, QC J4R 2T4</p>
                   </div>
                 </div>
                 
@@ -214,11 +214,11 @@ const BookingPage = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-10">
             <h2 className="font-serif text-3xl text-taupe mb-4">Nous trouver</h2>
-            <p className="text-taupe-light">1296 Rue Nobel #103, Boucherville, QC J4B 5H1</p>
+            <p className="text-taupe-light">2475 rue Saint-Georges, Lemoyne, QC J4R 2T4</p>
           </div>
           <div className="rounded-2xl overflow-hidden shadow-medium h-[400px]">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.8889!2d-73.4444!3d45.5833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc905e00e0a8b01%3A0x0!2s1296%20Rue%20Nobel%2C%20Boucherville%2C%20QC%20J4B%205H1!5e0!3m2!1sfr!2sca!4v1234567890"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.5!2d-73.5!3d45.53!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s2475%20rue%20Saint-Georges%2C%20Lemoyne%2C%20QC%20J4R%202T4!5e0!3m2!1sfr!2sca!4v1234567890"
               width="100%"
               height="100%"
               style={{ border: 0 }}
