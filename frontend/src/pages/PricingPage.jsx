@@ -95,18 +95,15 @@ const PRICING_DATA = {
     heroImage: 'https://www.lateliersecret.ca/images/slider/4.webp',
     hideNossTarifs: true,
     prices: [
-      { area: 'Lipocavitation (1 zone)', price: '75$' },
-      { area: 'Lipocavitation (2 zones)', price: '125$' },
-      { area: 'Lipocavitation (3 zones)', price: '165$' },
-      { area: 'Radiofréquence corps', price: '95$' },
-      { area: 'Drainage lymphatique', price: '85$' },
-      { area: 'Enveloppement minceur', price: '115$' },
-      { area: 'Massage sculptant', price: '95$' },
-      { area: 'Forfait corps complet', price: '225$' },
+      { area: 'Lipocavitation (1 zone)', price: '135$' },
+      { area: 'Lipocavitation (2 zones)', price: '175$' },
+      { area: 'Lipocavitation (3 zones)', price: '215$' },
+      { area: 'Microneedling corps', price: 'Sur demande' },
+      { area: 'Soins Dos Parfait', price: '195$' },
     ],
     promotions: [
-      { discount: '15%', description: 'Forfait 5 séances' },
-      { discount: '25%', description: 'Forfait 10 séances' },
+      { discount: '15%', description: '3 séances' },
+      { discount: '25%', description: '5 séances' },
     ]
   }
 };
