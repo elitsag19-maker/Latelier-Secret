@@ -89,10 +89,11 @@ const PRICING_DATA = {
     ]
   },
   'body-care-price': {
-    title: 'Tarifs Soins Corps',
+    title: 'Tarifs',
     subtitle: 'Soins Corporels',
-    description: 'Sculptez et tonifiez votre corps avec nos traitements non-invasifs.',
+    description: 'Soins du corps',
     heroImage: 'https://www.lateliersecret.ca/images/slider/4.webp',
+    hideNossTarifs: true,
     prices: [
       { area: 'Lipocavitation (1 zone)', price: '75$' },
       { area: 'Lipocavitation (2 zones)', price: '125$' },
