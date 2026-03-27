@@ -91,7 +91,7 @@ const PRICING_DATA = {
   'body-care-price': {
     title: 'Tarifs',
     subtitle: 'Soins Corporels',
-    description: 'Soins du corps',
+    description: 'Sculptez et tonifiez votre corps avec nos traitements non-invasifs.',
     heroImage: 'https://www.lateliersecret.ca/images/slider/4.webp',
     hideNossTarifs: true,
     prices: [
