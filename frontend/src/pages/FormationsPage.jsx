@@ -20,7 +20,7 @@ const FORMATIONS_LIST = [
   {
     title: "Esthétique Débutant",
     description: "Initiation aux fondamentaux de l'esthétique pour démarrer votre carrière dans le domaine de la beauté.",
-    image: "https://images.pexels.com/photos/3764552/pexels-photo-3764552.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    image: "https://customer-assets.emergentagent.com/job_70aebdef-865f-4706-8678-353e85a52623/artifacts/dewok1cx_pexels-arina-krasnikova-6663369.jpg",
     link: "/aesthetic-beginner",
     duration: "Formation initiale",
     level: "Débutant"
@@ -28,7 +28,7 @@ const FORMATIONS_LIST = [
   {
     title: "Esthétique Intermédiaire",
     description: "Approfondissez vos connaissances de base avec des techniques supplémentaires pour vous démarquer.",
-    image: "https://images.unsplash.com/photo-1679584352584-f07655bbadea?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MDV8MHwxfHNlYXJjaHw0fHxlc3RoZXRpY2lhbiUyMHNraW5jYXJlJTIwcHJvZmVzc2lvbmFsJTIwd29tYW4lMjBjbGVhbiUyMHNraW4lMjBuYXR1cmFsfGVufDB8fHx8MTc3NDU4OTI3NHww&ixlib=rb-4.1.0&q=85",
+    image: "https://customer-assets.emergentagent.com/job_70aebdef-865f-4706-8678-353e85a52623/artifacts/paxffd6c_pexels-arina-krasnikova-6663374.jpg",
     link: "/aesthetic-beginner-plus",
     duration: "Formation intermédiaire",
     level: "Intermédiaire"
@@ -36,7 +36,7 @@ const FORMATIONS_LIST = [
   {
     title: "Esthétique Avancé",
     description: "Formation complète pour maîtriser les techniques esthétiques avancées et développer votre expertise professionnelle.",
-    image: "https://images.pexels.com/photos/7446657/pexels-photo-7446657.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    image: "https://customer-assets.emergentagent.com/job_70aebdef-865f-4706-8678-353e85a52623/artifacts/7hojczl6_Untitled%20design%20%284%29.png",
     link: "/aesthetic-advance",
     duration: "Formation complète",
     level: "Avancé"
