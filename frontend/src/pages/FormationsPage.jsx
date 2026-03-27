@@ -20,7 +20,7 @@ const FORMATIONS_LIST = [
   {
     title: "Esthétique Débutant",
     description: "Initiation aux fondamentaux de l'esthétique pour démarrer votre carrière dans le domaine de la beauté.",
-    image: "https://images.unsplash.com/photo-1624031993438-ff5daf2ea2b3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwxfHxlc3RoZXRpY2lhbiUyMHRyYWluaW5nJTIwYmVhdXR5JTIwc2Nob29sJTIwcHJvZmVzc2lvbmFsJTIwbWFrZXVwJTIwY2xhc3N8ZW58MHx8fHwxNzc0NTg5MDE2fDA&ixlib=rb-4.1.0&q=85",
+    image: "https://images.pexels.com/photos/3764552/pexels-photo-3764552.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     link: "/aesthetic-beginner",
     duration: "Formation initiale",
     level: "Débutant"
@@ -28,7 +28,7 @@ const FORMATIONS_LIST = [
   {
     title: "Esthétique Intermédiaire",
     description: "Approfondissez vos connaissances de base avec des techniques supplémentaires pour vous démarquer.",
-    image: "https://images.pexels.com/photos/5177993/pexels-photo-5177993.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    image: "https://images.unsplash.com/photo-1679584352584-f07655bbadea?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MDV8MHwxfHNlYXJjaHw0fHxlc3RoZXRpY2lhbiUyMHNraW5jYXJlJTIwcHJvZmVzc2lvbmFsJTIwd29tYW4lMjBjbGVhbiUyMHNraW4lMjBuYXR1cmFsfGVufDB8fHx8MTc3NDU4OTI3NHww&ixlib=rb-4.1.0&q=85",
     link: "/aesthetic-beginner-plus",
     duration: "Formation intermédiaire",
     level: "Intermédiaire"
@@ -36,7 +36,7 @@ const FORMATIONS_LIST = [
   {
     title: "Esthétique Avancé",
     description: "Formation complète pour maîtriser les techniques esthétiques avancées et développer votre expertise professionnelle.",
-    image: "https://images.unsplash.com/photo-1606158582120-b4fc196bffad?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHw0fHxlc3RoZXRpY2lhbiUyMHRyYWluaW5nJTIwYmVhdXR5JTIwc2Nob29sJTIwcHJvZmVzc2lvbmFsJTIwbWFrZXVwJTIwY2xhc3N8ZW58MHx8fHwxNzc0NTg5MDE2fDA&ixlib=rb-4.1.0&q=85",
+    image: "https://images.pexels.com/photos/7446657/pexels-photo-7446657.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     link: "/aesthetic-advance",
     duration: "Formation complète",
     level: "Avancé"
