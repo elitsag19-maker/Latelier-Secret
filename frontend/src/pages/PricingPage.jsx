@@ -68,10 +68,11 @@ const PRICING_DATA = {
     ]
   },
   'eyelash-extensions-price': {
-    title: 'Extensions de Cils',
-    subtitle: '',
+    title: 'Tarifs',
+    subtitle: 'Extensions de Cils',
     description: 'Un service unique, professionnel et fait sur mesure',
     heroImage: 'https://www.lateliersecret.ca/images/2.png',
+    hideNossTarifs: true,
     prices: [
       { area: 'Pose Classique', price: '135$' },
       { area: 'Pose Hybride', price: '155$' },
@@ -162,11 +163,11 @@ const PricingPage = ({ pricingId: propPricingId }) => {
       <section className="py-20 bg-cream">
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-12">
+            {pricing.subtitle && !pricing.hideNossTarifs && (
+              <span className="font-script text-salmon text-2xl">Nos tarifs</span>
+            )}
             {pricing.subtitle && (
-              <>
-                <span className="font-script text-salmon text-2xl">Nos tarifs</span>
-                <h2 className="font-serif text-3xl text-charcoal mt-2">{pricing.subtitle}</h2>
-              </>
+              <h2 className="font-serif text-3xl text-charcoal mt-2">{pricing.subtitle}</h2>
             )}
             <p className="text-charcoal-light mt-4">{pricing.description}</p>
             <div className="section-divider mx-auto mt-6" />
