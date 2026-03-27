@@ -42,8 +42,9 @@ const NAV_ITEMS = [
     children: [
       { name: 'Esthétique Avancé', path: '/aesthetic-advance' },
       { name: 'Esthétique Débutant', path: '/aesthetic-beginner' },
-      { name: 'Débutant Plus', path: '/aesthetic-beginner-plus' },
-      { name: 'Extensions Cils', path: '/eyelash-extension' },
+      { name: 'Esthétique Intermédiaire', path: '/aesthetic-beginner-plus' },
+      { name: 'Extensions Cils Classique', path: '/eyelash-extension' },
+      { name: 'Extensions Cils Volume', path: '/eyelash-extension-volume' },
       { name: 'Rehaussement de Cils', path: '/classic-volume-lifting' },
     ]
   },

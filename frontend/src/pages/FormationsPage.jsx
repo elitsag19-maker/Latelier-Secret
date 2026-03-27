@@ -42,10 +42,18 @@ const FORMATIONS_LIST = [
     level: "Avancé"
   },
   {
-    title: "Extension de Cils",
-    description: "Apprenez les techniques professionnelles d'extension de cils pour créer des regards sublimes.",
+    title: "Extensions de Cils Classique",
+    description: "Apprenez les techniques professionnelles d'extension de cils classique pour créer des regards sublimes et naturels.",
     image: "https://images.pexels.com/photos/5128235/pexels-photo-5128235.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     link: "/eyelash-extension",
+    duration: "Formation spécialisée",
+    level: "Tous niveaux"
+  },
+  {
+    title: "Extensions de Cils Volume",
+    description: "Maîtrisez les techniques avancées d'extension de cils volume pour des regards intenses et glamour.",
+    image: "https://images.pexels.com/photos/5128220/pexels-photo-5128220.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    link: "/eyelash-extension-volume",
     duration: "Formation spécialisée",
     level: "Tous niveaux"
   },
