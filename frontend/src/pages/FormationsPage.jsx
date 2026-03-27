@@ -18,33 +18,33 @@ const stagger = {
 
 const FORMATIONS_LIST = [
   {
-    title: "Esthétique Avancé",
-    description: "Formation complète pour maîtriser les techniques esthétiques avancées et développer votre expertise professionnelle.",
-    image: "https://www.lateliersecret.ca/images/jty.jpeg",
-    link: "/aesthetic-advance",
-    duration: "Formation complète",
-    level: "Avancé"
-  },
-  {
     title: "Esthétique Débutant",
     description: "Initiation aux fondamentaux de l'esthétique pour démarrer votre carrière dans le domaine de la beauté.",
-    image: "https://www.lateliersecret.ca/images/jty.jpeg",
+    image: "https://images.unsplash.com/photo-1624031993438-ff5daf2ea2b3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwxfHxlc3RoZXRpY2lhbiUyMHRyYWluaW5nJTIwYmVhdXR5JTIwc2Nob29sJTIwcHJvZmVzc2lvbmFsJTIwbWFrZXVwJTIwY2xhc3N8ZW58MHx8fHwxNzc0NTg5MDE2fDA&ixlib=rb-4.1.0&q=85",
     link: "/aesthetic-beginner",
     duration: "Formation initiale",
     level: "Débutant"
   },
   {
-    title: "Esthétique Débutant Plus",
+    title: "Esthétique Intermédiaire",
     description: "Approfondissez vos connaissances de base avec des techniques supplémentaires pour vous démarquer.",
-    image: "https://www.lateliersecret.ca/images/jty.jpeg",
+    image: "https://images.pexels.com/photos/5177993/pexels-photo-5177993.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     link: "/aesthetic-beginner-plus",
     duration: "Formation intermédiaire",
     level: "Intermédiaire"
   },
   {
+    title: "Esthétique Avancé",
+    description: "Formation complète pour maîtriser les techniques esthétiques avancées et développer votre expertise professionnelle.",
+    image: "https://images.unsplash.com/photo-1606158582120-b4fc196bffad?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHw0fHxlc3RoZXRpY2lhbiUyMHRyYWluaW5nJTIwYmVhdXR5JTIwc2Nob29sJTIwcHJvZmVzc2lvbmFsJTIwbWFrZXVwJTIwY2xhc3N8ZW58MHx8fHwxNzc0NTg5MDE2fDA&ixlib=rb-4.1.0&q=85",
+    link: "/aesthetic-advance",
+    duration: "Formation complète",
+    level: "Avancé"
+  },
+  {
     title: "Extension de Cils",
     description: "Apprenez les techniques professionnelles d'extension de cils pour créer des regards sublimes.",
-    image: "https://www.lateliersecret.ca/images/2.png",
+    image: "https://images.pexels.com/photos/5128235/pexels-photo-5128235.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     link: "/eyelash-extension",
     duration: "Formation spécialisée",
     level: "Tous niveaux"
@@ -52,7 +52,7 @@ const FORMATIONS_LIST = [
   {
     title: "Rehaussement de Cils",
     description: "Maîtrisez l'art du rehaussement de cils (Lash Lift) pour offrir un regard naturellement sublimé.",
-    image: "https://www.lateliersecret.ca/images/vfsdv.jpeg",
+    image: "https://images.pexels.com/photos/5128220/pexels-photo-5128220.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     link: "/classic-volume-lifting",
     duration: "Formation spécialisée",
     level: "Tous niveaux"
