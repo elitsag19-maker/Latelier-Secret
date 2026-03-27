@@ -1,33 +1,7 @@
-import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, Clock, MapPin, Phone } from 'lucide-react';
 
 const BookingPage = () => {
-  // Load Go Rendez-vous script
-  useEffect(() => {
-    const loadGoRendezvousScript = () => {
-      const existingScript = document.getElementById('gorendezvous-bookingwidget-script');
-      if (existingScript) {
-        existingScript.parentNode.removeChild(existingScript);
-      }
-      
-      const script = document.createElement('script');
-      script.id = 'gorendezvous-bookingwidget-script';
-      script.src = `https://www.gorendezvous.com/Scripts/gorendezvous.bookingWidgetV2.min.js?v=${Math.floor(new Date().getTime() / (1000 * 60 * 30)) * (1000 * 60 * 30)}`;
-      script.async = true;
-      document.body.appendChild(script);
-    };
-
-    loadGoRendezvousScript();
-
-    return () => {
-      const script = document.getElementById('gorendezvous-bookingwidget-script');
-      if (script) {
-        script.parentNode.removeChild(script);
-      }
-    };
-  }, []);
-
   return (
     <>
       {/* Hero Banner */}
@@ -144,27 +118,16 @@ const BookingPage = () => {
 
               {/* Go Rendez-vous Button Widget */}
               <div className="flex justify-center mb-8">
-                <div 
-                  data-professionalpagename="" 
-                  data-bookingwidgeturlparams="companyId=138849" 
-                  data-language="fr" 
-                  data-label="Prendre un rendez-vous" 
-                  data-url="https://www.gorendezvous.com/" 
-                  className="gorendezvous-button" 
-                  data-buttoncolor="inverse" 
-                  data-width="280px" 
-                  data-height="50px"
+                <a 
+                  href="https://www.gorendezvous.com/BookingWidget/?companyId=138849&buttons-color=%23ffffff&buttons-backgroundColor=%230088CC&source=WebSite&sourcedetails=massage-demo.preview.emergentagent.com" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 bg-taupe text-white px-8 py-4 rounded-none font-sans text-sm uppercase tracking-wider font-medium hover:bg-taupe-dark transition-colors"
                   data-testid="gorendezvous-widget"
                 >
-                  <a 
-                    href="https://www.gorendezvous.com/homepage/138849?companyId=138849" 
-                    target="GOrendezvous"
-                    className="inline-flex items-center justify-center gap-2 bg-taupe text-white px-8 py-4 rounded-none font-sans text-sm uppercase tracking-wider font-medium hover:bg-taupe-dark transition-colors w-full"
-                  >
-                    <Calendar size={18} />
-                    Prendre un rendez-vous
-                  </a>
-                </div>
+                  <Calendar size={18} />
+                  Prendre un rendez-vous
+                </a>
               </div>
 
               {/* Or call us */}
