@@ -42,10 +42,11 @@ const PRICING_DATA = {
     ]
   },
   'facial-treatments-price': {
-    title: 'Tarifs Soins du Visage',
-    subtitle: 'Soins Faciaux',
-    description: 'Découvrez nos soins du visage haut de gamme pour révéler votre beauté naturelle.',
+    title: 'Tarifs',
+    subtitle: 'Soins du Visage',
+    description: 'Découvrez nos soins du visage haut de gamme adaptés spécifiquement à vos besoins.',
     heroImage: 'https://www.lateliersecret.ca/images/services/3%20(1).webp',
+    hideNossTarifs: true,
     prices: [
       { area: 'Facial de luxe', price: '135$' },
       { area: 'Soin anti-âge', price: '155$' },
