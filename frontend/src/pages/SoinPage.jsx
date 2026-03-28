@@ -9,7 +9,7 @@ const SOINS_DATA = {
     subtitle: 'Réduction progressive et durable de la pilosité',
     heroImage: 'https://static.wixstatic.com/media/9426a1_dbc406d1496a4ec5a3a4899459a57be8~mv2.jpg/v1/crop/x_422,y_0,w_1120,h_1071/fill/w_528,h_505,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/a-girl-is-happy-with-Laser-Hair-removal-services-in-Vancouver.jpg',
     mainImage: 'https://static.wixstatic.com/media/9426a1_e3c8fd3d4e7745d284836d9fa5055ac0~mv2.webp/v1/fill/w_600,h_485,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/9426a1_e3c8fd3d4e7745d284836d9fa5055ac0~mv2.webp',
-    questionTitle: "QU'EST-CE QUE LE LASER DIOD?",
+    questionTitle: "QU'EST-CE QUE LE LASER DIODE?",
     description: `Le laser diode est une technologie utilisée en soins esthétiques qui émet un faisceau lumineux par impulsion. Cette lumière est dirigée vers la zone ciblée afin de réduire progressivement la repousse des poils. Le faisceau vise spécifiquement le follicule pileux, tout en préservant les tissus environnants, ce qui permet une approche localisée, confortable et non invasive.
 
 Chez L'Atelier Secret, nous utilisons une technologie esthétique reconnue pour sa précision et son efficacité dans le cadre de soins non médicaux. Nos séances sont adaptées à chaque client·e en fonction de son type de peau, de la zone traitée et du cycle de repousse du poil. L'objectif est d'offrir une expérience sécuritaire, agréable et axée sur l'amélioration progressive de l'apparence de la pilosité.
@@ -427,11 +427,12 @@ const SoinPage = ({ soinId: propSoinId }) => {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Content */}
+            {/* Content - Order 1 on mobile */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
+              className="order-1"
             >
               <p className="text-taupe-light text-lg mb-2">{soin.subtitle}</p>
               <h1 className="font-serif text-4xl md:text-5xl text-taupe font-light uppercase tracking-wide mb-8" data-testid="soin-page-title">
@@ -447,12 +448,12 @@ const SoinPage = ({ soinId: propSoinId }) => {
               </Link>
             </motion.div>
 
-            {/* Hero Image */}
+            {/* Hero Image - Order 2 on mobile */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="rounded-none overflow-hidden shadow-medium"
+              className="rounded-none overflow-hidden shadow-medium order-2"
             >
               <img 
                 src={soin.heroImage}
@@ -464,16 +465,17 @@ const SoinPage = ({ soinId: propSoinId }) => {
         </div>
       </section>
 
-      {/* Main Content Section */}
+      {/* Main Content Section - "Qu'est-ce que..." */}
       <section className="py-16 bg-stone/20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            {/* Image */}
+            {/* Image - Hidden on mobile for epilation-laser (costTitle exists), shown on desktop left */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
+              className={soin.costTitle ? "hidden lg:block" : "order-2 lg:order-1"}
             >
               <img 
                 src={soin.mainImage}
@@ -488,6 +490,7 @@ const SoinPage = ({ soinId: propSoinId }) => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
+              className={soin.costTitle ? "" : "order-1 lg:order-2"}
             >
               {soin.introDescription && (
                 <p className="text-taupe text-lg leading-relaxed mb-8 font-serif">
@@ -506,7 +509,7 @@ const SoinPage = ({ soinId: propSoinId }) => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* CTA Section - "Vous avez des doutes?" */}
       <section className="py-12 bg-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="font-serif text-2xl text-taupe font-light mb-6">VOUS AVEZ DES DOUTES?</h2>
@@ -519,17 +522,18 @@ const SoinPage = ({ soinId: propSoinId }) => {
         </div>
       </section>
 
-      {/* Cost or Benefits Section */}
+      {/* Cost or Benefits Section - "Combien coûte..." */}
       {(soin.costTitle || soin.benefitsTitle) && (
         <section className="py-16 bg-stone/20">
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-              {/* Content */}
+              {/* Content - Order 1 on mobile */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
+                className="order-1"
               >
                 <h2 className="font-serif text-2xl text-taupe font-light uppercase tracking-wide mb-6">
                   {soin.costTitle || soin.benefitsTitle}
@@ -551,21 +555,28 @@ const SoinPage = ({ soinId: propSoinId }) => {
                 )}
               </motion.div>
 
-              {/* Image */}
-              {soin.benefitsImage && (
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                >
+              {/* Image - Order 2 on mobile: Show mainImage for costTitle pages, benefitsImage for others */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="order-2"
+              >
+                {soin.costTitle ? (
+                  <img 
+                    src={soin.mainImage}
+                    alt={soin.costTitle}
+                    className="w-full h-auto rounded-none shadow-medium lg:hidden"
+                  />
+                ) : soin.benefitsImage && (
                   <img 
                     src={soin.benefitsImage}
                     alt={soin.benefitsTitle}
                     className="w-full h-auto rounded-none shadow-medium"
                   />
-                </motion.div>
-              )}
+                )}
+              </motion.div>
             </div>
           </div>
         </section>

@@ -82,6 +82,8 @@ Migration et recréation du site web www.lateliersecret.ca - Centre esthétique 
 
 ### P0 (Critique - À faire avant mise en production)
 - [x] Implémenter les 12 soins du site Wix de référence ✅
+- [x] Corriger la mise en page mobile de la page Épilation Laser ✅ (Mars 2026)
+- [x] Corriger typo "laser diod" → "laser diode" ✅ (Mars 2026)
 - [ ] Ajouter Google Analytics ID (GA_TRACKING_ID)
 - [ ] Configurer Google Search Console
 - [ ] Tester Core Web Vitals après déploiement
@@ -108,4 +110,4 @@ Migration et recréation du site web www.lateliersecret.ca - Centre esthétique 
 6. **Tests** - Vérifier 404s et indexation après migration
 
 ---
-*Dernière mise à jour: Décembre 2025*
+*Dernière mise à jour: Mars 2026*
