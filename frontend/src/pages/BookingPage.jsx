@@ -122,11 +122,11 @@ const BookingPage = () => {
                   href="https://www.gorendezvous.com/BookingWidget/?companyId=138849&buttons-color=%23ffffff&buttons-backgroundColor=%230088CC&source=WebSite&sourcedetails=massage-demo.preview.emergentagent.com" 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 bg-taupe text-white px-8 py-4 rounded-none font-sans text-sm uppercase tracking-wider font-medium hover:bg-taupe-dark transition-colors"
+                  className="inline-flex items-center justify-center gap-2 bg-taupe text-white px-6 sm:px-8 py-4 rounded-none font-sans text-xs sm:text-sm uppercase tracking-wider font-medium hover:bg-taupe-dark transition-colors whitespace-nowrap"
                   data-testid="gorendezvous-widget"
                 >
-                  <Calendar size={18} />
-                  Prendre un rendez-vous
+                  <Calendar size={18} className="flex-shrink-0" />
+                  <span>Prendre rendez-vous</span>
                 </a>
               </div>
 
