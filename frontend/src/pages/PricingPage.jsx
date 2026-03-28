@@ -165,7 +165,7 @@ const PricingPage = ({ pricingId: propPricingId }) => {
             {pricing.subtitle && !pricing.hideNossTarifs && (
               <span className="font-script text-salmon text-2xl">Nos tarifs</span>
             )}
-            {pricing.subtitle && (
+            {pricing.subtitle && !pricing.hideNossTarifs && (
               <h2 className="font-serif text-3xl text-charcoal mt-2">{pricing.subtitle}</h2>
             )}
             <p className="text-charcoal-light mt-4">{pricing.description}</p>
