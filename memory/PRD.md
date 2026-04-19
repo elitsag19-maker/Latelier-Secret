@@ -102,9 +102,9 @@ Migration et recréation du site web www.lateliersecret.ca - Centre esthétique 
 - [ ] Blog pour SEO
 
 ## Prochaines Étapes
-1. **Intégrer Google Analytics** - Ajouter ID dans index.html (demander ID à l'utilisateur)
+1. ~~**Intégrer Google Analytics**~~ ✅ Complété
 2. **Intégrer Google Search Console** - Vérifier propriété et soumettre sitemap
-3. **Intégrer les avis Google** - Afficher les avis sur la page d'accueil
+3. **Intégrer les avis Google** - Afficher les avis sur la page d'accueil (optionnel)
 4. **Déploiement** - Déployer sur Vercel/Netlify
 5. **DNS** - Pointer lateliersecret.ca vers nouveau site
 6. **Tests** - Vérifier 404s et indexation après migration
@@ -113,6 +113,10 @@ Migration et recréation du site web www.lateliersecret.ca - Centre esthétique 
 - ✅ **Go Rendez-vous** (Mars 2026) - Widget de réservation intégré sur les pages "Prendre Rendez-vous" et "Contactez-nous"
   - Company ID: 138849
   - Widget embarqué avec script officiel Go Rendez-vous
+- ✅ **Google Analytics** (Mars 2026) - Suivi du trafic avec consentement utilisateur
+  - ID de mesure: G-NJS63QSMP7
+  - Bannière de consentement aux cookies (conforme Loi 25 Québec)
+  - Chargement conditionnel après acceptation de l'utilisateur
 
 ---
 *Dernière mise à jour: Mars 2026*

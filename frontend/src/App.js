@@ -3,6 +3,7 @@ import { useEffect } from "react";
 
 // Layout
 import Layout from "./components/Layout/Layout";
+import CookieConsent from "./components/CookieConsent";
 
 // Pages
 import HomePage from "./pages/HomePage";
@@ -145,6 +146,7 @@ function App() {
   return (
     <BrowserRouter>
       <AppRoutes />
+      <CookieConsent />
     </BrowserRouter>
   );
 }
