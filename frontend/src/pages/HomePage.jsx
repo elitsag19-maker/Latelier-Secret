@@ -25,8 +25,7 @@ const HeroSection = () => (
       <img 
         src="https://customer-assets.emergentagent.com/job_atelier-optimize/artifacts/2e5l4b4o_Screenshot_20260301_234621_Wix.jpg"
         alt="L'atelier Secret - Beauté naturelle"
-        className="w-full h-full object-cover md:object-center"
-        style={{ objectPosition: '30% center' }}
+        className="w-full h-full object-cover object-center"
       />
       <div className="absolute inset-0 bg-gradient-to-r from-white/80 via-white/40 to-transparent" />
     </div>
