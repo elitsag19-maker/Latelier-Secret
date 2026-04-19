@@ -136,6 +136,8 @@ function AppRoutes() {
           <Route path="/aesthetic-beginner-plus.php" element={<AcademyPageWrapper />} />
           <Route path="/eyelash-extension" element={<AcademyPageWrapper />} />
           <Route path="/eyelash-extension.php" element={<AcademyPageWrapper />} />
+          <Route path="/eyelash-extension-volume" element={<AcademyPageWrapper />} />
+          <Route path="/eyelash-extension-volume.php" element={<AcademyPageWrapper />} />
           <Route path="/classic-volume-lifting" element={<AcademyPageWrapper />} />
           <Route path="/classic-volume-lifting.php" element={<AcademyPageWrapper />} />
           

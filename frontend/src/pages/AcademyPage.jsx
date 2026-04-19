@@ -65,22 +65,42 @@ const COURSES_DATA = {
     ]
   },
   'eyelash-extension': {
-    title: 'Formation Extensions Cils',
+    title: 'Formation Extensions Cils Classique',
     subtitle: 'Spécialisation Regard',
-    description: 'Maîtrisez l\'art des extensions de cils avec notre formation spécialisée. Techniques classiques et volume pour sublimer le regard.',
+    description: 'Maîtrisez l\'art des extensions de cils avec notre formation spécialisée. Techniques classiques pour sublimer le regard de vos clientes.',
     heroImage: 'https://www.lateliersecret.ca/images/2.png',
     duration: '4 semaines',
     hours: '15 heures/semaine',
-    certification: 'Certification extensions cils',
+    certification: 'Certification extensions cils classique',
     maxStudents: '4 élèves max',
     modules: [
       {
-        title: 'Techniques',
-        items: ['Extension classique', 'Volume russe', 'Méga volume']
+        title: 'Techniques Classiques',
+        items: ['Extension classique 1:1', 'Cartographie des yeux', 'Choix des courbures']
       },
       {
         title: 'Pratique',
         items: ['Pose sur modèle', 'Retouches', 'Dépose sécuritaire']
+      }
+    ]
+  },
+  'eyelash-extension-volume': {
+    title: 'Formation Extensions Cils Volume',
+    subtitle: 'Technique Volume Russe',
+    description: 'Perfectionnez vos compétences avec la technique du volume russe. Apprenez à créer des bouquets de cils pour un regard intense et glamour.',
+    heroImage: 'https://www.lateliersecret.ca/images/2.png',
+    duration: '3 semaines',
+    hours: '12 heures/semaine',
+    certification: 'Certification volume russe',
+    maxStudents: '4 élèves max',
+    modules: [
+      {
+        title: 'Techniques Volume',
+        items: ['Volume russe 2D-6D', 'Méga volume', 'Création de bouquets']
+      },
+      {
+        title: 'Pratique Avancée',
+        items: ['Pose sur modèle', 'Techniques de remplissage', 'Entretien et conseils']
       }
     ]
   },

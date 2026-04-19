@@ -1,7 +1,10 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Phone, Mail, Clock, Send, CheckCircle } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Send, CheckCircle, AlertCircle } from 'lucide-react';
 import GoRendezVousWidget from '../components/GoRendezVousWidget';
+
+// Web3Forms Access Key - Get yours free at https://web3forms.com
+const WEB3FORMS_ACCESS_KEY = 'YOUR_ACCESS_KEY_HERE';
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -12,6 +15,7 @@ const ContactPage = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState(null);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -21,9 +25,38 @@ const ContactPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+    setError(null);
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: `Nouveau message de ${formData.name} - L'Atelier Secret`,
+          from_name: "L'Atelier Secret - Site Web",
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone || 'Non fourni',
+          message: formData.message,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setIsSubmitted(true);
+        setFormData({ name: '', email: '', phone: '', message: '' });
+      } else {
+        setError('Une erreur est survenue. Veuillez réessayer.');
+      }
+    } catch (err) {
+      setError('Une erreur est survenue. Veuillez réessayer ou nous contacter par téléphone.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -76,10 +109,24 @@ const ContactPage = () => {
                   <CheckCircle size={64} className="mx-auto mb-4 text-green-500" />
                   <h3 className="font-serif text-2xl text-taupe mb-2">Message envoyé!</h3>
                   <p className="text-taupe-light">Nous vous répondrons dans les plus brefs délais.</p>
+                  <button
+                    onClick={() => setIsSubmitted(false)}
+                    className="mt-6 text-taupe underline hover:text-taupe-dark transition-colors"
+                  >
+                    Envoyer un autre message
+                  </button>
                 </div>
               ) : (
                 <>
                   <h2 className="font-serif text-2xl text-taupe mb-6">Envoyez-nous un message</h2>
+                  
+                  {error && (
+                    <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-none flex items-center gap-3">
+                      <AlertCircle size={20} className="text-red-500 flex-shrink-0" />
+                      <p className="text-red-700 text-sm">{error}</p>
+                    </div>
+                  )}
+                  
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div>
                       <label className="block text-taupe-light text-sm mb-2">Nom complet *</label>
@@ -190,7 +237,7 @@ const ContactPage = () => {
                       className="text-taupe-light hover:text-taupe transition-colors"
                       data-testid="contact-phone"
                     >
-                      +1 438 882 2165
+                      438-882-2165
                     </a>
                   </div>
                 </div>
