@@ -27,7 +27,7 @@ const HeroSection = () => (
         alt="L'atelier Secret - Beauté naturelle"
         className="w-full h-full object-cover object-center"
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-white via-white/70 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-white/80 via-white/40 to-transparent" />
     </div>
 
     <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 w-full">
@@ -36,7 +36,8 @@ const HeroSection = () => (
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="font-serif text-5xl md:text-6xl lg:text-7xl text-taupe leading-tight mb-6 font-light"
+          className="font-serif text-5xl md:text-6xl lg:text-7xl leading-tight mb-6 font-light"
+          style={{ color: '#3D2B1F' }}
           data-testid="hero-title"
         >
           Exprimez votre beauté naturelle.
