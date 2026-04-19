@@ -24,7 +24,7 @@ const GoRendezVousWidget = () => {
 
   return (
     <div 
-      data-professionalpagename="ElitsaG" 
+      data-professionalpagename="" 
       data-bookingwidgeturlparams="companyId=138849" 
       data-language="fr" 
       data-label="Prendre un rendez-vous" 
@@ -36,7 +36,7 @@ const GoRendezVousWidget = () => {
       data-testid="gorendezvous-widget"
     >
       <a 
-        href="https://www.gorendezvous.com/ElitsaG" 
+        href="https://www.gorendezvous.com/homepage/138849?companyId=138849" 
         target="GOrendezvous"
         className="inline-flex items-center justify-center bg-taupe text-white px-8 py-4 rounded-none font-sans text-sm uppercase tracking-wider font-medium hover:bg-taupe-dark transition-colors"
       >
