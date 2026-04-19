@@ -17,6 +17,7 @@ import AcademyPage from "./pages/AcademyPage";
 import SoinPage from "./pages/SoinPage";
 import SoinsListPage from "./pages/SoinsListPage";
 import FormationsPage from "./pages/FormationsPage";
+import PrivacyPage from "./pages/PrivacyPage";
 
 // Service page wrapper - extracts serviceId from URL
 const ServicePageWrapper = ({ serviceId: propServiceId }) => {
@@ -101,6 +102,10 @@ function AppRoutes() {
           
           {/* Formations Page */}
           <Route path="/formations" element={<FormationsPage />} />
+          
+          {/* Legal Pages */}
+          <Route path="/privacy" element={<PrivacyPage />} />
+          <Route path="/politique-confidentialite" element={<PrivacyPage />} />
           
           {/* Legacy Service Pages (redirects) */}
           <Route path="/laser-hair" element={<SoinPage soinId="epilation-laser" />} />
