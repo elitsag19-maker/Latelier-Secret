@@ -1,0 +1,33 @@
+{
+  "redirects": [
+    { "source": "/accueil", "destination": "/", "permanent": true },
+    { "source": "/home", "destination": "/", "permanent": true },
+    { "source": "/a-propos", "destination": "/about", "permanent": true },
+    { "source": "/apropos", "destination": "/about", "permanent": true },
+    { "source": "/qui-sommes-nous", "destination": "/about", "permanent": true },
+    { "source": "/reservez", "destination": "/booking", "permanent": true },
+    { "source": "/reservation", "destination": "/booking", "permanent": true },
+    { "source": "/prendre-rendez-vous", "destination": "/booking", "permanent": true },
+    { "source": "/rendez-vous", "destination": "/booking", "permanent": true },
+    { "source": "/contactez-nous", "destination": "/contact", "permanent": true },
+    { "source": "/nous-joindre", "destination": "/contact", "permanent": true },
+    { "source": "/services", "destination": "/soins", "permanent": true },
+    { "source": "/nos-services", "destination": "/soins", "permanent": true },
+    { "source": "/nos-soins", "destination": "/soins", "permanent": true },
+    { "source": "/epilation-definitive", "destination": "/epilation-laser", "permanent": true },
+    { "source": "/epilation-au-laser", "destination": "/epilation-laser", "permanent": true },
+    { "source": "/laser", "destination": "/epilation-laser", "permanent": true },
+    { "source": "/tarifs", "destination": "/hair-removal-price", "permanent": true },
+    { "source": "/prix", "destination": "/hair-removal-price", "permanent": true },
+    { "source": "/academie", "destination": "/formations", "permanent": true },
+    { "source": "/academy", "destination": "/formations", "permanent": true },
+    { "source": "/formation", "destination": "/formations", "permanent": true },
+    { "source": "/cours", "destination": "/formations", "permanent": true },
+    { "source": "/politique-de-confidentialite", "destination": "/privacy", "permanent": true },
+    { "source": "/politique-confidentialite", "destination": "/privacy", "permanent": true },
+    { "source": "/confidentialite", "destination": "/privacy", "permanent": true },
+    { "source": "/galerie", "destination": "/", "permanent": true },
+    { "source": "/gallery", "destination": "/", "permanent": true },
+    { "source": "/photos", "destination": "/", "permanent": true }
+  ]
+}
