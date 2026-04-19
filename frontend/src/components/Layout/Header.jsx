@@ -48,7 +48,7 @@ const NAV_ITEMS = [
       { name: 'Rehaussement de Cils', path: '/classic-volume-lifting' },
     ]
   },
-  { name: 'Contact', path: '/contact' },
+  { name: 'Contactez-nous', path: '/contact' },
 ];
 
 const Header = () => {

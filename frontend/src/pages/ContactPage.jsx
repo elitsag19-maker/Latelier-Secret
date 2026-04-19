@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import { MapPin, Phone, Mail, Clock, Send, CheckCircle } from 'lucide-react';
+import GoRendezVousWidget from '../components/GoRendezVousWidget';
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -36,14 +36,14 @@ const ContactPage = () => {
             alt="Contactez-nous"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-charcoal/50" />
+          <div className="absolute inset-0 bg-taupe/50" />
         </div>
         <div className="relative z-10 text-center text-white px-6">
           <motion.h1 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="font-serif text-5xl md:text-6xl mb-4"
+            className="font-serif text-5xl md:text-6xl"
             data-testid="contact-page-title"
           >
             Contactez-nous
@@ -52,7 +52,7 @@ const ContactPage = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-white/80 text-lg"
+            className="text-white/80 text-lg mt-4"
           >
             Nous aimerions avoir de vos nouvelles
           </motion.p>
@@ -69,68 +69,68 @@ const ContactPage = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="bg-white p-8 md:p-10 rounded-2xl shadow-soft"
+              className="bg-white p-8 md:p-10 rounded-none shadow-soft"
             >
               {isSubmitted ? (
                 <div className="text-center py-12">
                   <CheckCircle size={64} className="mx-auto mb-4 text-green-500" />
-                  <h3 className="font-serif text-2xl text-charcoal mb-2">Message envoyé!</h3>
-                  <p className="text-charcoal-light">Nous vous répondrons dans les plus brefs délais.</p>
+                  <h3 className="font-serif text-2xl text-taupe mb-2">Message envoyé!</h3>
+                  <p className="text-taupe-light">Nous vous répondrons dans les plus brefs délais.</p>
                 </div>
               ) : (
                 <>
-                  <h2 className="font-serif text-2xl text-charcoal mb-6">Envoyez-nous un message</h2>
+                  <h2 className="font-serif text-2xl text-taupe mb-6">Envoyez-nous un message</h2>
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div>
-                      <label className="block text-charcoal-light text-sm mb-2">Nom complet *</label>
+                      <label className="block text-taupe-light text-sm mb-2">Nom complet *</label>
                       <input
                         type="text"
                         name="name"
                         value={formData.name}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-3 border border-stone rounded-lg focus:border-salmon focus:outline-none transition-colors"
+                        className="w-full px-4 py-3 border border-stone rounded-none focus:border-taupe focus:outline-none transition-colors"
                         placeholder="Votre nom"
                         data-testid="contact-input-name"
                       />
                     </div>
                     
                     <div>
-                      <label className="block text-charcoal-light text-sm mb-2">Adresse courriel *</label>
+                      <label className="block text-taupe-light text-sm mb-2">Adresse courriel *</label>
                       <input
                         type="email"
                         name="email"
                         value={formData.email}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-3 border border-stone rounded-lg focus:border-salmon focus:outline-none transition-colors"
+                        className="w-full px-4 py-3 border border-stone rounded-none focus:border-taupe focus:outline-none transition-colors"
                         placeholder="email@exemple.com"
                         data-testid="contact-input-email"
                       />
                     </div>
                     
                     <div>
-                      <label className="block text-charcoal-light text-sm mb-2">Téléphone</label>
+                      <label className="block text-taupe-light text-sm mb-2">Téléphone</label>
                       <input
                         type="tel"
                         name="phone"
                         value={formData.phone}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-stone rounded-lg focus:border-salmon focus:outline-none transition-colors"
+                        className="w-full px-4 py-3 border border-stone rounded-none focus:border-taupe focus:outline-none transition-colors"
                         placeholder="+1 438 000 0000"
                         data-testid="contact-input-phone"
                       />
                     </div>
                     
                     <div>
-                      <label className="block text-charcoal-light text-sm mb-2">Message *</label>
+                      <label className="block text-taupe-light text-sm mb-2">Message *</label>
                       <textarea
                         name="message"
                         value={formData.message}
                         onChange={handleInputChange}
                         required
                         rows={5}
-                        className="w-full px-4 py-3 border border-stone rounded-lg focus:border-salmon focus:outline-none transition-colors resize-none"
+                        className="w-full px-4 py-3 border border-stone rounded-none focus:border-taupe focus:outline-none transition-colors resize-none"
                         placeholder="Votre message..."
                         data-testid="contact-input-message"
                       />
@@ -139,7 +139,7 @@ const ContactPage = () => {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full inline-flex items-center justify-center gap-2 bg-salmon text-white py-4 rounded-full font-medium hover:bg-salmon-dark transition-colors disabled:opacity-50"
+                      className="w-full inline-flex items-center justify-center gap-2 bg-taupe text-white py-4 rounded-none font-medium hover:bg-taupe-dark transition-colors disabled:opacity-50"
                       data-testid="contact-submit-btn"
                     >
                       {isSubmitting ? 'Envoi en cours...' : 'Envoyer le message'}
@@ -159,36 +159,35 @@ const ContactPage = () => {
               className="space-y-8"
             >
               <div>
-                <span className="font-script text-salmon text-2xl">Pour toute demande</span>
-                <h2 className="font-serif text-3xl text-charcoal mt-2">Nos Coordonnées</h2>
+                <h2 className="font-serif text-3xl text-taupe">Nos Coordonnées</h2>
               </div>
 
-              <div className="space-y-6">
+              <div className="space-y-4">
                 {/* Address - NAP Critical for Local SEO */}
-                <div className="flex items-start gap-4 p-6 bg-white rounded-xl shadow-soft">
-                  <div className="w-12 h-12 rounded-full bg-salmon/10 flex items-center justify-center flex-shrink-0">
-                    <MapPin size={22} className="text-salmon" strokeWidth={1.5} />
+                <div className="flex items-start gap-4 p-6 bg-white rounded-none shadow-soft">
+                  <div className="w-12 h-12 rounded-full bg-taupe/10 flex items-center justify-center flex-shrink-0">
+                    <MapPin size={22} className="text-taupe" strokeWidth={1.5} />
                   </div>
                   <div>
-                    <h3 className="font-medium text-charcoal mb-1">Notre emplacement</h3>
-                    <address className="not-italic text-charcoal-light" data-testid="contact-address">
-                      <p className="font-medium text-charcoal">L'atelier Secret</p>
-                      <p>2475 Saint-Georges Street</p>
-                      <p>LeMoyne, QC J4R 2T4</p>
+                    <h3 className="font-medium text-taupe mb-1">Notre emplacement</h3>
+                    <address className="not-italic text-taupe-light" data-testid="contact-address">
+                      <p className="font-medium text-taupe">L'atelier Secret</p>
+                      <p>2475 rue Saint-Georges</p>
+                      <p>Lemoyne, QC J4R 2T4</p>
                     </address>
                   </div>
                 </div>
 
                 {/* Phone */}
-                <div className="flex items-start gap-4 p-6 bg-white rounded-xl shadow-soft">
-                  <div className="w-12 h-12 rounded-full bg-salmon/10 flex items-center justify-center flex-shrink-0">
-                    <Phone size={22} className="text-salmon" strokeWidth={1.5} />
+                <div className="flex items-start gap-4 p-6 bg-white rounded-none shadow-soft">
+                  <div className="w-12 h-12 rounded-full bg-taupe/10 flex items-center justify-center flex-shrink-0">
+                    <Phone size={22} className="text-taupe" strokeWidth={1.5} />
                   </div>
                   <div>
-                    <h3 className="font-medium text-charcoal mb-1">Appelez-nous</h3>
+                    <h3 className="font-medium text-taupe mb-1">Appelez-nous</h3>
                     <a 
                       href="tel:+14388822165" 
-                      className="text-charcoal-light hover:text-salmon transition-colors"
+                      className="text-taupe-light hover:text-taupe transition-colors"
                       data-testid="contact-phone"
                     >
                       +1 438 882 2165
@@ -197,15 +196,15 @@ const ContactPage = () => {
                 </div>
 
                 {/* Email */}
-                <div className="flex items-start gap-4 p-6 bg-white rounded-xl shadow-soft">
-                  <div className="w-12 h-12 rounded-full bg-salmon/10 flex items-center justify-center flex-shrink-0">
-                    <Mail size={22} className="text-salmon" strokeWidth={1.5} />
+                <div className="flex items-start gap-4 p-6 bg-white rounded-none shadow-soft">
+                  <div className="w-12 h-12 rounded-full bg-taupe/10 flex items-center justify-center flex-shrink-0">
+                    <Mail size={22} className="text-taupe" strokeWidth={1.5} />
                   </div>
                   <div>
-                    <h3 className="font-medium text-charcoal mb-1">Écrivez-nous</h3>
+                    <h3 className="font-medium text-taupe mb-1">Écrivez-nous</h3>
                     <a 
                       href="mailto:info@lateliersecret.ca" 
-                      className="text-charcoal-light hover:text-salmon transition-colors"
+                      className="text-taupe-light hover:text-taupe transition-colors"
                       data-testid="contact-email"
                     >
                       info@lateliersecret.ca
@@ -214,13 +213,13 @@ const ContactPage = () => {
                 </div>
 
                 {/* Hours */}
-                <div className="flex items-start gap-4 p-6 bg-white rounded-xl shadow-soft">
-                  <div className="w-12 h-12 rounded-full bg-salmon/10 flex items-center justify-center flex-shrink-0">
-                    <Clock size={22} className="text-salmon" strokeWidth={1.5} />
+                <div className="flex items-start gap-4 p-6 bg-white rounded-none shadow-soft">
+                  <div className="w-12 h-12 rounded-full bg-taupe/10 flex items-center justify-center flex-shrink-0">
+                    <Clock size={22} className="text-taupe" strokeWidth={1.5} />
                   </div>
                   <div>
-                    <h3 className="font-medium text-charcoal mb-1">Heures d'ouverture</h3>
-                    <div className="text-charcoal-light space-y-1">
+                    <h3 className="font-medium text-taupe mb-1">Heures d'ouverture</h3>
+                    <div className="text-taupe-light space-y-1">
                       <p>Lundi - Vendredi: 9h00 - 21h00</p>
                       <p>Samedi: 10h00 - 18h00</p>
                       <p>Dimanche: Fermé</p>
@@ -229,17 +228,13 @@ const ContactPage = () => {
                 </div>
               </div>
 
-              {/* Book CTA */}
-              <div className="bg-salmon p-8 rounded-2xl text-center">
+              {/* Go Rendez-vous Widget */}
+              <div className="bg-taupe p-8 rounded-none text-center">
                 <h3 className="font-serif text-2xl text-white mb-2">Prêt(e) à réserver?</h3>
                 <p className="text-white/80 mb-6">Réservez votre rendez-vous en ligne</p>
-                <Link
-                  to="/booking"
-                  className="inline-block bg-white text-salmon px-8 py-3 rounded-full font-medium hover:bg-cream transition-colors"
-                  data-testid="contact-book-btn"
-                >
-                  Réserver maintenant
-                </Link>
+                <div className="flex justify-center">
+                  <GoRendezVousWidget />
+                </div>
               </div>
             </motion.div>
           </div>
@@ -249,7 +244,7 @@ const ContactPage = () => {
       {/* Map Section */}
       <section className="h-[400px] bg-stone">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.3!2d-73.5078!3d45.5088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDXCsDMwJzMxLjciTiA3M8KwMzAnMjguMSJX!5e0!3m2!1sen!2sca!4v1234567890"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.5!2d-73.5!3d45.53!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s2475%20rue%20Saint-Georges%2C%20Lemoyne%2C%20QC%20J4R%202T4!5e0!3m2!1sfr!2sca!4v1234567890"
           width="100%"
           height="100%"
           style={{ border: 0 }}

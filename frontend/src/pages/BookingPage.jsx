@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Calendar, Clock, MapPin, Phone } from 'lucide-react';
+import GoRendezVousWidget from '../components/GoRendezVousWidget';
 
 const BookingPage = () => {
   return (
@@ -91,7 +92,7 @@ const BookingPage = () => {
               </div>
 
               {/* Additional Info */}
-              <div className="bg-white p-6 rounded-lg shadow-soft">
+              <div className="bg-white p-6 rounded-none shadow-soft">
                 <h3 className="font-serif text-xl text-taupe mb-3">Politique d'annulation</h3>
                 <p className="text-taupe-light text-sm leading-relaxed">
                   Veuillez nous prévenir au moins 24 heures à l'avance si vous devez annuler ou reporter votre rendez-vous. 
@@ -106,7 +107,7 @@ const BookingPage = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="bg-white p-8 md:p-10 rounded-2xl shadow-medium"
+              className="bg-white p-8 md:p-10 rounded-none shadow-medium"
             >
               <h3 className="font-serif text-2xl text-taupe mb-6 text-center">
                 Réserver maintenant
@@ -116,18 +117,9 @@ const BookingPage = () => {
                 Cliquez sur le bouton ci-dessous pour accéder à notre système de réservation en ligne
               </p>
 
-              {/* Go Rendez-vous Button Widget */}
+              {/* Go Rendez-vous Widget */}
               <div className="flex justify-center mb-8">
-                <a 
-                  href="https://www.gorendezvous.com/BookingWidget/?companyId=138849&buttons-color=%23ffffff&buttons-backgroundColor=%230088CC&source=WebSite&sourcedetails=massage-demo.preview.emergentagent.com" 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 bg-taupe text-white px-6 sm:px-8 py-4 rounded-none font-sans text-xs sm:text-sm uppercase tracking-wider font-medium hover:bg-taupe-dark transition-colors whitespace-nowrap"
-                  data-testid="gorendezvous-widget"
-                >
-                  <Calendar size={18} className="flex-shrink-0" />
-                  <span>Prendre rendez-vous</span>
-                </a>
+                <GoRendezVousWidget />
               </div>
 
               {/* Or call us */}
@@ -171,7 +163,7 @@ const BookingPage = () => {
             <h2 className="font-serif text-3xl text-taupe mb-4">Nous trouver</h2>
             <p className="text-taupe-light">2475 rue Saint-Georges, Lemoyne, QC J4R 2T4</p>
           </div>
-          <div className="rounded-2xl overflow-hidden shadow-medium h-[400px]">
+          <div className="rounded-none overflow-hidden shadow-medium h-[400px]">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.5!2d-73.5!3d45.53!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s2475%20rue%20Saint-Georges%2C%20Lemoyne%2C%20QC%20J4R%202T4!5e0!3m2!1sfr!2sca!4v1234567890"
               width="100%"

@@ -109,5 +109,10 @@ Migration et recréation du site web www.lateliersecret.ca - Centre esthétique 
 5. **DNS** - Pointer lateliersecret.ca vers nouveau site
 6. **Tests** - Vérifier 404s et indexation après migration
 
+## Intégrations Complétées
+- ✅ **Go Rendez-vous** (Mars 2026) - Widget de réservation intégré sur les pages "Prendre Rendez-vous" et "Contactez-nous"
+  - Company ID: 138849
+  - Widget embarqué avec script officiel Go Rendez-vous
+
 ---
 *Dernière mise à jour: Mars 2026*
