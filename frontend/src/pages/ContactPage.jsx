@@ -4,7 +4,7 @@ import { MapPin, Phone, Mail, Clock, Send, CheckCircle, AlertCircle } from 'luci
 import GoRendezVousWidget from '../components/GoRendezVousWidget';
 
 // Web3Forms Access Key - Get yours free at https://web3forms.com
-const WEB3FORMS_ACCESS_KEY = 'YOUR_ACCESS_KEY_HERE';
+const WEB3FORMS_ACCESS_KEY = 'd5d1dea8-2acf-4bde-8636-6a8176d44231';
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
