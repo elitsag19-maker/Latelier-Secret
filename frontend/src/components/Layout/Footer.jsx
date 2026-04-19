@@ -51,9 +51,10 @@ const Footer = () => {
               {[
                 { name: 'Accueil', path: '/' },
                 { name: 'À propos', path: '/about' },
-                { name: 'Épilation Laser', path: '/laser-hair' },
-                { name: 'Soins du Visage', path: '/luxury-facial' },
-                { name: 'Galerie', path: '/gallery' },
+                { name: 'Nos Soins', path: '/soins' },
+                { name: 'Tarifs', path: '/hair-removal-price' },
+                { name: 'Académie', path: '/formations' },
+                { name: 'Contactez-nous', path: '/contact' },
                 { name: 'Réserver', path: '/booking' },
               ].map((link) => (
                 <li key={link.path}>
@@ -74,12 +75,12 @@ const Footer = () => {
             <h4 className="font-serif text-lg mb-6 font-normal uppercase tracking-wide">Nos Services</h4>
             <ul className="space-y-3">
               {[
-                { name: 'Épilation Laser', path: '/hair-removal-price' },
+                { name: 'Épilation Laser', path: '/epilation-laser' },
                 { name: 'Microneedling', path: '/microneedling' },
-                { name: 'Soins Anti-Âge', path: '/anti-aging-facial' },
+                { name: 'Soins Anti-Âge', path: '/soin-anti-age' },
                 { name: 'Extensions Cils', path: '/eyelash-extensions-price' },
-                { name: 'Soins Corps', path: '/body-care-price' },
-                { name: 'Formations', path: '/aesthetic-advance' },
+                { name: 'Soins Corps', path: '/soin-silhouette' },
+                { name: 'Formations', path: '/formations' },
               ].map((link) => (
                 <li key={link.path}>
                   <Link 
@@ -91,12 +92,21 @@ const Footer = () => {
                   </Link>
                 </li>
               ))}
+              <li>
+                <Link 
+                  to="/soins"
+                  className="text-stone/70 hover:text-salmon transition-colors text-sm"
+                  data-testid="footer-service-et-dautres"
+                >
+                  et d'autres...
+                </Link>
+              </li>
             </ul>
           </div>
 
           {/* Contact Info - NAP for Local SEO */}
           <div>
-            <h4 className="font-serif text-lg mb-6 font-normal uppercase tracking-wide">Contact</h4>
+            <h4 className="font-serif text-lg mb-6 font-normal uppercase tracking-wide">Contactez-nous</h4>
             <address className="not-italic space-y-4">
               {/* Location - Critical for Local SEO */}
               <div className="flex items-start gap-3">
@@ -105,8 +115,8 @@ const Footer = () => {
                 </div>
                 <div className="text-sm text-stone/80">
                   <p className="font-medium text-white" data-testid="footer-business-name">L'atelier Secret</p>
-                  <p data-testid="footer-address">2475 Saint-Georges Street</p>
-                  <p>LeMoyne, QC J4R 2T4</p>
+                  <p data-testid="footer-address">2475 rue Saint-Georges</p>
+                  <p>Lemoyne, QC J4R 2T4</p>
                 </div>
               </div>
 
