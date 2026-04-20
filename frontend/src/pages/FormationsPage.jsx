@@ -60,7 +60,7 @@ const FORMATIONS_LIST = [
   {
     title: "Rehaussement de Cils",
     description: "Maîtrisez l'art du rehaussement de cils (Lash Lift) pour offrir un regard naturellement sublimé.",
-    image: "https://static.wixstatic.com/media/9426a1_c5d12f25e9034182857cfb8f7b9cbd2a~mv2.webp/v1/fill/w_800,h_600,al_c,q_85,enc_avif,quality_auto/DSC7619.webp",
+    image: "https://customer-assets.emergentagent.com/job_70aebdef-865f-4706-8678-353e85a52623/artifacts/p22niw3z_Copy%20of%20MICRONEEDLING_20260419_230634_0002.png",
     link: "/classic-volume-lifting",
     duration: "Formation spécialisée",
     level: "Tous niveaux"

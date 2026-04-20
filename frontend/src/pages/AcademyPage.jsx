@@ -108,7 +108,7 @@ const COURSES_DATA = {
     title: 'Formation Lash Lift',
     subtitle: 'Rehaussement de Cils',
     description: 'Apprenez la technique du lash lift pour offrir à vos clientes des cils naturellement sublimés. Formation pratique et certifiante.',
-    heroImage: 'https://static.wixstatic.com/media/9426a1_c5d12f25e9034182857cfb8f7b9cbd2a~mv2.webp/v1/fill/w_1200,h_800,al_c,q_85,enc_avif,quality_auto/DSC7619.webp',
+    heroImage: 'https://customer-assets.emergentagent.com/job_70aebdef-865f-4706-8678-353e85a52623/artifacts/p22niw3z_Copy%20of%20MICRONEEDLING_20260419_230634_0002.png',
     duration: '2 semaines',
     hours: '10 heures/semaine',
     certification: 'Certification lash lift',
