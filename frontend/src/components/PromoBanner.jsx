@@ -1,30 +1,85 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 const PromoBanner = () => {
   return (
     <motion.section
-      initial={{ opacity: 0, y: -10 }}
+      initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: 0.3 }}
-      className="w-full bg-gradient-to-r from-taupe via-taupe-dark to-taupe text-white"
+      transition={{ duration: 0.7, ease: 'easeOut' }}
+      className="relative w-full overflow-hidden"
+      style={{
+        background: 'linear-gradient(90deg, #2a2420 0%, #3d2f26 50%, #2a2420 100%)',
+      }}
       data-testid="promo-banner"
     >
-      <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 text-center">
-        <div className="flex items-center gap-3">
-          <Sparkles size={18} strokeWidth={1.5} className="text-cream shrink-0" />
-          <p className="font-sans text-sm sm:text-base tracking-wide">
-            Première visite ? <span className="font-bold">15% de rabais</span> sur votre 1<sup>er</sup> soin
+      {/* Shimmer overlay */}
+      <motion.div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            'linear-gradient(120deg, transparent 30%, rgba(212, 180, 131, 0.18) 50%, transparent 70%)',
+          backgroundSize: '200% 100%',
+        }}
+        animate={{ backgroundPosition: ['200% 0%', '-200% 0%'] }}
+        transition={{ duration: 6, repeat: Infinity, ease: 'linear' }}
+      />
+
+      {/* Top + bottom gold accent lines */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#d4b483] to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#d4b483] to-transparent" />
+
+      <div className="relative max-w-7xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-center gap-5 sm:gap-10 text-center">
+        <div className="flex items-center gap-4">
+          <span
+            className="hidden sm:inline-block h-px w-10"
+            style={{ background: 'linear-gradient(to right, transparent, #d4b483)' }}
+          />
+          <p className="font-serif text-white text-base sm:text-lg md:text-xl tracking-[0.02em]">
+            Première visite&nbsp;?{' '}
+            <span
+              className="font-bold"
+              style={{
+                color: '#e8c99a',
+                textShadow: '0 0 20px rgba(212, 180, 131, 0.35)',
+                letterSpacing: '0.04em',
+              }}
+            >
+              15% de rabais
+            </span>{' '}
+            <span className="font-light">sur votre 1<sup>er</sup> soin</span>
           </p>
+          <span
+            className="hidden sm:inline-block h-px w-10"
+            style={{ background: 'linear-gradient(to left, transparent, #d4b483)' }}
+          />
         </div>
+
         <Link
           to="/booking"
-          className="inline-flex items-center gap-2 bg-white text-taupe px-6 py-2.5 font-sans text-xs sm:text-sm uppercase tracking-wider font-semibold hover:bg-cream transition-colors rounded-none whitespace-nowrap"
+          className="group relative inline-flex items-center gap-2.5 px-7 py-3 font-sans text-xs sm:text-sm uppercase tracking-[0.18em] font-semibold transition-all duration-300 rounded-none whitespace-nowrap overflow-hidden"
+          style={{
+            background: 'linear-gradient(135deg, #e8c99a 0%, #d4b483 100%)',
+            color: '#2a2420',
+            boxShadow: '0 4px 20px rgba(212, 180, 131, 0.35)',
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.boxShadow = '0 6px 30px rgba(232, 201, 154, 0.6)';
+            e.currentTarget.style.transform = 'translateY(-1px)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.boxShadow = '0 4px 20px rgba(212, 180, 131, 0.35)';
+            e.currentTarget.style.transform = 'translateY(0)';
+          }}
           data-testid="promo-banner-cta"
         >
-          Réserver maintenant
-          <ArrowRight size={16} strokeWidth={1.5} />
+          <span className="relative z-10">Réserver maintenant</span>
+          <ArrowRight
+            size={16}
+            strokeWidth={2}
+            className="relative z-10 transition-transform duration-300 group-hover:translate-x-1"
+          />
         </Link>
       </div>
     </motion.section>
