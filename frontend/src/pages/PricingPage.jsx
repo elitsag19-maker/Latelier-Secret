@@ -76,7 +76,7 @@ const PRICING_DATA = {
     title: 'Tarifs',
     subtitle: 'Extensions de Cils',
     description: 'Un service unique, professionnel et fait sur mesure',
-    heroImage: 'https://static.wixstatic.com/media/da88f0575401483fb62f625d9b0033cb.jpg/v1/fill/w_1200,h_800,al_c,q_85,enc_avif,quality_auto/Femme.jpg',
+    heroImage: 'https://customer-assets.emergentagent.com/job_70aebdef-865f-4706-8678-353e85a52623/artifacts/t953zwk3_Copy%20of%20MICRONEEDLING_20260419_230634_0000.png',
     hideNossTarifs: true,
     prices: [
       { area: 'Pose Classique', price: '135$' },
