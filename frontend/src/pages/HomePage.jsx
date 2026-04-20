@@ -460,8 +460,8 @@ const AcademySection = () => {
       link: "/aesthetic-advance"
     },
     {
-      title: "Extension Cils",
-      image: "https://static.wixstatic.com/media/11062b_c08353118ce849f98c46f9788443b1fe~mv2.jpg/v1/fill/w_1200,h_800,al_c,q_85,enc_avif,quality_auto/Traitement%20facial%20au%20laser.jpg",
+      title: "Extensions de cils",
+      image: "https://customer-assets.emergentagent.com/job_70aebdef-865f-4706-8678-353e85a52623/artifacts/te61xztg_pexels-n-voitkevich-5128224.jpg",
       link: "/eyelash-extension"
     },
     {
