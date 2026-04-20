@@ -8,8 +8,8 @@ const SERVICES_DATA = {
     title: 'Épilation Laser',
     subtitle: 'Peau lisse et soyeuse',
     description: 'Découvrez la liberté d\'une réduction permanente des poils avec notre traitement d\'épilation laser avancé. Utilisant une technologie de pointe, nous offrons des résultats sûrs, efficaces et durables pour tous les types de peau.',
-    image: 'https://www.lateliersecret.ca/images/rfg.jpeg',
-    heroImage: 'https://www.lateliersecret.ca/images/services/1.webp',
+    image: 'https://static.wixstatic.com/media/9426a1_b941e26d1d9e46d38f15c68cfd693de9~mv2.jpg/v1/fill/w_800,h_600,al_c,q_85,enc_avif,quality_auto/epilation-laser-1_edited.jpg',
+    heroImage: 'https://static.wixstatic.com/media/9426a1_b941e26d1d9e46d38f15c68cfd693de9~mv2.jpg/v1/fill/w_1200,h_800,al_c,q_85,enc_avif,quality_auto/epilation-laser-1_edited.jpg',
     metaTitle: 'Épilation Laser LeMoyne | L\'Atelier Secret | Appelez Maintenant',
     metaDescription: 'Services d\'épilation laser à LeMoyne pour une peau lisse et sans poils utilisant une technologie laser avancée et sécuritaire.',
     benefits: [
@@ -34,8 +34,8 @@ const SERVICES_DATA = {
     title: 'Microneedling',
     subtitle: 'Régénération cutanée',
     description: 'Le microneedling stimule la production naturelle de collagène de votre peau, réduisant les cicatrices, les rides et améliorant la texture générale. Découvrez une peau rajeunie et éclatante.',
-    image: 'https://www.lateliersecret.ca/images/services/2%20(1).webp',
-    heroImage: 'https://www.lateliersecret.ca/images/services/2%20(1).webp',
+    image: 'https://static.wixstatic.com/media/11062b_6dfa28682dbf4247930028a218950e64~mv2.jpg/v1/crop/x_2019,y_0,w_2658,h_2543/fill/w_800,h_600,al_c,q_85,enc_avif,quality_auto/Gros%20plan%20sur%20le%20visage%20d%27une%20femme.jpg',
+    heroImage: 'https://static.wixstatic.com/media/11062b_6dfa28682dbf4247930028a218950e64~mv2.jpg/v1/crop/x_2019,y_0,w_2658,h_2543/fill/w_1200,h_800,al_c,q_85,enc_avif,quality_auto/Gros%20plan%20sur%20le%20visage%20d%27une%20femme.jpg',
     metaTitle: 'Microneedling LeMoyne | L\'Atelier Secret',
     metaDescription: 'Traitement de microneedling professionnel à LeMoyne pour stimuler le collagène et rajeunir votre peau.',
     benefits: [
@@ -60,8 +60,8 @@ const SERVICES_DATA = {
     title: 'Soin du Visage de Luxe',
     subtitle: 'Expérience premium',
     description: 'Offrez-vous un soin du visage de luxe qui nettoie, hydrate et rajeunit votre peau. Nos traitements personnalisés utilisent des produits haut de gamme pour des résultats exceptionnels.',
-    image: 'https://www.lateliersecret.ca/images/services/3%20(1).webp',
-    heroImage: 'https://www.lateliersecret.ca/images/services/3%20(1).webp',
+    image: 'https://static.wixstatic.com/media/11062b_017f998d03a44d5494c1f4eb4a9fcace~mv2.jpg/v1/fill/w_800,h_600,al_c,q_85,enc_avif,quality_auto/Gros%20plan%20sur%20les%20soins%20de%20la%20peau.jpg',
+    heroImage: 'https://static.wixstatic.com/media/11062b_017f998d03a44d5494c1f4eb4a9fcace~mv2.jpg/v1/fill/w_1200,h_800,al_c,q_85,enc_avif,quality_auto/Gros%20plan%20sur%20les%20soins%20de%20la%20peau.jpg',
     metaTitle: 'Soin du Visage de Luxe LeMoyne | L\'Atelier Secret',
     metaDescription: 'Soins du visage de luxe personnalisés à LeMoyne. Nettoyage en profondeur, hydratation et rajeunissement.',
     benefits: [
@@ -86,8 +86,8 @@ const SERVICES_DATA = {
     title: 'Soin Anti-Âge',
     subtitle: 'Soins lumineux',
     description: 'Nos soins anti-âge avancés combattent les signes du vieillissement avec des technologies LED et des actifs puissants. Redécouvrez une peau ferme, lisse et éclatante de jeunesse.',
-    image: 'https://www.lateliersecret.ca/images/services/4%20(1).webp',
-    heroImage: 'https://www.lateliersecret.ca/images/services/4%20(1).webp',
+    image: 'https://static.wixstatic.com/media/11062b_c08353118ce849f98c46f9788443b1fe~mv2.jpg/v1/fill/w_800,h_600,al_c,q_85,enc_avif,quality_auto/Traitement%20facial%20au%20laser.jpg',
+    heroImage: 'https://static.wixstatic.com/media/11062b_c08353118ce849f98c46f9788443b1fe~mv2.jpg/v1/fill/w_1200,h_800,al_c,q_85,enc_avif,quality_auto/Traitement%20facial%20au%20laser.jpg',
     metaTitle: 'Soin Anti-Âge LeMoyne | L\'Atelier Secret',
     metaDescription: 'Traitements anti-âge professionnels à LeMoyne. Technologie LED et soins avancés pour une peau rajeunie.',
     benefits: [

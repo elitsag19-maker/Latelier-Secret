@@ -65,7 +65,7 @@ const ContactPage = () => {
       <section className="relative h-[40vh] min-h-[300px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img 
-            src="https://www.lateliersecret.ca/images/slider/3.webp"
+            src="https://static.wixstatic.com/media/11062b_c08353118ce849f98c46f9788443b1fe~mv2.jpg/v1/fill/w_1920,h_800,al_c,q_85,enc_avif,quality_auto/Traitement%20facial%20au%20laser.jpg"
             alt="Contactez-nous"
             className="w-full h-full object-cover"
           />

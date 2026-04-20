@@ -117,6 +117,11 @@ Migration et recréation du site web www.lateliersecret.ca - Centre esthétique 
   - ID de mesure: G-NJS63QSMP7
   - Bannière de consentement aux cookies (conforme Loi 25 Québec)
   - Chargement conditionnel après acceptation de l'utilisateur
+- ✅ **Web3Forms** - Envoi d'emails depuis le formulaire de contact (sans backend)
+
+## Corrections récentes
+- ✅ **Fév 2026** - Correction de toutes les images brisées (Pricing, Academy, Gallery, Formations, Contact, Services). Les URLs pointant vers `lateliersecret.ca/images/*` (fichiers supprimés du serveur PHP d'origine) ont été remplacées par les URLs du CDN Wix (`static.wixstatic.com`) déjà utilisées ailleurs sur le site + quelques images Unsplash/Pexels vérifiées.
+- ✅ **Fév 2026** - Retrait du code orphelin `icingPage;` à la fin de `PricingPage.jsx` qui causait un crash complet du rendu.
 
 ---
-*Dernière mise à jour: Mars 2026*
+*Dernière mise à jour: Février 2026*

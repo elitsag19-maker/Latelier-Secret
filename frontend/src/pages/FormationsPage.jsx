@@ -60,7 +60,7 @@ const FORMATIONS_LIST = [
   {
     title: "Rehaussement de Cils",
     description: "Maîtrisez l'art du rehaussement de cils (Lash Lift) pour offrir un regard naturellement sublimé.",
-    image: "https://www.lateliersecret.ca/images/vfsdv.jpeg",
+    image: "https://static.wixstatic.com/media/9426a1_c5d12f25e9034182857cfb8f7b9cbd2a~mv2.webp/v1/fill/w_800,h_600,al_c,q_85,enc_avif,quality_auto/DSC7619.webp",
     link: "/classic-volume-lifting",
     duration: "Formation spécialisée",
     level: "Tous niveaux"

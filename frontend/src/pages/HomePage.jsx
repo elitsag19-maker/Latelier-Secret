@@ -188,7 +188,7 @@ const AboutSection = () => (
         >
           <div className="aspect-[3/4] rounded-none overflow-hidden shadow-medium">
             <img 
-              src="https://www.lateliersecret.ca/images/Untitled-design-4-768x1024.webp"
+              src="https://images.pexels.com/photos/5659012/pexels-photo-5659012.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
               alt="L'atelier Secret - Centre esthétique"
               className="w-full h-full object-cover"
             />
@@ -417,7 +417,7 @@ const CTASection = () => (
   <section className="relative py-32 overflow-hidden">
     <div className="absolute inset-0">
       <img 
-        src="https://www.lateliersecret.ca/images/Untitled-design-7.webp"
+        src="https://images.pexels.com/photos/12115016/pexels-photo-12115016.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
         alt="Book appointment"
         className="w-full h-full object-cover"
       />
@@ -456,17 +456,17 @@ const AcademySection = () => {
   const courses = [
     {
       title: "Esthétique",
-      image: "https://www.lateliersecret.ca/images/jty.jpeg",
+      image: "https://images.pexels.com/photos/5659012/pexels-photo-5659012.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
       link: "/aesthetic-advance"
     },
     {
       title: "Extension Cils",
-      image: "https://www.lateliersecret.ca/images/2.png",
+      image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&auto=format&fit=crop",
       link: "/eyelash-extension"
     },
     {
       title: "Rehaussement de cils",
-      image: "https://www.lateliersecret.ca/images/vfsdv.jpeg",
+      image: "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=600&auto=format&fit=crop",
       link: "/classic-volume-lifting"
     }
   ];

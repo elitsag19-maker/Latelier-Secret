@@ -4,15 +4,15 @@ import { Link } from 'react-router-dom';
 import { X, ArrowRight } from 'lucide-react';
 
 const galleryImages = [
-  { src: 'https://www.lateliersecret.ca/images/gallery9.jpeg', alt: 'Galerie 9' },
-  { src: 'https://www.lateliersecret.ca/images/gallery8.jpeg', alt: 'Galerie 8' },
-  { src: 'https://www.lateliersecret.ca/images/gallery7.jpeg', alt: 'Galerie 7' },
-  { src: 'https://www.lateliersecret.ca/images/gallery6.jpeg', alt: 'Galerie 6' },
-  { src: 'https://www.lateliersecret.ca/images/gallery5.jpeg', alt: 'Galerie 5' },
-  { src: 'https://www.lateliersecret.ca/images/gallery4.jpeg', alt: 'Galerie 4' },
-  { src: 'https://www.lateliersecret.ca/images/gallery3.jpeg', alt: 'Galerie 3' },
-  { src: 'https://www.lateliersecret.ca/images/gallery2.jpeg', alt: 'Galerie 2' },
-  { src: 'https://www.lateliersecret.ca/images/gallery1.jpeg', alt: 'Galerie 1' },
+  { src: 'https://static.wixstatic.com/media/9426a1_b941e26d1d9e46d38f15c68cfd693de9~mv2.jpg/v1/fill/w_1000,h_1000,al_c,q_85,enc_avif,quality_auto/epilation-laser-1_edited.jpg', alt: 'Épilation au laser' },
+  { src: 'https://static.wixstatic.com/media/11062b_017f998d03a44d5494c1f4eb4a9fcace~mv2.jpg/v1/fill/w_1000,h_1000,al_c,q_85,enc_avif,quality_auto/Gros%20plan%20sur%20les%20soins%20de%20la%20peau.jpg', alt: 'Soins de la peau' },
+  { src: 'https://static.wixstatic.com/media/9426a1_c5d12f25e9034182857cfb8f7b9cbd2a~mv2.webp/v1/fill/w_1000,h_1000,al_c,q_85,enc_avif,quality_auto/DSC7619.webp', alt: 'Soin silhouette' },
+  { src: 'https://static.wixstatic.com/media/11062b_6dfa28682dbf4247930028a218950e64~mv2.jpg/v1/crop/x_2019,y_0,w_2658,h_2543/fill/w_1000,h_1000,al_c,q_85,enc_avif,quality_auto/Gros%20plan%20sur%20le%20visage%20d%27une%20femme.jpg', alt: 'Microdermabrasion' },
+  { src: 'https://static.wixstatic.com/media/11062b_c08353118ce849f98c46f9788443b1fe~mv2.jpg/v1/fill/w_1000,h_1000,al_c,q_85,enc_avif,quality_auto/Traitement%20facial%20au%20laser.jpg', alt: 'Traitement facial au laser' },
+  { src: 'https://static.wixstatic.com/media/da88f0575401483fb62f625d9b0033cb.jpg/v1/fill/w_1000,h_1000,al_c,q_85,enc_avif,quality_auto/Femme.jpg', alt: 'Peeling aux algues' },
+  { src: 'https://static.wixstatic.com/media/9426a1_f45957c9984348b8a170040a952b448f~mv2.webp/v1/fill/w_1000,h_1000,al_c,q_85,enc_avif,quality_auto/plan-body-1.webp', alt: 'Soins corporels' },
+  { src: 'https://static.wixstatic.com/media/11062b_3bc3b147c0304c37b1d90a705c95e64d~mv2.jpg/v1/fill/w_1000,h_1000,al_c,q_85,enc_avif,quality_auto/Soin%20du%20visage%20relaxant.jpg', alt: 'Soin du visage relaxant' },
+  { src: 'https://static.wixstatic.com/media/9426a1_43e9cd6a316c45d8a45460da787e57aa~mv2.jpg/v1/fill/w_1000,h_1000,al_c,q_85,enc_avif,quality_auto/Natural%20Beauty_edited.jpg', alt: 'Beauté naturelle' },
 ];
 
 const GalleryPage = () => {
@@ -24,7 +24,7 @@ const GalleryPage = () => {
       <section className="relative h-[40vh] min-h-[300px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img 
-            src="https://www.lateliersecret.ca/images/OurGallery.png"
+            src="https://static.wixstatic.com/media/11062b_c08353118ce849f98c46f9788443b1fe~mv2.jpg/v1/fill/w_1920,h_800,al_c,q_85,enc_avif,quality_auto/Traitement%20facial%20au%20laser.jpg"
             alt="Notre Galerie"
             className="w-full h-full object-cover"
           />

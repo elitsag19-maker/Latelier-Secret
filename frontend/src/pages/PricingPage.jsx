@@ -8,7 +8,7 @@ const PRICING_DATA = {
     title: 'Tarifs',
     subtitle: 'Épilation au Laser',
     description: 'Obtenez une peau lisse et sans poils grâce à nos services professionnels d\'épilation au laser.',
-    heroImage: 'https://www.lateliersecret.ca/images/fgbhg.png',
+    heroImage: 'https://static.wixstatic.com/media/9426a1_b941e26d1d9e46d38f15c68cfd693de9~mv2.jpg/v1/fill/w_1200,h_800,al_c,q_85,enc_avif,quality_auto/epilation-laser-1_edited.jpg',
     hideNossTarifs: true,
     prices: [
       { area: 'Aisselles', price: '55$' },
@@ -49,7 +49,7 @@ const PRICING_DATA = {
     title: 'Tarifs',
     subtitle: 'Soins du Visage',
     description: 'Découvrez nos soins du visage haut de gamme adaptés spécifiquement à vos besoins.',
-    heroImage: 'https://www.lateliersecret.ca/images/services/3%20(1).webp',
+    heroImage: 'https://static.wixstatic.com/media/11062b_017f998d03a44d5494c1f4eb4a9fcace~mv2.jpg/v1/fill/w_1200,h_800,al_c,q_85,enc_avif,quality_auto/Gros%20plan%20sur%20les%20soins%20de%20la%20peau.jpg',
     hideNossTarifs: true,
     prices: [
       { area: 'Facial de luxe', price: '135$' },
@@ -76,7 +76,7 @@ const PRICING_DATA = {
     title: 'Tarifs',
     subtitle: 'Extensions de Cils',
     description: 'Un service unique, professionnel et fait sur mesure',
-    heroImage: 'https://www.lateliersecret.ca/images/2.png',
+    heroImage: 'https://static.wixstatic.com/media/da88f0575401483fb62f625d9b0033cb.jpg/v1/fill/w_1200,h_800,al_c,q_85,enc_avif,quality_auto/Femme.jpg',
     hideNossTarifs: true,
     prices: [
       { area: 'Pose Classique', price: '135$' },
@@ -97,7 +97,7 @@ const PRICING_DATA = {
     title: 'Tarifs',
     subtitle: 'Soins Corporels',
     description: 'Sculptez et tonifiez votre corps avec nos traitements non-invasifs.',
-    heroImage: 'https://www.lateliersecret.ca/images/slider/4.webp',
+    heroImage: 'https://static.wixstatic.com/media/9426a1_f45957c9984348b8a170040a952b448f~mv2.webp/v1/fill/w_1200,h_800,al_c,q_85,enc_avif,quality_auto/plan-body-1.webp',
     hideNossTarifs: true,
     prices: [
       { area: 'Lipocavitation (1 zone)', price: '135$' },
