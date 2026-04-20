@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight, Star, Phone, CheckCircle, Sparkles } from 'lucide-react';
+import PromoBanner from '../components/PromoBanner';
 
 // Animation variants
 const fadeInUp = {
@@ -534,6 +535,7 @@ const AcademySection = () => {
 const HomePage = () => {
   return (
     <>
+      <PromoBanner />
       <HeroSection />
       <ServicesSection />
       <AboutSection />
