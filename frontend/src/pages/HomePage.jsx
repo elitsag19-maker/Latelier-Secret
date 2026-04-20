@@ -461,12 +461,12 @@ const AcademySection = () => {
     },
     {
       title: "Extension Cils",
-      image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&auto=format&fit=crop",
+      image: "https://static.wixstatic.com/media/11062b_c08353118ce849f98c46f9788443b1fe~mv2.jpg/v1/fill/w_1200,h_800,al_c,q_85,enc_avif,quality_auto/Traitement%20facial%20au%20laser.jpg",
       link: "/eyelash-extension"
     },
     {
       title: "Rehaussement de cils",
-      image: "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=600&auto=format&fit=crop",
+      image: "https://static.wixstatic.com/media/9426a1_c5d12f25e9034182857cfb8f7b9cbd2a~mv2.webp/v1/fill/w_1200,h_800,al_c,q_85,enc_avif,quality_auto/DSC7619.webp",
       link: "/classic-volume-lifting"
     }
   ];
