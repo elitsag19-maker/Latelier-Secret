@@ -29,8 +29,8 @@ const FAQ = [
 
 // Photos officielles Glass Skin fournies par la cliente (2026-09-09),
 // redimensionnées et compressées pour le web (originales HiRez ~2 Mo → JPEG optimisé).
-const PHOTO_HERO = '/images/glass-skin/glass-skin-hero.jpg';
-const PHOTO_DEROULEMENT = '/images/glass-skin/glass-skin-deroulement.jpg';
+const PHOTO_HERO = '/images/glass-skin/glass-skin-hero.png';
+const PHOTO_DEROULEMENT = '/images/glass-skin/glass-skin-deroulement.png';
 
 const TITRE_ONGLET_PAR_DEFAUT = "L'atelier Secret - Centre Esthétique Professionnel LeMoyne | Épilation Laser, Microneedling";
 
