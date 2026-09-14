@@ -6,8 +6,18 @@ import { motion, AnimatePresence } from 'framer-motion';
 const NAV_ITEMS = [
   { name: 'Accueil', path: '/' },
   { name: 'À propos', path: '/about' },
-  { 
-    name: 'Soins', 
+  {
+    name: 'Promo',
+    path: '/promo',
+    bold: true,
+    children: [
+      { name: 'Épilation Laser', path: '/special-epilation-laser' },
+      { name: 'Microneedling', path: '/special-microneedling' },
+      { name: 'Glass Skin', path: '/special-glass-skin' },
+    ]
+  },
+  {
+    name: 'Soins',
     path: '/soins',
     clickable: true,
     children: [
@@ -25,8 +35,8 @@ const NAV_ITEMS = [
       { name: 'Soin Lumineux', path: '/soin-lumineux' },
     ]
   },
-  { 
-    name: 'Tarifs', 
+  {
+    name: 'Tarifs',
     path: '/pricing',
     children: [
       { name: 'Épilation', path: '/hair-removal-price' },
@@ -35,8 +45,8 @@ const NAV_ITEMS = [
       { name: 'Soins Corps', path: '/body-care-price' },
     ]
   },
-  { 
-    name: 'Académie', 
+  {
+    name: 'Académie',
     path: '/formations',
     clickable: true,
     children: [
@@ -125,7 +135,7 @@ const Header = () => {
                   <Link
                     to={item.clickable || !item.children ? item.path : '#'}
                     onClick={(e) => !item.clickable && item.children && e.preventDefault()}
-                    className={`flex items-center gap-1 font-sans text-sm tracking-wide uppercase transition-colors ${
+                    className={`flex items-center gap-1 font-sans text-sm tracking-wide uppercase transition-colors ${item.bold ? 'font-bold' : ''} ${
                       location.pathname === item.path || item.children?.some(c => c.path === location.pathname)
                         ? 'text-taupe-dark'
                         : 'text-taupe hover:text-taupe-dark'
@@ -205,7 +215,7 @@ const Header = () => {
                           <Link
                             to={item.clickable ? item.path : '#'}
                             onClick={(e) => !item.clickable && e.preventDefault()}
-                            className="flex-grow py-3 text-taupe font-sans uppercase text-sm tracking-wide"
+                            className={`flex-grow py-3 text-taupe font-sans uppercase text-sm tracking-wide ${item.bold ? 'font-bold' : ''}`}
                             data-testid={`mobile-nav-${item.name.toLowerCase().replace(/\s+/g, '-')}`}
                           >
                             {item.name}

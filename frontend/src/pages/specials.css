@@ -1,0 +1,35 @@
+/*
+  Styles partagés pour les pages "spéciaux" (landing pages promo).
+  Conçu par la cliente avec Claude Design — palette et polices propres à ces
+  pages (Marcellus / Jost), volontairement différentes des tokens Tailwind
+  du reste du site.
+  Utilisé par : SpecialEpilationLaserPage, SpecialMicroneedlingPage, SpecialSkinGlassPage.
+*/
+
+.special-page {
+  font-family: 'Jost', sans-serif;
+  color: #2B2320;
+  background: #FBF6F1;
+  overflow-x: hidden;
+}
+
+.special-page a {
+  color: #C9714B;
+  text-decoration: none;
+}
+
+.special-page a:hover {
+  color: #2B2320;
+}
+
+/* Recettes de survol (hover) réutilisées sur les boutons des 3 pages */
+.sp-hover-dark-to-terra:hover { background: #C9714B !important; }
+.sp-hover-terra-to-dark:hover { background: #2B2320 !important; }
+.sp-hover-outline-to-dark:hover { border-color: #2B2320 !important; }
+.sp-hover-salmon-to-white:hover { background: #FFF !important; }
+.sp-hover-outline-to-terra:hover {
+  background: #C9714B !important;
+  color: #FFF !important;
+  border-color: #C9714B !important;
+}
+.sp-hover-outline-light:hover { border-color: #F7EFE9 !important; }

@@ -18,6 +18,9 @@ import SoinPage from "./pages/SoinPage";
 import SoinsListPage from "./pages/SoinsListPage";
 import FormationsPage from "./pages/FormationsPage";
 import PrivacyPage from "./pages/PrivacyPage";
+import SpecialEpilationLaserPage from "./pages/SpecialEpilationLaserPage";
+import SpecialMicroneedlingPage from "./pages/SpecialMicroneedlingPage";
+import SpecialGlassSkinPage from "./pages/SpecialGlassSkinPage";
 
 // Service page wrapper - extracts serviceId from URL
 const ServicePageWrapper = ({ serviceId: propServiceId }) => {
@@ -102,6 +105,11 @@ function AppRoutes() {
           
           {/* Formations Page */}
           <Route path="/formations" element={<FormationsPage />} />
+
+          {/* Pages spéciaux (landing pages promo) */}
+          <Route path="/special-epilation-laser" element={<SpecialEpilationLaserPage />} />
+          <Route path="/special-microneedling" element={<SpecialMicroneedlingPage />} />
+          <Route path="/special-glass-skin" element={<SpecialGlassSkinPage />} />
           
           {/* Legal Pages */}
           <Route path="/privacy" element={<PrivacyPage />} />
