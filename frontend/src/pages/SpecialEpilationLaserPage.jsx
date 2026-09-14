@@ -102,14 +102,14 @@ const SpecialEpilationLaserPage = () => {
                 <span style={{ fontSize: 11.5, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#B7A196' }}>Pack 2</span>
                 <span style={{ fontSize: 12, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#F59D79' }}>−375 $</span>
               </div>
-              <h3 style={{ fontFamily: 'Marcellus, serif', fontSize: 'clamp(24px, 2vw, 28px)', lineHeight: 1.2, margin: 0, color: '#FFF' }}>Jambes complètes + 1 zone</h3>
+              <h3 style={{ fontFamily: 'Marcellus, serif', fontSize: 'clamp(24px, 2vw, 28px)', lineHeight: 1.2, margin: 0, color: '#FFF' }}>Jambes complètes + 1 petite zone</h3>
               <div style={{ display: 'flex', alignItems: 'flex-end', gap: 12 }}>
                 <span style={{ fontFamily: 'Marcellus, serif', fontSize: 'clamp(36px, 3.4vw, 46px)', lineHeight: 1, color: '#FFF', whiteSpace: 'nowrap' }}>1 410 $</span>
                 <span style={{ fontSize: 17, color: '#9E877C', whiteSpace: 'nowrap', textDecoration: 'line-through', paddingBottom: 8 }}>1 785 $</span>
               </div>
               <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: 11, fontSize: 15, fontWeight: 300, color: '#E4D6CC', borderTop: '1px solid #40332E', paddingTop: 20 }}>
                 <li>6 séances pour le prix de 5</li>
-                <li>Jambes complètes + zone au choix</li>
+                <li>Jambes complètes + petite zone au choix</li>
                 <li>Évaluation de peau à la 1<sup>re</sup> visite</li>
                 <li>235 $ / séance</li>
               </ul>
