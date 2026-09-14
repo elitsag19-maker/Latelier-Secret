@@ -30,7 +30,8 @@ const FAQ = [
 // Photos officielles Glass Skin fournies par la cliente (2026-09-09),
 // redimensionnées et compressées pour le web (originales HiRez ~2 Mo → JPEG optimisé).
 const PHOTO_HERO = '/images/glass-skin/glass-skin-hero.png';
-const PHOTO_DEROULEMENT = '/images/glass-skin/glass-skin-deroulement.png';
+const PHOTO_DEROULEMENT = '/images/glass-skin/glass-skin-deroulement.jpg';
+const PHOTO_MIRROR = '/images/glass-skin/glass-skin-mirror.png';
 
 const TITRE_ONGLET_PAR_DEFAUT = "L'atelier Secret - Centre Esthétique Professionnel LeMoyne | Épilation Laser, Microneedling";
 
@@ -159,6 +160,25 @@ const SpecialGlassSkinPage = () => {
           </div>
           <div style={{ position: 'relative', minHeight: 380, borderRadius: 4, overflow: 'hidden' }}>
             <img src={PHOTO_DEROULEMENT} alt="Résultat d'un soin Glass Skin" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+          </div>
+        </div>
+      </section>
+
+      {/* Résultat Glass Skin */}
+      <section style={{ padding: '0 clamp(24px, 4vw, 40px) 86px', background: '#FFF' }}>
+        <div style={{ maxWidth: 1180, margin: '0 auto' }}>
+          <div style={{ position: 'relative', minHeight: 500, borderRadius: 4, overflow: 'hidden' }}>
+            <img
+              src={PHOTO_MIRROR}
+              alt="Résultat lumineux après un soin Glass Skin"
+              style={{
+                position: 'absolute',
+                inset: 0,
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover'
+              }}
+            />
           </div>
         </div>
       </section>
