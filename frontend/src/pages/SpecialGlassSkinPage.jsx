@@ -164,32 +164,26 @@ const SpecialGlassSkinPage = () => {
         </div>
       </section>
 
-      {/* Résultat Glass Skin */}
-      <section style={{ padding: '0 clamp(24px, 4vw, 40px) 86px', background: '#FFF' }}>
-        <div style={{ maxWidth: 1180, margin: '0 auto' }}>
-          <div style={{ position: 'relative', minHeight: 500, borderRadius: 4, overflow: 'hidden' }}>
-            <img
-              src={PHOTO_MIRROR}
-              alt="Résultat lumineux après un soin Glass Skin"
-              style={{
-                position: 'absolute',
-                inset: 0,
-                width: '100%',
-                height: '100%',
-                objectFit: 'cover'
-              }}
-            />
-          </div>
-        </div>
-      </section>
-
       {/* FAQ */}
       <section id="faq" style={{ padding: 'clamp(56px, 7vw, 86px) clamp(24px, 4vw, 40px) 90px' }}>
         <div style={{ maxWidth: 1180, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: 'clamp(36px, 5vw, 72px)' }}>
-          <div>
-            <span style={{ fontSize: 11.5, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#C9714B' }}>Questions</span>
-            <h2 style={{ fontFamily: 'Marcellus, serif', fontSize: 40, lineHeight: 1.14, margin: '12px 0 0' }}>Ce qu'on nous demande le plus</h2>
-          </div>
+         <div>
+  <span style={{ fontSize: 11.5, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#C9714B' }}>
+    Questions
+  </span>
+
+  <h2 style={{ fontFamily: 'Marcellus, serif', fontSize: 40, lineHeight: 1.14, margin: '12px 0 0' }}>
+    Ce qu'on nous demande le plus
+  </h2>
+
+  <div style={{ marginTop: 36, width: '100%', height: 360, borderRadius: 4, overflow: 'hidden' }}>
+    <img
+      src={PHOTO_MIRROR}
+      alt="Résultat lumineux après un soin Glass Skin"
+      style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+    />
+  </div>
+</div>
           <div>
             {FAQ.map((item) => (
               <div key={item.q} style={{ borderTop: '1px solid #E8DED5', padding: '24px 0' }}>
