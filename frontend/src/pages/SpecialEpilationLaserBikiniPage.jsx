@@ -1,5 +1,7 @@
 import './specials.css';
 
+const PHOTO_HERO = '/images/epilation-laser-bikini/epilation-laser-bikini.png';
+
 const LIEN_CONSULTATION =
   'https://www.gorendezvous.com/bookingwidget/?companyId=138849&stype=CONSUITATION%20GRATUITE';
 
@@ -106,6 +108,24 @@ const SpecialEpilationLaserBikiniPage = () => {
             Réserver ma consultation gratuite
           </a>
         </div>
+<div
+  style={{
+    maxWidth: 900,
+    margin: '45px auto 0',
+    borderRadius: 4,
+    overflow: 'hidden',
+  }}
+>
+  <img
+    src={PHOTO_HERO}
+    alt="Séance d'épilation laser du bikini chez L'Atelier Secret"
+    style={{
+      display: 'block',
+      width: '100%',
+      height: 'auto',
+    }}
+  />
+</div>
       </section>
 
       {/* BANDEAU */}
