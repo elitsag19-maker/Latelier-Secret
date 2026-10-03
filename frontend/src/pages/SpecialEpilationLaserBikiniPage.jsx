@@ -107,6 +107,23 @@ const SpecialEpilationLaserBikiniPage = () => {
           >
             Réserver ma consultation gratuite
           </a>
+
+<a
+  href="tel:+15143254387"
+  style={{
+    display: 'block',
+    margin: '14px auto 0',
+    color: '#2B2320',
+    fontSize: 14,
+    fontWeight: 600,
+    letterSpacing: '0.08em',
+    textTransform: 'uppercase',
+    textDecoration: 'none',
+  }}
+>
+  Appeler — 514 325-4387
+</a>
+
         </div>
 <div
   style={{
