@@ -111,17 +111,21 @@ const SpecialEpilationLaserBikiniPage = () => {
 <a
   href="tel:+15143254387"
   style={{
-    display: 'block',
-    margin: '14px auto 0',
-    color: '#2B2320',
+    display: 'inline-block',
+    marginTop: 14,
+    padding: '17px 55px',
+    background: 'transparent',
+    color: '#CF7048',
+    border: '2px solid #CF7048',
+    borderRadius: 999,
     fontSize: 14,
     fontWeight: 600,
-    letterSpacing: '0.08em',
+    letterSpacing: '0.1em',
     textTransform: 'uppercase',
     textDecoration: 'none',
   }}
 >
-  Appeler — 514 325-4387
+  Appeler
 </a>
 
         </div>
