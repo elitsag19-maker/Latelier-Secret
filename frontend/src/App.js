@@ -19,6 +19,7 @@ import SoinsListPage from "./pages/SoinsListPage";
 import FormationsPage from "./pages/FormationsPage";
 import PrivacyPage from "./pages/PrivacyPage";
 import SpecialEpilationLaserPage from "./pages/SpecialEpilationLaserPage";
+import SpecialEpilationLaserBikiniPage from "./pages/SpecialEpilationLaserBikiniPage";
 import SpecialMicroneedlingPage from "./pages/SpecialMicroneedlingPage";
 import SpecialGlassSkinPage from "./pages/SpecialGlassSkinPage";
 
@@ -108,6 +109,7 @@ function AppRoutes() {
 
           {/* Pages spéciaux (landing pages promo) */}
           <Route path="/special-epilation-laser" element={<SpecialEpilationLaserPage />} />
+          <Route path="/special-epilation-laser-bikini" element={<SpecialEpilationLaserBikiniPage />} />
           <Route path="/special-microneedling" element={<SpecialMicroneedlingPage />} />
           <Route path="/special-glass-skin" element={<SpecialGlassSkinPage />} />
           

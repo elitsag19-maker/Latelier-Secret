@@ -12,6 +12,7 @@ const NAV_ITEMS = [
     bold: true,
     children: [
       { name: 'Épilation Laser', path: '/special-epilation-laser' },
+      { name: 'Épilation Laser Bikini', path: '/special-epilation-laser-bikini' },
       { name: 'Microneedling', path: '/special-microneedling' },
       { name: 'Glass Skin', path: '/special-glass-skin' },
     ]
